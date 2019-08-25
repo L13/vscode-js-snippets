@@ -1,0 +1,49 @@
+{
+    "name": "l13-js-snippets",
+    "displayName": "L13 JS Snippets",
+	"description": "Code Snippets for JavaScript and TypeScript",
+    "version": "0.13.0",
+    "publisher": "L13RARY",
+	"preview": true,
+    "license": "SEE LICENCE IN LICENCE.md",
+	"homepage": "https://github.com/l13/vscode-js-snippets/blob/master/README.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/l13/vscode-js-snippets.git"
+	},
+	"bugs": {
+		"url": "https://github.com/l13/vscode-js-snippets/issues"
+	},
+    "icon": "images/icon.png",
+	"galleryBanner": {
+		"color": "#232323",
+		"theme": "dark"
+	},
+    "engines": {
+        "vscode": "^1.32.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+	"keywords": [
+		"javascript",
+		"snippets",
+		"typescript"
+	],
+    "contributes": {
+        "snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/typescript.json"
+			}
+        ]
+    }
+}
