@@ -16,7 +16,7 @@ The idea of those snippets is to create a workflow with micro patterns. Write on
 
 Some prefixes are twice, because the rules are matching different patterns like `s_` -> `set NAME () { ... }` and `switch () { ... }`. Then you have to pick the right one.
 
-__The following prefixes are just examples to explain the rules.__ To see the complete list, please visit https://github.com/L13/vscode-js-snippets/tree/master/src/snippets . If a keyword or pattern might be missing, please open an issue on [Github](https://github.com/L13/vscode-js-snippets/issues) and make a suggestion.
+__The following prefixes are just examples to explain the rules.__ To see the complete list, please visit https://github.com/L13/vscode-js-snippets/tree/master/snippets . If a keyword or pattern might be missing, please open an issue on [Github](https://github.com/L13/vscode-js-snippets/issues) and make a suggestion.
 
 ## Shortcut rules for JavaScript
 
