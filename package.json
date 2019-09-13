@@ -2,7 +2,7 @@
     "name": "l13-js-snippets",
     "displayName": "L13 JS Snippets",
 	"description": "Code Snippets for JavaScript and TypeScript",
-    "version": "0.13.1",
+    "version": "0.14.0",
     "publisher": "L13RARY",
 	"preview": true,
     "license": "SEE LICENCE IN LICENCE.md",
