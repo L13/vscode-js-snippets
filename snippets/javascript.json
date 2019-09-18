@@ -3,7 +3,7 @@
 	"continue":									{ "prefix": "c",	"body": ["continue"], "description": "" },
 	"delete":									{ "prefix": "d",	"body": ["delete "], "description": "" },
 	"false":									{ "prefix": "f",	"body": ["false"], "description": "" },
-	"instanceof":								{ "prefix": "i",	"body": ["${1:value} instanceof ${0:constructor}"], "description": "" },
+	"instanceof":								{ "prefix": "i",	"body": ["${1:identifier} instanceof ${0:constructor}"], "description": "" },
 	"null":										{ "prefix": "n",	"body": ["null"], "description": "" },
 	"true":										{ "prefix": "t",	"body": ["true"], "description": "" },
 	"return":									{ "prefix": "r",	"body": ["return "], "description": "" },

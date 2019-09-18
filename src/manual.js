@@ -6,11 +6,14 @@ const path = require('path');
 //	Variables __________________________________________________________________
 
 const paths = {
-	JavaScript: './snippets/javascript.json',
-	TypeScript: './snippets/typescript.json',
+	JavaScript: '../snippets/javascript.json',
+	TypeScript: '../snippets/typescript.json',
 };
 
-const snippets = [];
+const snippets = [`## JavaScript and TypeScript Snippets
+
+Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. The rules for all these snippets are explained in the [README.md](./README.md)
+`];
 
 //	Initialize _________________________________________________________________
 
@@ -22,12 +25,12 @@ for (const [headline, pathname] of Object.entries(paths)) {
 | ------:| ------- |
 `);
 	
-	for (const [key, snippet] of Object.entries(json)) {
+	for (const snippet of Object.values(json)) {
 		if (snippet.prefix !== '___') snippets[snippets.length - 1] += formatSnippets(snippet);
 	}
 }
 
-fs.writeFileSync(path.join(__dirname, 'SNIPPETS.md'), snippets.join('\n'), 'utf-8');
+fs.writeFileSync(path.join(__dirname, '..', 'SNIPPETS.md'), snippets.join('\n'), 'utf-8');
 
 //	Exports ____________________________________________________________________
 

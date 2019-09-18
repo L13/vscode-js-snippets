@@ -45,5 +45,8 @@
 				"path": "./snippets/typescript.json"
 			}
         ]
-    }
+    },
+	"scripts": {
+		"build": "node ./src/manual.js"
+	}
 }

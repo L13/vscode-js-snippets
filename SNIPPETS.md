@@ -1,3 +1,7 @@
+## JavaScript and TypeScript Snippets
+
+Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. The rules for all these snippets are explained in the [README.md](./README.md)
+
 ### JavaScript
 
 | Prefix | Snippet |
@@ -6,7 +10,7 @@
 | `c` | `continue` |
 | `d` | `delete ` |
 | `f` | `false` |
-| `i` | `${1:value} instanceof ${0:constructor}` |
+| `i` | `${1:identifier} instanceof ${0:constructor}` |
 | `n` | `null` |
 | `t` | `true` |
 | `r` | `return ` |
@@ -154,8 +158,10 @@
 | `ecRE1` | `export const ${1:name}:RegExp = /$0/;` |
 | `ecD1` | `export const ${1:name}:Date = new Date($0);` |
 | `ecA1` | `export const ${1:name}:Array<$2> = [$0];` |
-| `e_` | `enum ${1:name} = { $0 };` |
-| `ce_` | `const enum ${1:name} = { $0 };` |
+| `e1` | `enum ${1:name} { $0 };` |
+| `e_` | `enum ${1:name} { $0 };` |
+| `ce1` | `const enum ${1:name} { $0 };` |
+| `ce_` | `const enum ${1:name} { $0 };` |
 | `fa_` | `function ${1:name} ($2) :any {  $0  }` |
 | `fb_` | `function ${1:name} ($2) :boolean {  $0  }` |
 | `fn_` | `function ${1:name} ($2) :number {  $0  }` |
