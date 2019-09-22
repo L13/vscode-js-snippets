@@ -1,7 +1,7 @@
 # Change Log
 All notable changes to the "L13 JS Snippets" extension will be documented in this file.
 
-## [0.14.0] - 2019-08-25
+## [0.14.0] - 2019-09-22
 
 ### Added
 - Added "else " snippet.
