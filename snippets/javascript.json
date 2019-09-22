@@ -3,7 +3,7 @@
 	"continue":									{ "prefix": "c",	"body": ["continue"], "description": "" },
 	"delete":									{ "prefix": "d",	"body": ["delete "], "description": "" },
 	"false":									{ "prefix": "f",	"body": ["false"], "description": "" },
-	"instanceof":								{ "prefix": "i",	"body": ["${1:value} instanceof ${0:constructor}"], "description": "" },
+	"instanceof":								{ "prefix": "i",	"body": ["${1:identifier} instanceof ${0:constructor}"], "description": "" },
 	"null":										{ "prefix": "n",	"body": ["null"], "description": "" },
 	"true":										{ "prefix": "t",	"body": ["true"], "description": "" },
 	"return":									{ "prefix": "r",	"body": ["return "], "description": "" },
@@ -14,10 +14,13 @@
 	"if ()":									{ "prefix": "i1",	"body": ["if (${0:condition}) ;"], "description": "" },
 	"if () {}":									{ "prefix": "i_",	"body": ["if (${0:condition}) {", "\t", "}"], "description": "" },
 	"if () return;":							{ "prefix": "ir1",	"body": ["if (${0:condition}) return;"], "description": "" },
-	"else":										{ "prefix": "e1",	"body": ["else $0;"], "description": "" },
+	"else;":									{ "prefix": "e1",	"body": ["else $0;"], "description": "" },
 	"else {}":									{ "prefix": "e_",	"body": ["else {", "\t$0", "}"], "description": "" },
+	"else if () ;":								{ "prefix": "ei1",	"body": ["else if ($0) ;"], "description": "" },
+	"else if () {}":							{ "prefix": "ei_",	"body": ["else if ($0) {", "\t", "}"], "description": "" },
 	
 	"switch () { }":							{ "prefix": "s_",	"body": ["switch (${0:value}) {", "\t", "}"], "description": "" },
+	"switch () { case: break; }":				{ "prefix": "s_cb",	"body": ["switch (${1:value}) {", "\tcase $0:", "\t\t", "\t\tbreak;", "}"], "description": "" },
 	"switch () { default }":					{ "prefix": "s_d",	"body": ["switch (${0:value}) {", "\t", "\tdefault:", "\t\t", "}"], "description": "" },
 	"case: break;":								{ "prefix": "cb",	"body": ["case $0:", "\t", "\tbreak;"], "description": "" },
 	
@@ -83,6 +86,9 @@
 	"export NAME from ''":						{ "prefix": "ef1",	"body": ["export ${0:name} from '${1:path}';"], "description": "" },
 	"export {} from ''":						{ "prefix": "e_f1",	"body": ["export { ${0:name} } from '${1:path}';"], "description": "" },
 	"export as from ''":						{ "prefix": "eaf1",	"body": ["export * as ${0:name} from '${1:path}';"], "description": "" },
+	
+	"export default":							{ "prefix": "ed1",	"body": ["export default $0;"], "description": "" },
+	"export default {}":						{ "prefix": "ed_",	"body": ["export default {", "\t$0", "}"], "description": "" },
 	
 	"export const NAME":						{ "prefix": "ec1",	"body": ["export const ${1:name} = ${2:value};"], "description": "" },
 	"export let NAME":							{ "prefix": "el1",	"body": ["export let ${1:name} = ${2:value};"], "description": "" },

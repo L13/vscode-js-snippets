@@ -47,8 +47,10 @@
 	"export const NAME:Date = new Date();":		{ "prefix": "ecD1",	"body": ["export const ${1:name}:Date = new Date($0);"], "description": "" },
 	"export const NAME:Array<> = [];":			{ "prefix": "ecA1",	"body": ["export const ${1:name}:Array<$2> = [$0];"], "description": "" },
 	
-	"enum NAME = {}":							{ "prefix": "e_",	"body": ["enum ${1:name} = {", "\t$0", "};"], "description": "" },
-	"const enum NAME = {}":						{ "prefix": "ce_",	"body": ["const enum ${1:name} = {", "\t$0", "};"], "description": "" },
+	"enum NAME {}":								{ "prefix": "e1",	"body": ["enum ${1:name} { $0 };"], "description": "" },
+	"enum NAME { ... }":						{ "prefix": "e_",	"body": ["enum ${1:name} {", "\t$0", "};"], "description": "" },
+	"const enum NAME {}":						{ "prefix": "ce1",	"body": ["const enum ${1:name} { $0 };"], "description": "" },
+	"const enum NAME { ... }":					{ "prefix": "ce_",	"body": ["const enum ${1:name} {", "\t$0", "};"], "description": "" },
 	
 	"function NAME () :any {}":					{ "prefix": "fa_",	"body": ["function ${1:name} ($2) :any {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"function NAME () :boolean {}":				{ "prefix": "fb_",	"body": ["function ${1:name} ($2) :boolean {", "\t", "\t$0", "\t", "}"], "description": "" },
