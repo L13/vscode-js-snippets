@@ -2,6 +2,14 @@
 
 Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. The rules for all these snippets are explained in the [README.md](./README.md)
 
+### JSON
+
+| Prefix | Snippet |
+| ------:| ------- |
+| `f` | `false` |
+| `n` | `null` |
+| `t` | `true` |
+
 ### JavaScript
 
 | Prefix | Snippet |
