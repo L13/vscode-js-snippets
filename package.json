@@ -2,7 +2,7 @@
     "name": "l13-js-snippets",
     "displayName": "L13 JS Snippets",
 	"description": "Code Snippets for JavaScript and TypeScript",
-    "version": "0.14.0",
+    "version": "0.15.0",
     "publisher": "L13RARY",
 	"preview": true,
     "license": "SEE LICENCE IN LICENCE.md",
@@ -26,6 +26,7 @@
         "Snippets"
     ],
 	"keywords": [
+		"json",
 		"javascript",
 		"snippets",
 		"typescript"
@@ -33,20 +34,40 @@
     "contributes": {
         "snippets": [
 			{
+				"language": "json",
+				"path": "./snippets/json.json"
+			},
+			{
+				"language": "jsonc",
+				"path": "./snippets/json.json"
+			},
+			{
 				"language": "javascript",
 				"path": "./snippets/javascript.json"
 			},
 			{
+				"language": "javascriptreact",
+				"path": "./snippets/javascript.json"
+			},
+			{
 				"language": "typescript",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "typescriptreact",
 				"path": "./snippets/javascript.json"
 			},
 			{
 				"language": "typescript",
 				"path": "./snippets/typescript.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/typescript.json"
 			}
         ]
     },
 	"scripts": {
-		"build": "node ./src/manual.js"
+		"build": "node ./src/index.js"
 	}
 }

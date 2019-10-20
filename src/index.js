@@ -6,6 +6,7 @@ const path = require('path');
 //	Variables __________________________________________________________________
 
 const paths = {
+	JSON: '../snippets/json.json',
 	JavaScript: '../snippets/javascript.json',
 	TypeScript: '../snippets/typescript.json',
 };
