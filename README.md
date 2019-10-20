@@ -6,7 +6,7 @@ This extension is part of the [L13 Extension Pack](https://marketplace.visualstu
 
 ## What's new in L13 JS Snippets 0.15.0
 
-- Added support for JSON.
+- Added support for JSON and JSONC.
 - Added support for JavaScript React and TypeScript React.
 
 ## Index
