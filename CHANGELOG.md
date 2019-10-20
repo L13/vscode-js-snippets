@@ -7,7 +7,7 @@ All notable changes to the "L13 JS Snippets" extension will be documented in thi
 - Added support for JSON and JSONC.
 - Added support for JavaScript React and TypeScript React.
 
-## [0.14.0] - 2019-08-25
+## [0.14.0] - 2019-09-22
 
 ### Added
 - Added "else " snippet.
