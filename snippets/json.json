@@ -1,0 +1,5 @@
+{
+	"false":									{ "prefix": "f",	"body": ["false"], "description": "" },
+	"null":										{ "prefix": "n",	"body": ["null"], "description": "" },
+	"true":										{ "prefix": "t",	"body": ["true"], "description": "" }
+}
