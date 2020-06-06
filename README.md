@@ -4,10 +4,13 @@ This extension contains keyword snippets and micro patterns for JavaScript and T
 
 This extension is part of the [L13 Extension Pack](https://marketplace.visualstudio.com/items?itemName=L13RARY.l13-extension-pack).
 
-## What's new in L13 JS Snippets 0.15.0
+## What's new in L13 JS Snippets 0.16.0
 
-- Added support for JSON and JSONC.
-- Added support for JavaScript React and TypeScript React.
+- Added `for await ... of` loop.
+- Added keyword `yield`.
+- Added `return { ... };`.
+- Added `const|let|var { ... } = null;`
+- Added more console functions.
 
 ## Index
 
@@ -19,7 +22,7 @@ This extension is part of the [L13 Extension Pack](https://marketplace.visualstu
 
 ## Introduction
 
-The idea of those snippets is to create a workflow with micro patterns. Write one to four characters and you get the keyword or pattern.
+The idea of those snippets is to create a workflow with micro patterns. Write one to five characters and you get the keyword or pattern.
 
 Some prefixes are twice, because the rules are matching different patterns like `s_` -> `set NAME () { ... }` and `switch () { ... }`. Then you have to pick the right one.
 
