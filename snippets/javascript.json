@@ -10,6 +10,7 @@
 	"static":									{ "prefix": "s",	"body": ["static "], "description": "" },
 	"undefined":								{ "prefix": "u",	"body": ["undefined"], "description": "" },
 	"void":										{ "prefix": "v",	"body": ["void"], "description": "" },
+	"yield":									{ "prefix": "y",	"body": ["yield"], "description": "" },
 	
 	"if ()":									{ "prefix": "i1",	"body": ["if (${0:condition}) ;"], "description": "" },
 	"if () {}":									{ "prefix": "i_",	"body": ["if (${0:condition}) {", "\t", "}"], "description": "" },
@@ -19,8 +20,8 @@
 	"else if () ;":								{ "prefix": "ei1",	"body": ["else if ($0) ;"], "description": "" },
 	"else if () {}":							{ "prefix": "ei_",	"body": ["else if ($0) {", "\t", "}"], "description": "" },
 	
-	"switch () { }":							{ "prefix": "s_",	"body": ["switch (${0:value}) {", "\t", "}"], "description": "" },
 	"switch () { case: break; }":				{ "prefix": "s_cb",	"body": ["switch (${1:value}) {", "\tcase $0:", "\t\t", "\t\tbreak;", "}"], "description": "" },
+	"switch () { case: break; default }":		{ "prefix": "s_cbd",	"body": ["switch (${1:value}) {", "\tcase $0:", "\t\t", "\t\tbreak;", "\tdefault:", "\t\t", "}"], "description": "" },
 	"switch () { default }":					{ "prefix": "s_d",	"body": ["switch (${0:value}) {", "\t", "\tdefault:", "\t\t", "}"], "description": "" },
 	"case: break;":								{ "prefix": "cb",	"body": ["case $0:", "\t", "\tbreak;"], "description": "" },
 	
@@ -32,23 +33,36 @@
 	"for (const key in object)":				{ "prefix": "fci1",	"body": ["for (const ${1:key} in ${0:object}) ;"], "description": "" },
 	"for (const key in object) {}":				{ "prefix": "fci_",	"body": ["for (const ${1:key} in ${0:object}) {", "\t", "}"], "description": "" },
 	
-	"for (const value of object)":				{ "prefix": "fco1",	"body": ["for (const ${1:value} of ${0:object}) ;"], "description": "" },
-	"for (const value of object) {}":			{ "prefix": "fco_",	"body": ["for (const ${1:value} of ${0:object}) {", "\t", "}"], "description": "" },
-	
 	"for (let key in object)":					{ "prefix": "fli1",	"body": ["for (let ${1:key} in ${0:object}) ;"], "description": "" },
 	"for (let key in object) {}":				{ "prefix": "fli_",	"body": ["for (let ${1:key} in ${0:object}) {", "\t", "}"], "description": "" },
-	
-	"for (let value of object)":				{ "prefix": "flo1",	"body": ["for (let ${1:value} of ${0:object}) ;"], "description": "" },
-	"for (let value of object) {}":				{ "prefix": "flo_",	"body": ["for (let ${1:value} of ${0:object}) {", "\t", "}"], "description": "" },
 	
 	"for (var key in object)":					{ "prefix": "fvi1",	"body": ["for (var ${1:key} in ${0:object}) ;"], "description": "" },
 	"for (var key in object) {}":				{ "prefix": "fvi_",	"body": ["for (var ${1:key} in ${0:object}) {", "\t", "}"], "description": "" },
 	
+	"for (const value of object)":				{ "prefix": "fco1",	"body": ["for (const ${1:value} of ${0:object}) ;"], "description": "" },
+	"for (const value of object) {}":			{ "prefix": "fco_",	"body": ["for (const ${1:value} of ${0:object}) {", "\t", "}"], "description": "" },
+	
+	"for (let value of object)":				{ "prefix": "flo1",	"body": ["for (let ${1:value} of ${0:object}) ;"], "description": "" },
+	"for (let value of object) {}":				{ "prefix": "flo_",	"body": ["for (let ${1:value} of ${0:object}) {", "\t", "}"], "description": "" },
+	
 	"for (var value of object)":				{ "prefix": "fvo1",	"body": ["for (var ${1:value} of ${0:object}) ;"], "description": "" },
 	"for (var value of object) {}":				{ "prefix": "fvo_",	"body": ["for (var ${1:value} of ${0:object}) {", "\t", "}"], "description": "" },
 	
+	"for await (const value of object)":		{ "prefix": "faco1",	"body": ["for await (const ${1:value} of ${0:object}) ;"], "description": "" },
+	"for await (const value of object) {}":		{ "prefix": "faco_",	"body": ["for await (const ${1:value} of ${0:object}) {", "\t", "}"], "description": "" },
+	
+	"for await (let value of object)":			{ "prefix": "falo1",	"body": ["for await (let ${1:value} of ${0:object}) ;"], "description": "" },
+	"for await (let value of object) {}":		{ "prefix": "falo_",	"body": ["for await (let ${1:value} of ${0:object}) {", "\t", "}"], "description": "" },
+	
+	"for await (var value of object)":			{ "prefix": "favo1",	"body": ["for await (var ${1:value} of ${0:object}) ;"], "description": "" },
+	"for await (var value of object) {}":		{ "prefix": "favo_",	"body": ["for await (var ${1:value} of ${0:object}) {", "\t", "}"], "description": "" },
+	
 	"let name = value;":						{ "prefix": "l1",	"body": ["let ${1:name} = ${0:null};"], "description": "" },
+	"let {} = value;":							{ "prefix": "l_1",	"body": ["let { $0 } = ${1:null};"], "description": "" },
 	"const name = value;":						{ "prefix": "c1",	"body": ["const ${1:name} = ${0:null};"], "description": "" },
+	"const {} = value;":						{ "prefix": "c_1",	"body": ["const { $0 } = ${1:null};"], "description": "" },
+	"var name = value;":						{ "prefix": "v1",	"body": ["var ${1:name} = ${0:null};"], "description": "" },
+	"var {} = value;":							{ "prefix": "v_1",	"body": ["var { $0 } = ${1:null};"], "description": "" },
 	
 	"while ()":									{ "prefix": "w1",	"body": ["while (${0:condition}) ;"], "description": "" },
 	"while () {}":								{ "prefix": "w_",	"body": ["while (${0:condition}) {", "\t", "}"], "description": "" },
@@ -57,26 +71,27 @@
 	"try {} finally {}":						{ "prefix": "t_f_",	"body": ["try {", "\t$0", "} finally {", "\t", "}"], "description": "" },
 	"try {} catch () {} finally {}":			{ "prefix": "t_c_f_",	"body": ["try {", "\t$0", "} catch (error) {", "\t", "} finally {", "\t", "}"], "description": "" },
 	
-	"typeof value === 'boolean'":				{ "prefix": "teb",	"body": ["typeof $0 === 'boolean'"], "description": "" },
-	"typeof value === 'function'":				{ "prefix": "tef",	"body": ["typeof $0 === 'function'"], "description": "" },
-	"typeof value === 'number'":				{ "prefix": "ten",	"body": ["typeof $0 === 'number'"], "description": "" },
-	"typeof value === 'object'":				{ "prefix": "teo",	"body": ["typeof $0 === 'object'"], "description": "" },
-	"typeof value === 'string'":				{ "prefix": "tes",	"body": ["typeof $0 === 'string'"], "description": "" },
-	"typeof value === 'symbol'":				{ "prefix": "tes",	"body": ["typeof $0 === 'symbol'"], "description": "" },
-	"typeof value === 'undefined'":				{ "prefix": "teu",	"body": ["typeof $0 === 'undefined'"], "description": "" },
+	"typeof value === 'boolean'":				{ "prefix": "tb",	"body": ["typeof $0 === 'boolean'"], "description": "" },
+	"typeof value === 'function'":				{ "prefix": "tf",	"body": ["typeof $0 === 'function'"], "description": "" },
+	"typeof value === 'number'":				{ "prefix": "tn",	"body": ["typeof $0 === 'number'"], "description": "" },
+	"typeof value === 'object'":				{ "prefix": "to",	"body": ["typeof $0 === 'object'"], "description": "" },
+	"typeof value === 'string'":				{ "prefix": "ts",	"body": ["typeof $0 === 'string'"], "description": "" },
+	"typeof value === 'symbol'":				{ "prefix": "ts",	"body": ["typeof $0 === 'symbol'"], "description": "" },
+	"typeof value === 'undefined'":				{ "prefix": "tu",	"body": ["typeof $0 === 'undefined'"], "description": "" },
 	
-	"typeof value !== 'boolean'":				{ "prefix": "tnb",	"body": ["typeof $0 !== 'boolean'"], "description": "" },
-	"typeof value !== 'function'":				{ "prefix": "tnf",	"body": ["typeof $0 !== 'function'"], "description": "" },
-	"typeof value !== 'number'":				{ "prefix": "tnn",	"body": ["typeof $0 !== 'number'"], "description": "" },
-	"typeof value !== 'object'":				{ "prefix": "tno",	"body": ["typeof $0 !== 'object'"], "description": "" },
-	"typeof value !== 'string'":				{ "prefix": "tns",	"body": ["typeof $0 !== 'string'"], "description": "" },
-	"typeof value !== 'symbol'":				{ "prefix": "tns",	"body": ["typeof $0 !== 'symbol'"], "description": "" },
-	"typeof value !== 'undefined'":				{ "prefix": "tnu",	"body": ["typeof $0 !== 'undefined'"], "description": "" },
+	"typeof value !== 'boolean'":				{ "prefix": "tb",	"body": ["typeof $0 !== 'boolean'"], "description": "" },
+	"typeof value !== 'function'":				{ "prefix": "tf",	"body": ["typeof $0 !== 'function'"], "description": "" },
+	"typeof value !== 'number'":				{ "prefix": "tn",	"body": ["typeof $0 !== 'number'"], "description": "" },
+	"typeof value !== 'object'":				{ "prefix": "to",	"body": ["typeof $0 !== 'object'"], "description": "" },
+	"typeof value !== 'string'":				{ "prefix": "ts",	"body": ["typeof $0 !== 'string'"], "description": "" },
+	"typeof value !== 'symbol'":				{ "prefix": "ts",	"body": ["typeof $0 !== 'symbol'"], "description": "" },
+	"typeof value !== 'undefined'":				{ "prefix": "tu",	"body": ["typeof $0 !== 'undefined'"], "description": "" },
 	
 	"function NAME () {}":						{ "prefix": "f_",	"body": ["function ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"async function NAME () {}":				{ "prefix": "af_",	"body": ["async function ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"() =>":									{ "prefix": "$1",	"body": ["($1) => $0"], "description": "" },
 	"() => {}":									{ "prefix": "$_",	"body": ["($1) => {", "\t", "\t$0", "\t", "}"], "description": "" },
+	"async () => {}":							{ "prefix": "a$_",	"body": ["async ($1) => {", "\t", "\t$0", "\t", "}"], "description": "" },
 	
 	"module NAME {}":							{ "prefix": "m_",	"body": ["module ${1:name} {", "\t", "$0", "\t", "}"], "description": "" },
 	
@@ -110,6 +125,8 @@
 	"set NAME () {}":							{ "prefix": "s_",	"body": ["set ${1:name} (value) {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"NAME () {}":								{ "prefix": "_",	"body": ["${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"async NAME () {}":							{ "prefix": "a_",	"body": ["async ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
+		
+	"return {};":								{ "prefix": "r_",	"body": ["return {", "\t$0", "};"], "description": "" },
 	
 	"valueOf () {}":							{ "prefix": "vO_",	"body": ["valueOf () {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"toString () {}":							{ "prefix": "tS_",	"body": ["toString () {", "\t", "\treturn '[object ${0:name}]';", "\t", "}"], "description": "" },
@@ -124,9 +141,21 @@
 	"throw new URIError()":						{ "prefix": "tnUE$",	"body": ["throw new URIError(${0:message})"], "description": "" },
 	
 	"console.assert();":						{ "prefix": "ca$",	"body": ["console.assert($0);"], "description": "" },
+	"console.clear();":							{ "prefix": "cc$",	"body": ["console.clear();"], "description": "" },
+	"console.count();":							{ "prefix": "cc$",	"body": ["console.count($0);"], "description": "" },
+	"console.debug();":							{ "prefix": "cd$",	"body": ["console.debug($0);"], "description": "" },
+	"console.dir();":							{ "prefix": "cd$",	"body": ["console.dir($0);"], "description": "" },
 	"console.error();":							{ "prefix": "ce$",	"body": ["console.error($0);"], "description": "" },
+	"console.group();":							{ "prefix": "cg$",	"body": ["console.group($0);"], "description": "" },
+	"console.groupCollapsed();":				{ "prefix": "cgC$",	"body": ["console.groupCollapsed($0);"], "description": "" },
+	"console.groupEnd();":						{ "prefix": "cgE$",	"body": ["console.groupEnd($0);"], "description": "" },
 	"console.info();":							{ "prefix": "ci$",	"body": ["console.info($0);"], "description": "" },
 	"console.log();":							{ "prefix": "cl$",	"body": ["console.log($0);"], "description": "" },
+	"console.table();":							{ "prefix": "ct$",	"body": ["console.table($0);"], "description": "" },
+	"console.time();":							{ "prefix": "ct$",	"body": ["console.time($0);"], "description": "" },
+	"console.timeEnd();":						{ "prefix": "ctE$",	"body": ["console.timeEnd($0);"], "description": "" },
+	"console.timeLog();":						{ "prefix": "ctE$",	"body": ["console.timeLog($0);"], "description": "" },
+	"console.trace();":							{ "prefix": "ct$",	"body": ["console.trace($0);"], "description": "" },
 	"console.warn();":							{ "prefix": "cw$",	"body": ["console.warn($0);"], "description": "" },
 	
 	"JSON.parse()":								{ "prefix": "Jp$",	"body": ["JSON.parse($0)"], "description": "" },

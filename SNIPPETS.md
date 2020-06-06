@@ -25,6 +25,7 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `s` | `static ` |
 | `u` | `undefined` |
 | `v` | `void` |
+| `y` | `yield` |
 | `i1` | `if (${0:condition}) ;` |
 | `i_` | `if (${0:condition}) {  }` |
 | `ir1` | `if (${0:condition}) return;` |
@@ -32,8 +33,8 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `e_` | `else { $0 }` |
 | `ei1` | `else if ($0) ;` |
 | `ei_` | `else if ($0) {  }` |
-| `s_` | `switch (${0:value}) {  }` |
 | `s_cb` | `switch (${1:value}) { case $0:  break; }` |
+| `s_cbd` | `switch (${1:value}) { case $0:  break; default:  }` |
 | `s_d` | `switch (${0:value}) {  default:  }` |
 | `cb` | `case $0:  break;` |
 | `d_w` | `do {  } while (${0:condition});` |
@@ -41,41 +42,52 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `fl_` | `for (let i = 0; ${0:condition}; i++) {  }` |
 | `fci1` | `for (const ${1:key} in ${0:object}) ;` |
 | `fci_` | `for (const ${1:key} in ${0:object}) {  }` |
-| `fco1` | `for (const ${1:value} of ${0:object}) ;` |
-| `fco_` | `for (const ${1:value} of ${0:object}) {  }` |
 | `fli1` | `for (let ${1:key} in ${0:object}) ;` |
 | `fli_` | `for (let ${1:key} in ${0:object}) {  }` |
-| `flo1` | `for (let ${1:value} of ${0:object}) ;` |
-| `flo_` | `for (let ${1:value} of ${0:object}) {  }` |
 | `fvi1` | `for (var ${1:key} in ${0:object}) ;` |
 | `fvi_` | `for (var ${1:key} in ${0:object}) {  }` |
+| `fco1` | `for (const ${1:value} of ${0:object}) ;` |
+| `fco_` | `for (const ${1:value} of ${0:object}) {  }` |
+| `flo1` | `for (let ${1:value} of ${0:object}) ;` |
+| `flo_` | `for (let ${1:value} of ${0:object}) {  }` |
 | `fvo1` | `for (var ${1:value} of ${0:object}) ;` |
 | `fvo_` | `for (var ${1:value} of ${0:object}) {  }` |
+| `faco1` | `for await (const ${1:value} of ${0:object}) ;` |
+| `faco_` | `for await (const ${1:value} of ${0:object}) {  }` |
+| `falo1` | `for await (let ${1:value} of ${0:object}) ;` |
+| `falo_` | `for await (let ${1:value} of ${0:object}) {  }` |
+| `favo1` | `for await (var ${1:value} of ${0:object}) ;` |
+| `favo_` | `for await (var ${1:value} of ${0:object}) {  }` |
 | `l1` | `let ${1:name} = ${0:null};` |
+| `l_1` | `let { $0 } = ${1:null};` |
 | `c1` | `const ${1:name} = ${0:null};` |
+| `c_1` | `const { $0 } = ${1:null};` |
+| `v1` | `var ${1:name} = ${0:null};` |
+| `v_1` | `var { $0 } = ${1:null};` |
 | `w1` | `while (${0:condition}) ;` |
 | `w_` | `while (${0:condition}) {  }` |
 | `t_c_` | `try { $0 } catch (error) {  }` |
 | `t_f_` | `try { $0 } finally {  }` |
 | `t_c_f_` | `try { $0 } catch (error) {  } finally {  }` |
-| `teb` | `typeof $0 === 'boolean'` |
-| `tef` | `typeof $0 === 'function'` |
-| `ten` | `typeof $0 === 'number'` |
-| `teo` | `typeof $0 === 'object'` |
-| `tes` | `typeof $0 === 'string'` |
-| `tes` | `typeof $0 === 'symbol'` |
-| `teu` | `typeof $0 === 'undefined'` |
-| `tnb` | `typeof $0 !== 'boolean'` |
-| `tnf` | `typeof $0 !== 'function'` |
-| `tnn` | `typeof $0 !== 'number'` |
-| `tno` | `typeof $0 !== 'object'` |
-| `tns` | `typeof $0 !== 'string'` |
-| `tns` | `typeof $0 !== 'symbol'` |
-| `tnu` | `typeof $0 !== 'undefined'` |
+| `tb` | `typeof $0 === 'boolean'` |
+| `tf` | `typeof $0 === 'function'` |
+| `tn` | `typeof $0 === 'number'` |
+| `to` | `typeof $0 === 'object'` |
+| `ts` | `typeof $0 === 'string'` |
+| `ts` | `typeof $0 === 'symbol'` |
+| `tu` | `typeof $0 === 'undefined'` |
+| `tb` | `typeof $0 !== 'boolean'` |
+| `tf` | `typeof $0 !== 'function'` |
+| `tn` | `typeof $0 !== 'number'` |
+| `to` | `typeof $0 !== 'object'` |
+| `ts` | `typeof $0 !== 'string'` |
+| `ts` | `typeof $0 !== 'symbol'` |
+| `tu` | `typeof $0 !== 'undefined'` |
 | `f_` | `function ${1:name} ($2) {  $0  }` |
 | `af_` | `async function ${1:name} ($2) {  $0  }` |
 | `$1` | `($1) => $0` |
 | `$_` | `($1) => {  $0  }` |
+| `a$_` | `async ($1) => {  $0  }` |
 | `m_` | `module ${1:name} {  $0  }` |
 | `i_f1` | `import { ${0:name} } from '${1:path}';` |
 | `iaf1` | `import * as ${0:name} from '${1:path}';` |
@@ -101,6 +113,7 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `s_` | `set ${1:name} (value) {  $0  }` |
 | `_` | `${1:name} ($2) {  $0  }` |
 | `a_` | `async ${1:name} ($2) {  $0  }` |
+| `r_` | `return { $0 };` |
 | `vO_` | `valueOf () {  $0  }` |
 | `tS_` | `toString () {  return '[object ${0:name}]';  }` |
 | `tJ_` | `toJSON () {  $0  }` |
@@ -112,9 +125,21 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `tnTE$` | `throw new TypeError(${0:message})` |
 | `tnUE$` | `throw new URIError(${0:message})` |
 | `ca$` | `console.assert($0);` |
+| `cc$` | `console.clear();` |
+| `cc$` | `console.count($0);` |
+| `cd$` | `console.debug($0);` |
+| `cd$` | `console.dir($0);` |
 | `ce$` | `console.error($0);` |
+| `cg$` | `console.group($0);` |
+| `cgC$` | `console.groupCollapsed($0);` |
+| `cgE$` | `console.groupEnd($0);` |
 | `ci$` | `console.info($0);` |
 | `cl$` | `console.log($0);` |
+| `ct$` | `console.table($0);` |
+| `ct$` | `console.time($0);` |
+| `ctE$` | `console.timeEnd($0);` |
+| `ctE$` | `console.timeLog($0);` |
+| `ct$` | `console.trace($0);` |
 | `cw$` | `console.warn($0);` |
 | `Jp$` | `JSON.parse($0)` |
 | `Js$` | `JSON.stringify($0)` |
