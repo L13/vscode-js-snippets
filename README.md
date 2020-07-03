@@ -13,11 +13,12 @@ This extension contains keyword snippets and micro patterns for JavaScript and T
 
 ## Index
 
-1. [Introduction](#Introduction)
+1. [Introduction](#introduction)
 1. [Shortcut rules for JavaScript](#shortcut-rules-for-javascript)
 1. [Shortcut rules for TypeScript](#shortcut-rules-for-typescript)
 1. [Recommended Settings](#recommended-settings)
 1. [Recommended Keyboard Shortcuts](#recommended-keyboard-shortcuts)
+1. [Recommended Extensions](#recommended-extensions)
 
 ## Introduction
 
@@ -128,4 +129,8 @@ Please have the following keyboard shortcuts always in mind, because these are f
 * `Ctrl + Enter` - Insert line below, even if the caret is in the middle of a line.
 * `Ctrl + Shift + Enter` - Insert line above, even if the caret is in the middle of a line.
 
-> This extension is part of the [L13 Extension Pack](https://marketplace.visualstudio.com/items?itemName=L13RARY.l13-extension-pack).
+## Recommended Extensions
+
+- [Swap Keywords](https://marketplace.visualstudio.com/items?itemName=L13RARY.l13-swap)
+- [Built-In Extensions](https://marketplace.visualstudio.com/items?itemName=L13RARY.l13-built-in-extensions)
+- [Extension Pack](https://marketplace.visualstudio.com/items?itemName=L13RARY.l13-extension-pack)
