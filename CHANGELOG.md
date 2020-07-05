@@ -1,5 +1,26 @@
 # Change Log
-All notable changes to the "L13 JS Snippets" extension will be documented in this file.
+All notable changes to the "JavaScript and TypeScript Snippets" extension will be documented in this file.
+
+## [0.17.0] - 2020-07-05
+
+### Added
+- Added info for [Built-In Extensions](https://marketplace.visualstudio.com/items?itemName=L13RARY.l13-built-in-extensions) to disable built-in JavaScript and TypeScript snippets.
+- Added `Promis.all()`, `Promis.resolve()` and `Promis.reject()`.
+- Added `new NAME()`, `new Array()`, `new Date()`and `new RegExp()`.
+- Added `get NAME () {} + set NAME () {}` including simple types.
+- Added `static NAME () {}` and `static async NAME () {}`.
+- Added `break;`
+
+### Changed
+- Changed display name from `L13 JS Snippets` to `JavaScript and TypeScript Snippets`.
+
+### Fixed
+- Fixed `export * from ...` snippets.
+
+### Removed
+- Removed keyword `static`.
+- Removed patterns with `:never`, `:object`, `:any`, etc. in TypeScript.
+- Removed patterns with `new Array()`, `new Date()`and `new RegExp()`, etc.
 
 ## [0.16.0] - 2020-06-07
 

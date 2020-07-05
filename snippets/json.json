@@ -1,5 +1,9 @@
 {
 	"false":									{ "prefix": "f",	"body": ["false"], "description": "" },
 	"null":										{ "prefix": "n",	"body": ["null"], "description": "" },
-	"true":										{ "prefix": "t",	"body": ["true"], "description": "" }
+	"true":										{ "prefix": "t",	"body": ["true"], "description": "" },
+		
+	"{}":										{ "prefix": "_",	"body": ["{", "\t$0", "}"], "description": "" },
+	"\"key\": null":							{ "prefix": "_1",	"body": ["\"${1:key}\": ${0:null}"], "description": "" },
+	"\"key\": {}":								{ "prefix": "__",	"body": ["\"${1:key}\": {", "\t$0", "}"], "description": "" }
 }
