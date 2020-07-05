@@ -9,22 +9,25 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `f` | `false` |
 | `n` | `null` |
 | `t` | `true` |
+| `_` | `{ $0 }` |
+| `_1` | `"${1:key}": ${0:null}` |
+| `__` | `"${1:key}": { $0 }` |
 
 ### JavaScript
 
 | Prefix | Snippet |
 | ------:| ------- |
 | `a` | `await ` |
-| `c` | `continue` |
+| `b` | `break$0;` |
+| `c` | `continue$0;` |
 | `d` | `delete ` |
 | `f` | `false` |
 | `i` | `${1:identifier} instanceof ${0:constructor}` |
 | `n` | `null` |
 | `t` | `true` |
 | `r` | `return ` |
-| `s` | `static ` |
 | `u` | `undefined` |
-| `v` | `void` |
+| `v` | `void ` |
 | `y` | `yield` |
 | `i1` | `if (${0:condition}) ;` |
 | `i_` | `if (${0:condition}) {  }` |
@@ -91,14 +94,14 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `m_` | `module ${1:name} {  $0  }` |
 | `i_f1` | `import { ${0:name} } from '${1:path}';` |
 | `iaf1` | `import * as ${0:name} from '${1:path}';` |
-| `ef1` | `export ${0:name} from '${1:path}';` |
+| `ef1` | `export * from '${0:path}';` |
 | `e_f1` | `export { ${0:name} } from '${1:path}';` |
-| `eaf1` | `export * as ${0:name} from '${1:path}';` |
+| `e_` | `export { $0 };` |
 | `ed1` | `export default $0;` |
-| `ed_` | `export default { $0 }` |
-| `ec1` | `export const ${1:name} = ${2:value};` |
-| `el1` | `export let ${1:name} = ${2:value};` |
-| `ev1` | `export var ${1:name} = ${2:value};` |
+| `ed_` | `export default { $0 };` |
+| `ec1` | `export const ${1:name} = ${0:null};` |
+| `el1` | `export let ${1:name} = ${0:null};` |
+| `ev1` | `export var ${1:name} = ${0:null};` |
 | `ef_` | `export function ${1:name} ($2) {  $0  }` |
 | `edf_` | `export default function ($2) {  $0  }` |
 | `c_` | `class ${1:name} {  $0  }` |
@@ -111,8 +114,11 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `s$` | `super($0);` |
 | `g_` | `get ${1:name} () {  $0  }` |
 | `s_` | `set ${1:name} (value) {  $0  }` |
+| `g_s_` | `get ${1:name} () {  $0  }  set ${1:name} (value) {    }` |
 | `_` | `${1:name} ($2) {  $0  }` |
+| `s_` | `static ${1:name} ($2) {  $0  }` |
 | `a_` | `async ${1:name} ($2) {  $0  }` |
+| `sa_` | `static async ${1:name} ($2) {  $0  }` |
 | `r_` | `return { $0 };` |
 | `vO_` | `valueOf () {  $0  }` |
 | `tS_` | `toString () {  return '[object ${0:name}]';  }` |
@@ -143,8 +149,16 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `cw$` | `console.warn($0);` |
 | `Jp$` | `JSON.parse($0)` |
 | `Js$` | `JSON.stringify($0)` |
+| `Js$n` | `JSON.stringify($0, null, '\t')` |
+| `n$` | `new ${1:Name}($0)` |
+| `nA$` | `new Array($0)` |
+| `nD$` | `new Date($0)` |
+| `nRE$` | `new RegExp($0)` |
 | `nP$_` | `new Promise((resolve, reject) => {  $0  });` |
 | `nPf_` | `new Promise(function (resolve, reject) {  $0  });` |
+| `Pa$` | `Promise.all($0)` |
+| `Pr$` | `Promise.resolve($0)` |
+| `Pr$` | `Promise.reject($0)` |
 
 ### TypeScript
 
@@ -159,147 +173,128 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `ei_` | `export interface ${1:name} {  $0  }` |
 | `eie_` | `export interface ${1:name} extends ${2:name} {  $0  }` |
 | `n_` | `namespace ${1:name} {  $0  }` |
-| `la1` | `let ${1:name}:any = ${0:null};` |
 | `lb1` | `let ${1:name}:boolean = ${0:false};` |
 | `ln1` | `let ${1:name}:number = ${0:0};` |
 | `ls1` | `let ${1:name}:string = '$0';` |
-| `lo1` | `let ${1:name}:object = {$0};` |
-| `lRE1` | `let ${1:name}:RegExp = /$0/;` |
-| `lD1` | `let ${1:name}:Date = new Date($0);` |
-| `lA1` | `let ${1:name}:Array<$2> = [$0];` |
-| `ela1` | `export let ${1:name}:any = ${0:null};` |
 | `elb1` | `export let ${1:name}:boolean = ${0:false};` |
 | `eln1` | `export let ${1:name}:number = ${0:0};` |
 | `els1` | `export let ${1:name}:string = '$0';` |
-| `elo1` | `export let ${1:name}:object = {$0};` |
-| `elRE1` | `export let ${1:name}:RegExp = /$0/;` |
-| `elD1` | `export let ${1:name}:Date = new Date($0);` |
-| `elA1` | `export let ${1:name}:Array<$2> = [$0];` |
-| `ca1` | `const ${1:name}:any = ${0:null};` |
 | `cb1` | `const ${1:name}:boolean = ${0:false};` |
 | `cn1` | `const ${1:name}:number = ${0:0};` |
 | `cs1` | `const ${1:name}:string = '$0';` |
-| `co1` | `const ${1:name}:object = {$0};` |
-| `cRE1` | `const ${1:name}:RegExp = /$0/;` |
-| `cD1` | `const ${1:name}:Date = new Date($0);` |
-| `cA1` | `const ${1:name}:Array<$2> = [$0];` |
-| `eca1` | `export const ${1:name}:any = ${0:null};` |
 | `ecb1` | `export const ${1:name}:boolean = ${0:false};` |
 | `ecn1` | `export const ${1:name}:number = ${0:0};` |
 | `ecs1` | `export const ${1:name}:string = '$0';` |
-| `eco1` | `export const ${1:name}:object = {$0};` |
-| `ecRE1` | `export const ${1:name}:RegExp = /$0/;` |
-| `ecD1` | `export const ${1:name}:Date = new Date($0);` |
-| `ecA1` | `export const ${1:name}:Array<$2> = [$0];` |
 | `e1` | `enum ${1:name} { $0 };` |
 | `e_` | `enum ${1:name} { $0 };` |
 | `ce1` | `const enum ${1:name} { $0 };` |
 | `ce_` | `const enum ${1:name} { $0 };` |
-| `fa_` | `function ${1:name} ($2) :any {  $0  }` |
 | `fb_` | `function ${1:name} ($2) :boolean {  $0  }` |
 | `fn_` | `function ${1:name} ($2) :number {  $0  }` |
-| `fn_` | `function ${1:name} ($2) :never {  $0  }` |
 | `fa_` | `function ${1:name} ($2) :string {  $0  }` |
-| `fo_` | `function ${1:name} ($2) :object {  $0  }` |
 | `fv_` | `function ${1:name} ($2) :void {  $0  }` |
-| `efa_` | `export function ${1:name} ($2) :any {  $0  }` |
 | `efb_` | `export function ${1:name} ($2) :boolean {  $0  }` |
 | `efn_` | `export function ${1:name} ($2) :number {  $0  }` |
-| `efn_` | `export function ${1:name} ($2) :never {  $0  }` |
 | `efa_` | `export function ${1:name} ($2) :string {  $0  }` |
-| `efo_` | `export function ${1:name} ($2) :object {  $0  }` |
 | `efv_` | `export function ${1:name} ($2) :void {  $0  }` |
-| `afa_` | `async function ${1:name} ($2) :any {  $0  }` |
 | `afb_` | `async function ${1:name} ($2) :boolean {  $0  }` |
 | `afn_` | `async function ${1:name} ($2) :number {  $0  }` |
-| `afn_` | `async function ${1:name} ($2) :never {  $0  }` |
 | `afa_` | `async function ${1:name} ($2) :string {  $0  }` |
-| `afo_` | `async function ${1:name} ($2) :object {  $0  }` |
 | `afv_` | `async function ${1:name} ($2) :void {  $0  }` |
+| `eafb_` | `export async function ${1:name} ($2) :boolean {  $0  }` |
+| `eafn_` | `export async function ${1:name} ($2) :number {  $0  }` |
+| `eafa_` | `export async function ${1:name} ($2) :string {  $0  }` |
+| `eafv_` | `export async function ${1:name} ($2) :void {  $0  }` |
 | `pc_` | `public constructor ($1) {  $0  }` |
 | `_c_` | `private constructor ($1) {  $0  }` |
-| `p1` | `public ${0:name};` |
-| `pa1` | `public ${1:name}:any = ${0:null};` |
+| `p1` | `public ${1:name} = ${0:null};` |
 | `pb1` | `public ${1:name}:boolean = ${0:false};` |
 | `pn1` | `public ${1:name}:number = ${0:0};` |
 | `ps1` | `public ${1:name}:string = '$0';` |
-| `po1` | `public ${1:name}:object = {$0};` |
-| `pRE1` | `public ${1:name}:RegExp = /$0/;` |
-| `pD1` | `public ${1:name}:Date = new Date($0);` |
-| `pA1` | `public ${1:name}:Array<$2> = [$0];` |
-| `pr1` | `public readonly ${0:name};` |
-| `pra1` | `public readonly ${1:name}:any = ${0:null};` |
+| `pr1` | `public readonly ${1:name} = ${0:null};` |
 | `prb1` | `public readonly ${1:name}:boolean = ${0:false};` |
 | `prn1` | `public readonly ${1:name}:number = ${0:0};` |
 | `prs1` | `public readonly ${1:name}:string = '$0';` |
-| `pro1` | `public readonly ${1:name}:object = {$0};` |
-| `prRE1` | `public readonly ${1:name}:RegExp = /$0/;` |
-| `prD1` | `public readonly ${1:name}:Date = new Date($0);` |
-| `prA1` | `public readonly ${1:name}:Array<$2> = [$0];` |
-| `_1` | `private ${0:name};` |
-| `_a1` | `private ${1:name}:any = ${0:null};` |
+| `ps1` | `public static ${1:name} = ${0:null};` |
+| `psb1` | `public static ${1:name}:boolean = ${0:false};` |
+| `psn1` | `public static ${1:name}:number = ${0:0};` |
+| `pss1` | `public static ${1:name}:string = '$0';` |
+| `_1` | `private ${1:name} = ${0:null};` |
 | `_b1` | `private ${1:name}:boolean = ${0:false};` |
 | `_n1` | `private ${1:name}:number = ${0:0};` |
 | `_s1` | `private ${1:name}:string = '$0';` |
-| `_o1` | `private ${1:name}:object = {$0};` |
-| `_RE1` | `private ${1:name}:RegExp = /$0/;` |
-| `_D1` | `private ${1:name}:Date = new Date($0);` |
-| `_A1` | `private ${1:name}:Array<$2> = [$0];` |
+| `_r1` | `private readonly ${1:name} = ${0:null};` |
+| `_rb1` | `private readonly ${1:name}:boolean = ${0:false};` |
+| `_rn1` | `private readonly ${1:name}:number = ${0:0};` |
+| `_rs1` | `private readonly ${1:name}:string = '$0';` |
+| `_s1` | `private static ${1:name} = ${0:null};` |
+| `_sb1` | `private static ${1:name}:boolean = ${0:false};` |
+| `_sn1` | `private static ${1:name}:number = ${0:0};` |
+| `_ss1` | `private static ${1:name}:string = '$0';` |
 | `p_` | `public ${1:name} ($2) {  $0  }` |
-| `pv_` | `public ${1:name} ($2) :void {  $0  }` |
-| `pa_` | `public ${1:name} ($2) :any {  $0  }` |
 | `pb_` | `public ${1:name} ($2) :boolean {  $0  }` |
 | `pn_` | `public ${1:name} ($2) :number {  $0  }` |
-| `pn_` | `public ${1:name} ($2) :never {  $0  }` |
 | `ps_` | `public ${1:name} ($2) :string {  $0  }` |
-| `po_` | `public ${1:name} ($2) :object {  $0  }` |
+| `pv_` | `public ${1:name} ($2) :void {  $0  }` |
+| `pa_` | `public async ${1:name} ($2) {  $0  }` |
+| `pab_` | `public async ${1:name} ($2) :boolean {  $0  }` |
+| `pan_` | `public async ${1:name} ($2) :number {  $0  }` |
+| `pas_` | `public async ${1:name} ($2) :string {  $0  }` |
+| `pav_` | `public async ${1:name} ($2) :void {  $0  }` |
 | `__` | `private ${1:name} ($2) {  $0  }` |
-| `_v_` | `private ${1:name} ($2) :void {  $0  }` |
-| `_a_` | `private ${1:name} ($2) :any {  $0  }` |
 | `_b_` | `private ${1:name} ($2) :boolean {  $0  }` |
 | `_n_` | `private ${1:name} ($2) :number {  $0  }` |
-| `_n_` | `private ${1:name} ($2) :never {  $0  }` |
 | `_s_` | `private ${1:name} ($2) :string {  $0  }` |
-| `_o_` | `private ${1:name} ($2) :object {  $0  }` |
+| `_v_` | `private ${1:name} ($2) :void {  $0  }` |
+| `_a_` | `private async ${1:name} ($2) {  $0  }` |
+| `_ab_` | `private async ${1:name} ($2) :boolean {  $0  }` |
+| `_an_` | `private async ${1:name} ($2) :number {  $0  }` |
+| `_as_` | `private async ${1:name} ($2) :string {  $0  }` |
+| `_av_` | `private async ${1:name} ($2) :void {  $0  }` |
+| `pg_s_` | `private _${1:name} = ${0:null};  public get ${1:name} () {  return this._${1:name};  }  public set ${1:name} (value) {  this._${1:name} = value;  }` |
+| `pbg_s_` | `private _${1:name}:boolean = ${0:false};  public get ${1:name} () :boolean {  return this._${1:name};  }  public set ${1:name} (value:boolean) {  this._${1:name} = value;  }` |
+| `png_s_` | `private _${1:name}:number = ${0:0};  public get ${1:name} () :number {  return this._${1:name};  }  public set ${1:name} (value:number) {  this._${1:name} = value;  }` |
+| `psg_s_` | `private _${1:name}:string = '$0';  public get ${1:name} () :string {  return this._${1:name};  }  public set ${1:name} (value:string) {  this._${1:name} = value;  }` |
 | `pg_` | `public get ${1:name} () {  $0  }` |
-| `pga_` | `public get ${1:name} () :any {  $0  }` |
 | `pgb_` | `public get ${1:name} () :boolean {  $0  }` |
 | `pgn_` | `public get ${1:name} () :number {  $0  }` |
 | `pgs_` | `public get ${1:name} () :string {  $0  }` |
-| `pgo_` | `public get ${1:name} () :object {  $0  }` |
 | `ps_` | `public set ${1:name} (value) {  $0  }` |
-| `psa_` | `public set ${1:name} (value:any) {  $0  }` |
 | `psb_` | `public set ${1:name} (value:boolean) {  $0  }` |
 | `psn_` | `public set ${1:name} (value:number) {  $0  }` |
 | `pss_` | `public set ${1:name} (value:string) {  $0  }` |
-| `pso_` | `public set ${1:name} (value:object) {  $0  }` |
+| `_g_s_` | `private _${1:name} = ${0:null};  private get ${1:name} () {  return this._${1:name};  }  private set ${1:name} (value) {  this._${1:name} = value;  }` |
+| `_bg_s_` | `private _${1:name} = ${0:false};  private get ${1:name} () :boolean {  return this._${1:name};  }  private set ${1:name} (value:boolean) {  this._${1:name} = value;  }` |
+| `_ng_s_` | `private _${1:name} = ${0:0};  private get ${1:name} () :number {  return this._${1:name};  }  private set ${1:name} (value:number) {  this._${1:name} = value;  }` |
+| `_sg_s_` | `private _${1:name} = '$0';  private get ${1:name} () :string {  return this._${1:name};  }  private set ${1:name} (value:string) {  this._${1:name} = value;  }` |
 | `_g_` | `private get ${1:name} () {  $0  }` |
-| `_ga_` | `private get ${1:name} () :any {  $0  }` |
 | `_gb_` | `private get ${1:name} () :boolean {  $0  }` |
 | `_gn_` | `private get ${1:name} () :number {  $0  }` |
 | `_gs_` | `private get ${1:name} () :string {  $0  }` |
-| `_go_` | `private get ${1:name} () :object {  $0  }` |
 | `_s_` | `private set ${1:name} (value) {  $0  }` |
-| `_sa_` | `private set ${1:name} (value:any) {  $0  }` |
 | `_sb_` | `private set ${1:name} (value:boolean) {  $0  }` |
 | `_sn_` | `private set ${1:name} (value:number) {  $0  }` |
 | `_ss_` | `private set ${1:name} (value:string) {  $0  }` |
-| `_so_` | `private set ${1:name} (value:object) {  $0  }` |
 | `ps_` | `public static ${1:name} ($2) {  $0  }` |
-| `psv_` | `public static ${1:name} ($2) :void {  $0  }` |
-| `psa_` | `public static ${1:name} ($2) :any {  $0  }` |
 | `psb_` | `public static ${1:name} ($2) :boolean {  $0  }` |
 | `psn_` | `public static ${1:name} ($2) :number {  $0  }` |
-| `psn_` | `public static ${1:name} ($2) :never {  $0  }` |
 | `pss_` | `public static ${1:name} ($2) :string {  $0  }` |
-| `pso_` | `public static ${1:name} ($2) :object {  $0  }` |
+| `psv_` | `public static ${1:name} ($2) :void {  $0  }` |
+| `psa_` | `public static async ${1:name} ($2) {  $0  }` |
+| `psab_` | `public static async ${1:name} ($2) :boolean {  $0  }` |
+| `psan_` | `public static async ${1:name} ($2) :number {  $0  }` |
+| `psas_` | `public static async ${1:name} ($2) :string {  $0  }` |
+| `psav_` | `public static async ${1:name} ($2) :void {  $0  }` |
 | `_s_` | `private static ${1:name} ($2) {  $0  }` |
-| `_sa_` | `private static ${1:name} ($2) :any {  $0  }` |
 | `_sb_` | `private static ${1:name} ($2) :boolean {  $0  }` |
 | `_sn_` | `private static ${1:name} ($2) :number {  $0  }` |
-| `_sn_` | `private static ${1:name} ($2) :never {  $0  }` |
 | `_ss_` | `private static ${1:name} ($2) :string {  $0  }` |
-| `_so_` | `private static ${1:name} ($2) :object {  $0  }` |
+| `_sv_` | `private static ${1:name} ($2) :void {  $0  }` |
+| `_sa_` | `private static async ${1:name} ($2) {  $0  }` |
+| `_sab_` | `private static async ${1:name} ($2) :boolean {  $0  }` |
+| `_san_` | `private static async ${1:name} ($2) :number {  $0  }` |
+| `_sas_` | `private static async ${1:name} ($2) :string {  $0  }` |
+| `_sav_` | `private static async ${1:name} ($2) :void {  $0  }` |
 | `pvOb_` | `public valueOf () :boolean {  $0  }` |
 | `pvOn_` | `public valueOf () :number {  $0  }` |
 | `pvOs_` | `public valueOf () :string {  $0  }` |

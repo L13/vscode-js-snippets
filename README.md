@@ -1,30 +1,30 @@
-# L13 JavaScript and TypeScript Snippets
+# JavaScript and TypeScript Snippets
 
 This extension contains keyword snippets and micro patterns for JavaScript and TypeScript.
 
-This extension is part of the [L13 Extension Pack](https://marketplace.visualstudio.com/items?itemName=L13RARY.l13-extension-pack).
+## What's new in JavaScript and TypeScript Snippets 0.17.0
 
-## What's new in L13 JS Snippets 0.16.0
-
-- Added `for await ... of` loop.
-- Added keyword `yield`.
-- Added `return { ... };`.
-- Added `const|let|var { ... } = null;`
-- Added more console functions.
+- Added info for [Built-In Extensions](https://marketplace.visualstudio.com/items?itemName=L13RARY.l13-built-in-extensions) to disable built-in JavaScript and TypeScript snippets.
+- Added `Promis.all()`, `Promis.resolve()` and `Promis.reject()`.
+- Added `new NAME()`, `new Array()`, `new Date()`and `new RegExp()`.
+- Added `get NAME () {} + set NAME () {}` including simple types.
+- Added `static NAME () {}` and `static async NAME () {}`.
+- Added `break;`
 
 ## Index
 
-1. [Introduction](#Introduction)
+1. [Introduction](#introduction)
 1. [Shortcut rules for JavaScript](#shortcut-rules-for-javascript)
 1. [Shortcut rules for TypeScript](#shortcut-rules-for-typescript)
 1. [Recommended Settings](#recommended-settings)
 1. [Recommended Keyboard Shortcuts](#recommended-keyboard-shortcuts)
+1. [Recommended Extensions](#recommended-extensions)
 
 ## Introduction
 
 The idea of those snippets is to create a workflow with micro patterns. Write one to five characters and you get the keyword or pattern.
 
-Some prefixes are twice, because the rules are matching different patterns like `s_` -> `set NAME () { ... }` and `switch () { ... }`. Then you have to pick the right one.
+Some prefixes are twice, because the rules are matching different patterns like `s_` -> `set NAME () { ... }` and `static NAME () { ... }`. Then you have to pick the right one.
 
 __The following prefixes are just examples to explain the rules.__ To see the complete list, please visit [SNIPPETS.md](https://github.com/L13/vscode-js-snippets/blob/master/SNIPPETS.md). If a keyword or pattern might be missing, please open an issue on [Github](https://github.com/L13/vscode-js-snippets/issues) and make a suggestion.
 
@@ -107,6 +107,10 @@ It is recommended to set the snippet suggestions to top.
 "editor.snippetSuggestions": "top",
 ```
 
+It is also recommended to disable the built-in JavaScript Snippets with the following extension.
+
+[Built-In Extensions](https://marketplace.visualstudio.com/items?itemName=L13RARY.l13-built-in-extensions)
+
 ## Recommended Keyboard Shortcuts
 
 Please have the following keyboard shortcuts always in mind, because these are fundamental to get the most out of it. Every tab stop is used only if necessary, because it prevents VS Code to open the IntelliSense menu automatically. So sometimes `DownArrow` or `Cmd/Ctrl + Enter` can have the same effect.
@@ -124,3 +128,9 @@ Please have the following keyboard shortcuts always in mind, because these are f
 * `DownArrow` - Move the caret down one line.
 * `Ctrl + Enter` - Insert line below, even if the caret is in the middle of a line.
 * `Ctrl + Shift + Enter` - Insert line above, even if the caret is in the middle of a line.
+
+## Recommended Extensions
+
+- [Swap Keywords](https://marketplace.visualstudio.com/items?itemName=L13RARY.l13-swap)
+- [Built-In Extensions](https://marketplace.visualstudio.com/items?itemName=L13RARY.l13-built-in-extensions)
+- [Extension Pack](https://marketplace.visualstudio.com/items?itemName=L13RARY.l13-extension-pack)

@@ -1,18 +1,18 @@
 {
 	"await":									{ "prefix": "a",	"body": ["await "], "description": "" },
-	"continue":									{ "prefix": "c",	"body": ["continue"], "description": "" },
+	"break;":									{ "prefix": "b",	"body": ["break$0;"], "description": "" },
+	"continue;":								{ "prefix": "c",	"body": ["continue$0;"], "description": "" },
 	"delete":									{ "prefix": "d",	"body": ["delete "], "description": "" },
 	"false":									{ "prefix": "f",	"body": ["false"], "description": "" },
 	"instanceof":								{ "prefix": "i",	"body": ["${1:identifier} instanceof ${0:constructor}"], "description": "" },
 	"null":										{ "prefix": "n",	"body": ["null"], "description": "" },
 	"true":										{ "prefix": "t",	"body": ["true"], "description": "" },
 	"return":									{ "prefix": "r",	"body": ["return "], "description": "" },
-	"static":									{ "prefix": "s",	"body": ["static "], "description": "" },
 	"undefined":								{ "prefix": "u",	"body": ["undefined"], "description": "" },
-	"void":										{ "prefix": "v",	"body": ["void"], "description": "" },
+	"void":										{ "prefix": "v",	"body": ["void "], "description": "" },
 	"yield":									{ "prefix": "y",	"body": ["yield"], "description": "" },
 	
-	"if ()":									{ "prefix": "i1",	"body": ["if (${0:condition}) ;"], "description": "" },
+	"if () ;":									{ "prefix": "i1",	"body": ["if (${0:condition}) ;"], "description": "" },
 	"if () {}":									{ "prefix": "i_",	"body": ["if (${0:condition}) {", "\t", "}"], "description": "" },
 	"if () return;":							{ "prefix": "ir1",	"body": ["if (${0:condition}) return;"], "description": "" },
 	"else;":									{ "prefix": "e1",	"body": ["else $0;"], "description": "" },
@@ -27,10 +27,10 @@
 	
 	"do {} while ();":							{ "prefix": "d_w",	"body": ["do {", "\t", "} while (${0:condition});"], "description": "" },
 	
-	"for (i)":									{ "prefix": "fl1",	"body": ["for (let i = 0; ${0:condition}; i++) ;"], "description": "" },
-	"for (i) {}":								{ "prefix": "fl_",	"body": ["for (let i = 0; ${0:condition}; i++) {", "\t", "}"], "description": "" },
+	"for (let i = 0) ;":						{ "prefix": "fl1",	"body": ["for (let i = 0; ${0:condition}; i++) ;"], "description": "" },
+	"for (let i = 0) {}":						{ "prefix": "fl_",	"body": ["for (let i = 0; ${0:condition}; i++) {", "\t", "}"], "description": "" },
 	
-	"for (const key in object)":				{ "prefix": "fci1",	"body": ["for (const ${1:key} in ${0:object}) ;"], "description": "" },
+	"for (const key in object) ;":				{ "prefix": "fci1",	"body": ["for (const ${1:key} in ${0:object}) ;"], "description": "" },
 	"for (const key in object) {}":				{ "prefix": "fci_",	"body": ["for (const ${1:key} in ${0:object}) {", "\t", "}"], "description": "" },
 	
 	"for (let key in object)":					{ "prefix": "fli1",	"body": ["for (let ${1:key} in ${0:object}) ;"], "description": "" },
@@ -98,16 +98,16 @@
 	"import {} from ''":						{ "prefix": "i_f1",	"body": ["import { ${0:name} } from '${1:path}';"], "description": "" },
 	"import as from ''":						{ "prefix": "iaf1",	"body": ["import * as ${0:name} from '${1:path}';"], "description": "" },
 	
-	"export NAME from ''":						{ "prefix": "ef1",	"body": ["export ${0:name} from '${1:path}';"], "description": "" },
+	"export * from ''":							{ "prefix": "ef1",	"body": ["export * from '${0:path}';"], "description": "" },
 	"export {} from ''":						{ "prefix": "e_f1",	"body": ["export { ${0:name} } from '${1:path}';"], "description": "" },
-	"export as from ''":						{ "prefix": "eaf1",	"body": ["export * as ${0:name} from '${1:path}';"], "description": "" },
 	
+	"export {}":								{ "prefix": "e_",	"body": ["export {", "\t$0", "};"], "description": "" },
 	"export default":							{ "prefix": "ed1",	"body": ["export default $0;"], "description": "" },
-	"export default {}":						{ "prefix": "ed_",	"body": ["export default {", "\t$0", "}"], "description": "" },
+	"export default {}":						{ "prefix": "ed_",	"body": ["export default {", "\t$0", "};"], "description": "" },
 	
-	"export const NAME":						{ "prefix": "ec1",	"body": ["export const ${1:name} = ${2:value};"], "description": "" },
-	"export let NAME":							{ "prefix": "el1",	"body": ["export let ${1:name} = ${2:value};"], "description": "" },
-	"export var NAME":							{ "prefix": "ev1",	"body": ["export var ${1:name} = ${2:value};"], "description": "" },
+	"export const NAME":						{ "prefix": "ec1",	"body": ["export const ${1:name} = ${0:null};"], "description": "" },
+	"export let NAME":							{ "prefix": "el1",	"body": ["export let ${1:name} = ${0:null};"], "description": "" },
+	"export var NAME":							{ "prefix": "ev1",	"body": ["export var ${1:name} = ${0:null};"], "description": "" },
 	
 	"export function NAME () {}":				{ "prefix": "ef_",	"body": ["export function ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"export default function () {}":			{ "prefix": "edf_",	"body": ["export default function ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
@@ -123,8 +123,11 @@
 	"super();":									{ "prefix": "s$",	"body": ["super($0);"], "description": "" },
 	"get NAME () {}":							{ "prefix": "g_",	"body": ["get ${1:name} () {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"set NAME () {}":							{ "prefix": "s_",	"body": ["set ${1:name} (value) {", "\t", "\t$0", "\t", "}"], "description": "" },
+	"get set NAME () {}":						{ "prefix": "g_s_",	"body": ["get ${1:name} () {", "\t", "\t$0", "\t", "}", "", "set ${1:name} (value) {", "\t", "\t", "\t", "}"], "description": "" },
 	"NAME () {}":								{ "prefix": "_",	"body": ["${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
+	"static NAME () {}":						{ "prefix": "s_",	"body": ["static ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"async NAME () {}":							{ "prefix": "a_",	"body": ["async ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
+	"static async NAME () {}":					{ "prefix": "sa_",	"body": ["static async ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
 		
 	"return {};":								{ "prefix": "r_",	"body": ["return {", "\t$0", "};"], "description": "" },
 	
@@ -160,9 +163,18 @@
 	
 	"JSON.parse()":								{ "prefix": "Jp$",	"body": ["JSON.parse($0)"], "description": "" },
 	"JSON.stringify()":							{ "prefix": "Js$",	"body": ["JSON.stringify($0)"], "description": "" },
+	"JSON.stringify(..., null, '\\t')":			{ "prefix": "Js$n",	"body": ["JSON.stringify($0, null, '\\t')"], "description": "" },
 	
+	"new Class()":								{ "prefix": "n$",	"body": ["new ${1:Name}($0)"], "description": "" },
+	"new Array()":								{ "prefix": "nA$",	"body": ["new Array($0)"], "description": "" },
+	"new Date()":								{ "prefix": "nD$",	"body": ["new Date($0)"], "description": "" },
+	"new RegExp()":								{ "prefix": "nRE$",	"body": ["new RegExp($0)"], "description": "" },
+		
 	"new Promise(() => {})":					{ "prefix": "nP$_",	"body": ["new Promise((resolve, reject) => {", "\t", "\t$0", "\t", "});"], "description": "" },
 	"new Promise(function () {})":				{ "prefix": "nPf_",	"body": ["new Promise(function (resolve, reject) {", "\t", "\t$0", "\t", "});"], "description": "" },
+	"Promise.all()":							{ "prefix": "Pa$",	"body": ["Promise.all($0)"], "description": "" },
+	"Promise.resolve()":						{ "prefix": "Pr$",	"body": ["Promise.resolve($0)"], "description": "" },
+	"Promise.reject()":							{ "prefix": "Pr$",	"body": ["Promise.reject($0)"], "description": "" },
 	
 	"Sections": {
 		"prefix": "___",
