@@ -2,14 +2,11 @@
 
 This extension contains keyword snippets and micro patterns for JavaScript and TypeScript.
 
-## What's new in JavaScript and TypeScript Snippets 0.17.0
+## What's new in JavaScript and TypeScript Snippets 0.18.0
 
-- Added info for [Built-In Extensions](https://marketplace.visualstudio.com/items?itemName=L13RARY.l13-built-in-extensions) to disable built-in JavaScript and TypeScript snippets.
-- Added `Promis.all()`, `Promis.resolve()` and `Promis.reject()`.
-- Added `new NAME()`, `new Array()`, `new Date()`and `new RegExp()`.
-- Added `get NAME () {} + set NAME () {}` including simple types.
-- Added `static NAME () {}` and `static async NAME () {}`.
-- Added `break;`
+- Added `Array.isArray()`.
+- Added `Object.assign()`, `Object.create()`, `Object.entries()`, `Object.keys()` and `Object.values()`.
+- Added `Symbol()`, `Symbol.for()` and `Symbol.keyFor()`.
 
 ## Index
 

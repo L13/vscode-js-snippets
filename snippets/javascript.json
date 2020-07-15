@@ -165,10 +165,22 @@
 	"JSON.stringify()":							{ "prefix": "Js$",	"body": ["JSON.stringify($0)"], "description": "" },
 	"JSON.stringify(..., null, '\\t')":			{ "prefix": "Js$n",	"body": ["JSON.stringify($0, null, '\\t')"], "description": "" },
 	
+	"Symbol()":									{ "prefix": "S$",	"body": ["Symbol($0)"], "description": "" },
+	"Symbol.for()":								{ "prefix": "Sf$",	"body": ["Symbol.for($0)"], "description": "" },
+	"Symbol.keyFor()":							{ "prefix": "SkF$",	"body": ["Symbol.keyFor($0)"], "description": "" },
+		
 	"new Class()":								{ "prefix": "n$",	"body": ["new ${1:Name}($0)"], "description": "" },
 	"new Array()":								{ "prefix": "nA$",	"body": ["new Array($0)"], "description": "" },
 	"new Date()":								{ "prefix": "nD$",	"body": ["new Date($0)"], "description": "" },
 	"new RegExp()":								{ "prefix": "nRE$",	"body": ["new RegExp($0)"], "description": "" },
+		
+	"Array.isArray()":							{ "prefix": "AiA$",	"body": ["Array.isArray($0)"], "description": "" },
+		
+	"Object.assign()":							{ "prefix": "Oa$",	"body": ["Object.assign($0)"], "description": "" },
+	"Object.create()":							{ "prefix": "Oc$",	"body": ["Object.create($0)"], "description": "" },
+	"Object.entries()":							{ "prefix": "Oe$",	"body": ["Object.entries($0)"], "description": "" },
+	"Object.keys()":							{ "prefix": "Ok$",	"body": ["Object.keys($0)"], "description": "" },
+	"Object.values()":							{ "prefix": "Ov$",	"body": ["Object.values($0)"], "description": "" },
 		
 	"new Promise(() => {})":					{ "prefix": "nP$_",	"body": ["new Promise((resolve, reject) => {", "\t", "\t$0", "\t", "});"], "description": "" },
 	"new Promise(function () {})":				{ "prefix": "nPf_",	"body": ["new Promise(function (resolve, reject) {", "\t", "\t$0", "\t", "});"], "description": "" },
