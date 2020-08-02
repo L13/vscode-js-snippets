@@ -1,12 +1,19 @@
 # Change Log
 All notable changes to the "JavaScript and TypeScript Snippets" extension will be documented in this file.
 
-## [0.18.0] - 2020-07-19
+## [0.18.0] - 2020-08-02
 
 ### Added
 - Added `Array.isArray()`.
 - Added `Object.assign()`, `Object.create()`, `Object.entries()`, `Object.keys()` and `Object.values()`.
 - Added `Symbol()`, `Symbol.for()` and `Symbol.keyFor()`.
+- Added primitive types to `toJSON`.
+
+### Changed
+- Added tab stop for loops and conditions to one line snippets.
+
+### Fixed
+- Fixed async typed functions.
 
 ## [0.17.0] - 2020-07-05
 

@@ -12,12 +12,12 @@
 	"void":										{ "prefix": "v",	"body": ["void "], "description": "" },
 	"yield":									{ "prefix": "y",	"body": ["yield"], "description": "" },
 	
-	"if () ;":									{ "prefix": "i1",	"body": ["if (${0:condition}) ;"], "description": "" },
+	"if () ;":									{ "prefix": "i1",	"body": ["if (${1:condition}) $0;"], "description": "" },
 	"if () {}":									{ "prefix": "i_",	"body": ["if (${0:condition}) {", "\t", "}"], "description": "" },
 	"if () return;":							{ "prefix": "ir1",	"body": ["if (${0:condition}) return;"], "description": "" },
 	"else;":									{ "prefix": "e1",	"body": ["else $0;"], "description": "" },
 	"else {}":									{ "prefix": "e_",	"body": ["else {", "\t$0", "}"], "description": "" },
-	"else if () ;":								{ "prefix": "ei1",	"body": ["else if ($0) ;"], "description": "" },
+	"else if () ;":								{ "prefix": "ei1",	"body": ["else if ($1) §0;"], "description": "" },
 	"else if () {}":							{ "prefix": "ei_",	"body": ["else if ($0) {", "\t", "}"], "description": "" },
 	
 	"switch () { case: break; }":				{ "prefix": "s_cb",	"body": ["switch (${1:value}) {", "\tcase $0:", "\t\t", "\t\tbreak;", "}"], "description": "" },
@@ -27,34 +27,34 @@
 	
 	"do {} while ();":							{ "prefix": "d_w",	"body": ["do {", "\t", "} while (${0:condition});"], "description": "" },
 	
-	"for (let i = 0) ;":						{ "prefix": "fl1",	"body": ["for (let i = 0; ${0:condition}; i++) ;"], "description": "" },
+	"for (let i = 0) ;":						{ "prefix": "fl1",	"body": ["for (let i = 0; ${1:condition}; i++) $0;"], "description": "" },
 	"for (let i = 0) {}":						{ "prefix": "fl_",	"body": ["for (let i = 0; ${0:condition}; i++) {", "\t", "}"], "description": "" },
 	
-	"for (const key in object) ;":				{ "prefix": "fci1",	"body": ["for (const ${1:key} in ${0:object}) ;"], "description": "" },
+	"for (const key in object) ;":				{ "prefix": "fci1",	"body": ["for (const ${1:key} in ${2:object}) $0;"], "description": "" },
 	"for (const key in object) {}":				{ "prefix": "fci_",	"body": ["for (const ${1:key} in ${0:object}) {", "\t", "}"], "description": "" },
 	
-	"for (let key in object)":					{ "prefix": "fli1",	"body": ["for (let ${1:key} in ${0:object}) ;"], "description": "" },
+	"for (let key in object)":					{ "prefix": "fli1",	"body": ["for (let ${1:key} in ${2:object}) $0;"], "description": "" },
 	"for (let key in object) {}":				{ "prefix": "fli_",	"body": ["for (let ${1:key} in ${0:object}) {", "\t", "}"], "description": "" },
 	
-	"for (var key in object)":					{ "prefix": "fvi1",	"body": ["for (var ${1:key} in ${0:object}) ;"], "description": "" },
+	"for (var key in object)":					{ "prefix": "fvi1",	"body": ["for (var ${1:key} in ${2:object}) $0;"], "description": "" },
 	"for (var key in object) {}":				{ "prefix": "fvi_",	"body": ["for (var ${1:key} in ${0:object}) {", "\t", "}"], "description": "" },
 	
-	"for (const value of object)":				{ "prefix": "fco1",	"body": ["for (const ${1:value} of ${0:object}) ;"], "description": "" },
+	"for (const value of object)":				{ "prefix": "fco1",	"body": ["for (const ${1:value} of ${2:object}) $0;"], "description": "" },
 	"for (const value of object) {}":			{ "prefix": "fco_",	"body": ["for (const ${1:value} of ${0:object}) {", "\t", "}"], "description": "" },
 	
-	"for (let value of object)":				{ "prefix": "flo1",	"body": ["for (let ${1:value} of ${0:object}) ;"], "description": "" },
+	"for (let value of object)":				{ "prefix": "flo1",	"body": ["for (let ${1:value} of ${2:object}) $0;"], "description": "" },
 	"for (let value of object) {}":				{ "prefix": "flo_",	"body": ["for (let ${1:value} of ${0:object}) {", "\t", "}"], "description": "" },
 	
-	"for (var value of object)":				{ "prefix": "fvo1",	"body": ["for (var ${1:value} of ${0:object}) ;"], "description": "" },
+	"for (var value of object)":				{ "prefix": "fvo1",	"body": ["for (var ${1:value} of ${2:object}) $0;"], "description": "" },
 	"for (var value of object) {}":				{ "prefix": "fvo_",	"body": ["for (var ${1:value} of ${0:object}) {", "\t", "}"], "description": "" },
 	
-	"for await (const value of object)":		{ "prefix": "faco1",	"body": ["for await (const ${1:value} of ${0:object}) ;"], "description": "" },
+	"for await (const value of object)":		{ "prefix": "faco1",	"body": ["for await (const ${1:value} of ${2:object}) $0;"], "description": "" },
 	"for await (const value of object) {}":		{ "prefix": "faco_",	"body": ["for await (const ${1:value} of ${0:object}) {", "\t", "}"], "description": "" },
 	
-	"for await (let value of object)":			{ "prefix": "falo1",	"body": ["for await (let ${1:value} of ${0:object}) ;"], "description": "" },
+	"for await (let value of object)":			{ "prefix": "falo1",	"body": ["for await (let ${1:value} of ${2:object}) $0;"], "description": "" },
 	"for await (let value of object) {}":		{ "prefix": "falo_",	"body": ["for await (let ${1:value} of ${0:object}) {", "\t", "}"], "description": "" },
 	
-	"for await (var value of object)":			{ "prefix": "favo1",	"body": ["for await (var ${1:value} of ${0:object}) ;"], "description": "" },
+	"for await (var value of object)":			{ "prefix": "favo1",	"body": ["for await (var ${1:value} of ${2:object}) $0;"], "description": "" },
 	"for await (var value of object) {}":		{ "prefix": "favo_",	"body": ["for await (var ${1:value} of ${0:object}) {", "\t", "}"], "description": "" },
 	
 	"let name = value;":						{ "prefix": "l1",	"body": ["let ${1:name} = ${0:null};"], "description": "" },
@@ -64,7 +64,7 @@
 	"var name = value;":						{ "prefix": "v1",	"body": ["var ${1:name} = ${0:null};"], "description": "" },
 	"var {} = value;":							{ "prefix": "v_1",	"body": ["var { $0 } = ${1:null};"], "description": "" },
 	
-	"while ()":									{ "prefix": "w1",	"body": ["while (${0:condition}) ;"], "description": "" },
+	"while ()":									{ "prefix": "w1",	"body": ["while (${1:condition}) $0;"], "description": "" },
 	"while () {}":								{ "prefix": "w_",	"body": ["while (${0:condition}) {", "\t", "}"], "description": "" },
 	
 	"try {} catch () {}":						{ "prefix": "t_c_",	"body": ["try {", "\t$0", "} catch (error) {", "\t", "}"], "description": "" },
@@ -110,7 +110,8 @@
 	"export var NAME":							{ "prefix": "ev1",	"body": ["export var ${1:name} = ${0:null};"], "description": "" },
 	
 	"export function NAME () {}":				{ "prefix": "ef_",	"body": ["export function ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
-	"export default function () {}":			{ "prefix": "edf_",	"body": ["export default function ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
+	"export async function () {}":				{ "prefix": "eaf_",	"body": ["export async function ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
+	"export default function () {}":			{ "prefix": "edf_",	"body": ["export default function ($1) {", "\t", "\t$0", "\t", "}"], "description": "" },
 	
 	"class NAME {}":							{ "prefix": "c_",	"body": ["class ${1:name} {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"class NAME extends PARENT {}":				{ "prefix": "ce_",	"body": ["class ${1:name} extends ${2:parent} {", "\t", "\t$0", "\t", "}"], "description": "" },

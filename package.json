@@ -1,11 +1,11 @@
 {
-    "name": "l13-js-snippets",
-    "displayName": "JavaScript and TypeScript Snippets",
+	"name": "l13-js-snippets",
+	"displayName": "JavaScript and TypeScript Snippets",
 	"description": "Keyword snippets and micro patterns for JavaScript and TypeScript",
-	"version": "0.17.0",
+	"version": "0.18.0",
 	"preview": true,
-    "publisher": "L13RARY",
-    "license": "SEE LICENCE IN LICENCE.md",
+	"publisher": "L13RARY",
+	"license": "SEE LICENCE IN LICENCE.md",
 	"homepage": "https://github.com/l13/vscode-js-snippets/blob/master/README.md",
 	"repository": {
 		"type": "git",
@@ -14,25 +14,25 @@
 	"bugs": {
 		"url": "https://github.com/l13/vscode-js-snippets/issues"
 	},
-    "icon": "images/icon.png",
+	"icon": "images/icon.png",
 	"galleryBanner": {
 		"color": "#232323",
 		"theme": "dark"
 	},
-    "engines": {
-        "vscode": "^1.32.0"
-    },
-    "categories": [
-        "Snippets"
-    ],
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"categories": [
+		"Snippets"
+	],
 	"keywords": [
 		"json",
 		"javascript",
 		"snippets",
 		"typescript"
 	],
-    "contributes": {
-        "snippets": [
+	"contributes": {
+		"snippets": [
 			{
 				"language": "json",
 				"path": "./snippets/json.json"
@@ -65,8 +65,8 @@
 				"language": "typescriptreact",
 				"path": "./snippets/typescript.json"
 			}
-        ]
-    },
+		]
+	},
 	"scripts": {
 		"build": "node ./src/index.js"
 	}
