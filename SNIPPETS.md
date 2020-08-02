@@ -29,37 +29,37 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `u` | `undefined` |
 | `v` | `void ` |
 | `y` | `yield` |
-| `i1` | `if (${0:condition}) ;` |
+| `i1` | `if (${1:condition}) $0;` |
 | `i_` | `if (${0:condition}) {  }` |
 | `ir1` | `if (${0:condition}) return;` |
 | `e1` | `else $0;` |
 | `e_` | `else { $0 }` |
-| `ei1` | `else if ($0) ;` |
+| `ei1` | `else if ($1) §0;` |
 | `ei_` | `else if ($0) {  }` |
 | `s_cb` | `switch (${1:value}) { case $0:  break; }` |
 | `s_cbd` | `switch (${1:value}) { case $0:  break; default:  }` |
 | `s_d` | `switch (${0:value}) {  default:  }` |
 | `cb` | `case $0:  break;` |
 | `d_w` | `do {  } while (${0:condition});` |
-| `fl1` | `for (let i = 0; ${0:condition}; i++) ;` |
+| `fl1` | `for (let i = 0; ${1:condition}; i++) $0;` |
 | `fl_` | `for (let i = 0; ${0:condition}; i++) {  }` |
-| `fci1` | `for (const ${1:key} in ${0:object}) ;` |
+| `fci1` | `for (const ${1:key} in ${2:object}) $0;` |
 | `fci_` | `for (const ${1:key} in ${0:object}) {  }` |
-| `fli1` | `for (let ${1:key} in ${0:object}) ;` |
+| `fli1` | `for (let ${1:key} in ${2:object}) $0;` |
 | `fli_` | `for (let ${1:key} in ${0:object}) {  }` |
-| `fvi1` | `for (var ${1:key} in ${0:object}) ;` |
+| `fvi1` | `for (var ${1:key} in ${2:object}) $0;` |
 | `fvi_` | `for (var ${1:key} in ${0:object}) {  }` |
-| `fco1` | `for (const ${1:value} of ${0:object}) ;` |
+| `fco1` | `for (const ${1:value} of ${2:object}) $0;` |
 | `fco_` | `for (const ${1:value} of ${0:object}) {  }` |
-| `flo1` | `for (let ${1:value} of ${0:object}) ;` |
+| `flo1` | `for (let ${1:value} of ${2:object}) $0;` |
 | `flo_` | `for (let ${1:value} of ${0:object}) {  }` |
-| `fvo1` | `for (var ${1:value} of ${0:object}) ;` |
+| `fvo1` | `for (var ${1:value} of ${2:object}) $0;` |
 | `fvo_` | `for (var ${1:value} of ${0:object}) {  }` |
-| `faco1` | `for await (const ${1:value} of ${0:object}) ;` |
+| `faco1` | `for await (const ${1:value} of ${2:object}) $0;` |
 | `faco_` | `for await (const ${1:value} of ${0:object}) {  }` |
-| `falo1` | `for await (let ${1:value} of ${0:object}) ;` |
+| `falo1` | `for await (let ${1:value} of ${2:object}) $0;` |
 | `falo_` | `for await (let ${1:value} of ${0:object}) {  }` |
-| `favo1` | `for await (var ${1:value} of ${0:object}) ;` |
+| `favo1` | `for await (var ${1:value} of ${2:object}) $0;` |
 | `favo_` | `for await (var ${1:value} of ${0:object}) {  }` |
 | `l1` | `let ${1:name} = ${0:null};` |
 | `l_1` | `let { $0 } = ${1:null};` |
@@ -67,7 +67,7 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `c_1` | `const { $0 } = ${1:null};` |
 | `v1` | `var ${1:name} = ${0:null};` |
 | `v_1` | `var { $0 } = ${1:null};` |
-| `w1` | `while (${0:condition}) ;` |
+| `w1` | `while (${1:condition}) $0;` |
 | `w_` | `while (${0:condition}) {  }` |
 | `t_c_` | `try { $0 } catch (error) {  }` |
 | `t_f_` | `try { $0 } finally {  }` |
@@ -103,7 +103,8 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `el1` | `export let ${1:name} = ${0:null};` |
 | `ev1` | `export var ${1:name} = ${0:null};` |
 | `ef_` | `export function ${1:name} ($2) {  $0  }` |
-| `edf_` | `export default function ($2) {  $0  }` |
+| `eaf_` | `export async function ${1:name} ($2) {  $0  }` |
+| `edf_` | `export default function ($1) {  $0  }` |
 | `c_` | `class ${1:name} {  $0  }` |
 | `ce_` | `class ${1:name} extends ${2:parent} {  $0  }` |
 | `ec_` | `export class ${1:name} {  $0  }` |
@@ -150,10 +151,19 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `Jp$` | `JSON.parse($0)` |
 | `Js$` | `JSON.stringify($0)` |
 | `Js$n` | `JSON.stringify($0, null, '\t')` |
+| `S$` | `Symbol($0)` |
+| `Sf$` | `Symbol.for($0)` |
+| `SkF$` | `Symbol.keyFor($0)` |
 | `n$` | `new ${1:Name}($0)` |
 | `nA$` | `new Array($0)` |
 | `nD$` | `new Date($0)` |
 | `nRE$` | `new RegExp($0)` |
+| `AiA$` | `Array.isArray($0)` |
+| `Oa$` | `Object.assign($0)` |
+| `Oc$` | `Object.create($0)` |
+| `Oe$` | `Object.entries($0)` |
+| `Ok$` | `Object.keys($0)` |
+| `Ov$` | `Object.values($0)` |
 | `nP$_` | `new Promise((resolve, reject) => {  $0  });` |
 | `nPf_` | `new Promise(function (resolve, reject) {  $0  });` |
 | `Pa$` | `Promise.all($0)` |
@@ -197,14 +207,14 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `efn_` | `export function ${1:name} ($2) :number {  $0  }` |
 | `efa_` | `export function ${1:name} ($2) :string {  $0  }` |
 | `efv_` | `export function ${1:name} ($2) :void {  $0  }` |
-| `afb_` | `async function ${1:name} ($2) :boolean {  $0  }` |
-| `afn_` | `async function ${1:name} ($2) :number {  $0  }` |
-| `afa_` | `async function ${1:name} ($2) :string {  $0  }` |
-| `afv_` | `async function ${1:name} ($2) :void {  $0  }` |
-| `eafb_` | `export async function ${1:name} ($2) :boolean {  $0  }` |
-| `eafn_` | `export async function ${1:name} ($2) :number {  $0  }` |
-| `eafa_` | `export async function ${1:name} ($2) :string {  $0  }` |
-| `eafv_` | `export async function ${1:name} ($2) :void {  $0  }` |
+| `afb_` | `async function ${1:name} ($2) :Promise<boolean> {  $0  }` |
+| `afn_` | `async function ${1:name} ($2) :Promise<number> {  $0  }` |
+| `afa_` | `async function ${1:name} ($2) :Promise<string> {  $0  }` |
+| `afv_` | `async function ${1:name} ($2) :Promise<void> {  $0  }` |
+| `eafb_` | `export async function ${1:name} ($2) :Promise<boolean> {  $0  }` |
+| `eafn_` | `export async function ${1:name} ($2) :Promise<number> {  $0  }` |
+| `eafa_` | `export async function ${1:name} ($2) :Promise<string> {  $0  }` |
+| `eafv_` | `export async function ${1:name} ($2) :Promise<void> {  $0  }` |
 | `pc_` | `public constructor ($1) {  $0  }` |
 | `_c_` | `private constructor ($1) {  $0  }` |
 | `p1` | `public ${1:name} = ${0:null};` |
@@ -237,20 +247,20 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `ps_` | `public ${1:name} ($2) :string {  $0  }` |
 | `pv_` | `public ${1:name} ($2) :void {  $0  }` |
 | `pa_` | `public async ${1:name} ($2) {  $0  }` |
-| `pab_` | `public async ${1:name} ($2) :boolean {  $0  }` |
-| `pan_` | `public async ${1:name} ($2) :number {  $0  }` |
-| `pas_` | `public async ${1:name} ($2) :string {  $0  }` |
-| `pav_` | `public async ${1:name} ($2) :void {  $0  }` |
+| `pab_` | `public async ${1:name} ($2) :Promise<boolean> {  $0  }` |
+| `pan_` | `public async ${1:name} ($2) :Promise<number> {  $0  }` |
+| `pas_` | `public async ${1:name} ($2) :Promise<string> {  $0  }` |
+| `pav_` | `public async ${1:name} ($2) :Promise<void> {  $0  }` |
 | `__` | `private ${1:name} ($2) {  $0  }` |
 | `_b_` | `private ${1:name} ($2) :boolean {  $0  }` |
 | `_n_` | `private ${1:name} ($2) :number {  $0  }` |
 | `_s_` | `private ${1:name} ($2) :string {  $0  }` |
 | `_v_` | `private ${1:name} ($2) :void {  $0  }` |
 | `_a_` | `private async ${1:name} ($2) {  $0  }` |
-| `_ab_` | `private async ${1:name} ($2) :boolean {  $0  }` |
-| `_an_` | `private async ${1:name} ($2) :number {  $0  }` |
-| `_as_` | `private async ${1:name} ($2) :string {  $0  }` |
-| `_av_` | `private async ${1:name} ($2) :void {  $0  }` |
+| `_ab_` | `private async ${1:name} ($2) :Promise<boolean> {  $0  }` |
+| `_an_` | `private async ${1:name} ($2) :Promise<number> {  $0  }` |
+| `_as_` | `private async ${1:name} ($2) :Promise<string> {  $0  }` |
+| `_av_` | `private async ${1:name} ($2) :Promise<void> {  $0  }` |
 | `pg_s_` | `private _${1:name} = ${0:null};  public get ${1:name} () {  return this._${1:name};  }  public set ${1:name} (value) {  this._${1:name} = value;  }` |
 | `pbg_s_` | `private _${1:name}:boolean = ${0:false};  public get ${1:name} () :boolean {  return this._${1:name};  }  public set ${1:name} (value:boolean) {  this._${1:name} = value;  }` |
 | `png_s_` | `private _${1:name}:number = ${0:0};  public get ${1:name} () :number {  return this._${1:name};  }  public set ${1:name} (value:number) {  this._${1:name} = value;  }` |
@@ -281,22 +291,26 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `pss_` | `public static ${1:name} ($2) :string {  $0  }` |
 | `psv_` | `public static ${1:name} ($2) :void {  $0  }` |
 | `psa_` | `public static async ${1:name} ($2) {  $0  }` |
-| `psab_` | `public static async ${1:name} ($2) :boolean {  $0  }` |
-| `psan_` | `public static async ${1:name} ($2) :number {  $0  }` |
-| `psas_` | `public static async ${1:name} ($2) :string {  $0  }` |
-| `psav_` | `public static async ${1:name} ($2) :void {  $0  }` |
+| `psab_` | `public static async ${1:name} ($2) :Promise<boolean> {  $0  }` |
+| `psan_` | `public static async ${1:name} ($2) :Promise<number> {  $0  }` |
+| `psas_` | `public static async ${1:name} ($2) :Promise<string> {  $0  }` |
+| `psav_` | `public static async ${1:name} ($2) :Promise<void> {  $0  }` |
 | `_s_` | `private static ${1:name} ($2) {  $0  }` |
 | `_sb_` | `private static ${1:name} ($2) :boolean {  $0  }` |
 | `_sn_` | `private static ${1:name} ($2) :number {  $0  }` |
 | `_ss_` | `private static ${1:name} ($2) :string {  $0  }` |
 | `_sv_` | `private static ${1:name} ($2) :void {  $0  }` |
 | `_sa_` | `private static async ${1:name} ($2) {  $0  }` |
-| `_sab_` | `private static async ${1:name} ($2) :boolean {  $0  }` |
-| `_san_` | `private static async ${1:name} ($2) :number {  $0  }` |
-| `_sas_` | `private static async ${1:name} ($2) :string {  $0  }` |
-| `_sav_` | `private static async ${1:name} ($2) :void {  $0  }` |
+| `_sab_` | `private static async ${1:name} ($2) :Promise<boolean> {  $0  }` |
+| `_san_` | `private static async ${1:name} ($2) :Promise<number> {  $0  }` |
+| `_sas_` | `private static async ${1:name} ($2) :Promise<string> {  $0  }` |
+| `_sav_` | `private static async ${1:name} ($2) :Promise<void> {  $0  }` |
 | `pvOb_` | `public valueOf () :boolean {  $0  }` |
 | `pvOn_` | `public valueOf () :number {  $0  }` |
 | `pvOs_` | `public valueOf () :string {  $0  }` |
 | `ptJ_` | `public toJSON () :string {  $0  }` |
-| `ptS_` | `public toString () :string {  return '[object ${0:name}]';  }` |
+| `ptJb_` | `public toJSON () :boolean {  $0  }` |
+| `ptJn_` | `public toJSON () :number {  $0  }` |
+| `ptJs_` | `public toJSON () :string {  $0  }` |
+| `ptS_` | `public toString () {  return '[object ${0:name}]';  }` |
+| `ptSs_` | `public toString () :string {  return '[object ${0:name}]';  }` |
