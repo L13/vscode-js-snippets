@@ -4,7 +4,7 @@ All notable changes to the "JavaScript and TypeScript Snippets" extension will b
 ## [0.19.0] - 2021-03-28
 
 ### Added
-- Added to JSON `"${1:key}": ${0:false}`, `"${1:key}": ${0:0}`, `"${1:key}": "$0"` and `"${1:key}": [", "\t$0", "]`.
+- Added to JSON `"key": false`, `"key": 0`, `"key": ""` and `"key": [ ... ]`.
 
 ### Changed
 - Changed `return ` to `return;`.

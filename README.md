@@ -4,7 +4,7 @@ This extension contains keyword snippets and micro patterns for JavaScript, Type
 
 ## What's new in JavaScript and TypeScript Snippets 0.19.0
 
-- Added to JSON `"${1:key}": ${0:false}`, `"${1:key}": ${0:0}`, `"${1:key}": "$0"` and `"${1:key}": [", "\t$0", "]`.
+- Added to JSON `"key": false`, `"key": 0`, `"key": ""` and `"key": [ ... ]`.
 - Changed `return ` to `return;`.
 - Removed `;` from `new Promise( ... )`.
 
