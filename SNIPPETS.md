@@ -33,6 +33,7 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `u` | `undefined` |
 | `v` | `void ` |
 | `y` | `yield` |
+| `t1` | `this.` |
 | `i1` | `if (${1:condition}) $0;` |
 | `i_` | `if (${0:condition}) {  }` |
 | `ir1` | `if (${0:condition}) return;` |

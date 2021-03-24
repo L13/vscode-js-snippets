@@ -5,6 +5,7 @@ All notable changes to the "JavaScript and TypeScript Snippets" extension will b
 
 ### Added
 - Added to JSON `"key": false`, `"key": 0`, `"key": ""` and `"key": [ ... ]`.
+- Added `this.`.
 
 ### Changed
 - Changed `return ` to `return;`.
