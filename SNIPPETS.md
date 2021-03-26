@@ -31,7 +31,6 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `r` | `return$0;` |
 | `s` | `super.` |
 | `t` | `true` |
-| `t` | `this.` |
 | `u` | `undefined` |
 | `v` | `void ` |
 | `y` | `yield` |
@@ -111,8 +110,6 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `ef_` | `export function ${1:name} ($2) {  $0  }` |
 | `eaf_` | `export async function ${1:name} ($2) {  $0  }` |
 | `edf_` | `export default function ($1) {  $0  }` |
-| `c_` | `class ${1:name} {  $0  }` |
-| `ce_` | `class ${1:name} extends ${2:parent} {  $0  }` |
 | `ec_` | `export class ${1:name} {  $0  }` |
 | `ece_` | `export class ${1:name} extends ${2:parent} {  $0  }` |
 | `edc_` | `export default class {  $0  }` |

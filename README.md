@@ -5,9 +5,10 @@ This extension contains keyword snippets and micro patterns for JavaScript, Type
 ## What's new in JavaScript and TypeScript Snippets 0.19.0
 
 - Added to JSON `"key": false`, `"key": 0`, `"key": ""` and `"key": [ ... ]`.
-- Added `this.`.
+- Added `super.`.
 - Changed `return ` to `return;`.
 - Removed `;` from `new Promise( ... )`.
+- Removed `class NAME { ... }` and `class NAME extends PARENT { ... }`.
 
 ## Index
 
