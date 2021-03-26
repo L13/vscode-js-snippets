@@ -28,12 +28,13 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `f` | `false` |
 | `i` | `${1:identifier} instanceof ${0:constructor}` |
 | `n` | `null` |
-| `t` | `true` |
 | `r` | `return$0;` |
+| `s` | `super.` |
+| `t` | `true` |
+| `t` | `this.` |
 | `u` | `undefined` |
 | `v` | `void ` |
 | `y` | `yield` |
-| `t1` | `this.` |
 | `i1` | `if (${1:condition}) $0;` |
 | `i_` | `if (${0:condition}) {  }` |
 | `ir1` | `if (${0:condition}) return;` |
