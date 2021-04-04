@@ -1,6 +1,19 @@
 # Change Log
 All notable changes to the "JavaScript and TypeScript Snippets" extension will be documented in this file.
 
+## [0.19.0] - 2021-04-04
+
+### Added
+- Added to JSON `"key": false`, `"key": 0`, `"key": ""` and `"key": [ ... ]`.
+- Added `super.`.
+
+### Changed
+- Changed `return ` to `return;`.
+- Removed `;` from `new Promise( ... )`.
+
+### Removed
+- Removed `class NAME { ... }` and `class NAME extends PARENT { ... }`.
+
 ## [0.18.0] - 2020-08-02
 
 ### Added
