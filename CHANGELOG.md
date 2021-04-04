@@ -1,7 +1,7 @@
 # Change Log
 All notable changes to the "JavaScript and TypeScript Snippets" extension will be documented in this file.
 
-## [0.19.0] - 2021-03-28
+## [0.19.0] - 2021-04-04
 
 ### Added
 - Added to JSON `"key": false`, `"key": 0`, `"key": ""` and `"key": [ ... ]`.
