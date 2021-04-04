@@ -1,7 +1,7 @@
 {
-	"type NAME = VALUE;":						{ "prefix": "t1",	"body": ["type ${1:name} = ${0:value};"], "description": "" },
+	"type NAME = null;":						{ "prefix": "t1",	"body": ["type ${1:name} = ${0:null};"], "description": "" },
 	"type NAME = {};":							{ "prefix": "t_",	"body": ["type ${1:name} = {", "\t$0", "};"], "description": "" },
-	"export type NAME = VALUE;":				{ "prefix": "et1",	"body": ["export type ${1:name} = ${0:value};"], "description": "" },
+	"export type NAME = null;":					{ "prefix": "et1",	"body": ["export type ${1:name} = ${0:null};"], "description": "" },
 	"export type NAME = {};":					{ "prefix": "et_",	"body": ["export type ${1:name} = {", "\t$0", "};"], "description": "" },
 	
 	"interface NAME":							{ "prefix": "i_",	"body": ["interface ${1:name} {", "\t", "\t$0", "\t", "}"], "description": "" },

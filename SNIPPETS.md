@@ -11,6 +11,10 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `t` | `true` |
 | `_` | `{ $0 }` |
 | `_1` | `"${1:key}": ${0:null}` |
+| `_b1` | `"${1:key}": ${0:false}` |
+| `_n1` | `"${1:key}": ${0:0}` |
+| `_s1` | `"${1:key}": "$0"` |
+| `_$` | `"${1:key}": [ $0 ]` |
 | `__` | `"${1:key}": { $0 }` |
 
 ### JavaScript
@@ -24,8 +28,9 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `f` | `false` |
 | `i` | `${1:identifier} instanceof ${0:constructor}` |
 | `n` | `null` |
+| `r` | `return$0;` |
+| `s` | `super.` |
 | `t` | `true` |
-| `r` | `return ` |
 | `u` | `undefined` |
 | `v` | `void ` |
 | `y` | `yield` |
@@ -105,8 +110,6 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `ef_` | `export function ${1:name} ($2) {  $0  }` |
 | `eaf_` | `export async function ${1:name} ($2) {  $0  }` |
 | `edf_` | `export default function ($1) {  $0  }` |
-| `c_` | `class ${1:name} {  $0  }` |
-| `ce_` | `class ${1:name} extends ${2:parent} {  $0  }` |
 | `ec_` | `export class ${1:name} {  $0  }` |
 | `ece_` | `export class ${1:name} extends ${2:parent} {  $0  }` |
 | `edc_` | `export default class {  $0  }` |
@@ -164,8 +167,8 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `Oe$` | `Object.entries($0)` |
 | `Ok$` | `Object.keys($0)` |
 | `Ov$` | `Object.values($0)` |
-| `nP$_` | `new Promise((resolve, reject) => {  $0  });` |
-| `nPf_` | `new Promise(function (resolve, reject) {  $0  });` |
+| `nP$_` | `new Promise((resolve, reject) => {  $0  })` |
+| `nPf_` | `new Promise(function (resolve, reject) {  $0  })` |
 | `Pa$` | `Promise.all($0)` |
 | `Pr$` | `Promise.resolve($0)` |
 | `Pr$` | `Promise.reject($0)` |
@@ -174,9 +177,9 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 
 | Prefix | Snippet |
 | ------:| ------- |
-| `t1` | `type ${1:name} = ${0:value};` |
+| `t1` | `type ${1:name} = ${0:null};` |
 | `t_` | `type ${1:name} = { $0 };` |
-| `et1` | `export type ${1:name} = ${0:value};` |
+| `et1` | `export type ${1:name} = ${0:null};` |
 | `et_` | `export type ${1:name} = { $0 };` |
 | `i_` | `interface ${1:name} {  $0  }` |
 | `ie_` | `interface ${1:name} extends ${2:name} {  $0  }` |
