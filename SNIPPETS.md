@@ -42,9 +42,12 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `ei1` | `else if ($1) §0;` |
 | `ei_` | `else if ($0) {  }` |
 | `s_cb` | `switch (${1:value}) { case $0:  break; }` |
+| `s_c_b` | `switch (${1:value}) { case $0: {  break; } }` |
 | `s_cbd` | `switch (${1:value}) { case $0:  break; default:  }` |
+| `s_c_bd` | `switch (${1:value}) { case $0: {  break; } default:  }` |
 | `s_d` | `switch (${0:value}) {  default:  }` |
 | `cb` | `case $0:  break;` |
+| `c_b` | `case $0: {  break; }` |
 | `d_w` | `do {  } while (${0:condition});` |
 | `fl1` | `for (let i = 0; ${1:condition}; i++) $0;` |
 | `fl_` | `for (let i = 0; ${0:condition}; i++) {  }` |
@@ -179,6 +182,7 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | ------:| ------- |
 | `t1` | `type ${1:name} = ${0:null};` |
 | `t_` | `type ${1:name} = { $0 };` |
+| `it_f1` | `import type { ${0:name} } from '${1:path}';` |
 | `et1` | `export type ${1:name} = ${0:null};` |
 | `et_` | `export type ${1:name} = { $0 };` |
 | `i_` | `interface ${1:name} {  $0  }` |

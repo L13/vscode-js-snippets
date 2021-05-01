@@ -22,9 +22,12 @@
 	"else if () {}":							{ "prefix": "ei_",	"body": ["else if ($0) {", "\t", "}"], "description": "" },
 	
 	"switch () { case: break; }":				{ "prefix": "s_cb",	"body": ["switch (${1:value}) {", "\tcase $0:", "\t\t", "\t\tbreak;", "}"], "description": "" },
+	"switch () { case: { break; } }":			{ "prefix": "s_c_b",	"body": ["switch (${1:value}) {", "\tcase $0: {", "\t\t", "\t\tbreak;", "\t}", "}"], "description": "" },
 	"switch () { case: break; default }":		{ "prefix": "s_cbd",	"body": ["switch (${1:value}) {", "\tcase $0:", "\t\t", "\t\tbreak;", "\tdefault:", "\t\t", "}"], "description": "" },
+	"switch () { case: { break; } default }":	{ "prefix": "s_c_bd",	"body": ["switch (${1:value}) {", "\tcase $0: {", "\t\t", "\t\tbreak;", "\t}", "\tdefault:", "\t\t", "}"], "description": "" },
 	"switch () { default }":					{ "prefix": "s_d",	"body": ["switch (${0:value}) {", "\t", "\tdefault:", "\t\t", "}"], "description": "" },
 	"case: break;":								{ "prefix": "cb",	"body": ["case $0:", "\t", "\tbreak;"], "description": "" },
+	"case: { break; }":							{ "prefix": "c_b",	"body": ["case $0: {", "\t", "\tbreak;", "}"], "description": "" },
 	
 	"do {} while ();":							{ "prefix": "d_w",	"body": ["do {", "\t", "} while (${0:condition});"], "description": "" },
 	
