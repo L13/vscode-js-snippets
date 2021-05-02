@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to the "JavaScript and TypeScript Snippets" extension will be documented in this file.
 
+## [0.20.0] - 2021-05-02
+
+### Added
+- Added brace scope for cases `case '': { ... break; }`.
+- Added type import `import type { ... } from '...'`.
+
 ## [0.19.0] - 2021-04-04
 
 ### Added

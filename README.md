@@ -2,13 +2,10 @@
 
 This extension contains keyword snippets and micro patterns for JavaScript, TypeScript and JSON.
 
-## What's new in JavaScript and TypeScript Snippets 0.19.0
+## What's new in JavaScript and TypeScript Snippets 0.20.0
 
-- Added to JSON `"key": false`, `"key": 0`, `"key": ""` and `"key": [ ... ]`.
-- Added `super.`.
-- Changed `return ` to `return;`.
-- Removed `;` from `new Promise( ... )`.
-- Removed `class NAME { ... }` and `class NAME extends PARENT { ... }`.
+- Added brace scope for cases `case '': { ... break; }`.
+- Added type import `import type { ... } from '...'`.
 
 ## Index
 
