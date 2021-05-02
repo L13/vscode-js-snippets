@@ -1,11 +1,15 @@
 {
 	"type NAME = null;":						{ "prefix": "t1",	"body": ["type ${1:name} = ${0:null};"], "description": "" },
 	"type NAME = {};":							{ "prefix": "t_",	"body": ["type ${1:name} = {", "\t$0", "};"], "description": "" },
+		
+	"import type {} from ''":					{ "prefix": "it_f1",	"body": ["import type { ${0:name} } from '${1:path}';"], "description": "" },
+		
 	"export type NAME = null;":					{ "prefix": "et1",	"body": ["export type ${1:name} = ${0:null};"], "description": "" },
 	"export type NAME = {};":					{ "prefix": "et_",	"body": ["export type ${1:name} = {", "\t$0", "};"], "description": "" },
 	
 	"interface NAME":							{ "prefix": "i_",	"body": ["interface ${1:name} {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"interface NAME extends NAME":				{ "prefix": "ie_",	"body": ["interface ${1:name} extends ${2:name} {", "\t", "\t$0", "\t", "}"], "description": "" },
+		
 	"export interface NAME":					{ "prefix": "ei_",	"body": ["export interface ${1:name} {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"export interface NAME extends NAME":		{ "prefix": "eie_",	"body": ["export interface ${1:name} extends ${2:name} {", "\t", "\t$0", "\t", "}"], "description": "" },
 	
