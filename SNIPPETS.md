@@ -94,11 +94,11 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `ts` | `typeof $0 !== 'string'` |
 | `ts` | `typeof $0 !== 'symbol'` |
 | `tu` | `typeof $0 !== 'undefined'` |
-| `f_` | `function ${1:name} ($2) {  $0  }` |
-| `af_` | `async function ${1:name} ($2) {  $0  }` |
+| `f_` | `function ${1:name} ($2) { $0 }` |
+| `af_` | `async function ${1:name} ($2) { $0 }` |
 | `$1` | `($1) => $0` |
-| `$_` | `($1) => {  $0  }` |
-| `a$_` | `async ($1) => {  $0  }` |
+| `$_` | `($1) => { $0 }` |
+| `a$_` | `async ($1) => { $0 }` |
 | `m_` | `module ${1:name} {  $0  }` |
 | `i_f1` | `import { ${0:name} } from '${1:path}';` |
 | `iaf1` | `import * as ${0:name} from '${1:path}';` |
@@ -110,26 +110,26 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `ec1` | `export const ${1:name} = ${0:null};` |
 | `el1` | `export let ${1:name} = ${0:null};` |
 | `ev1` | `export var ${1:name} = ${0:null};` |
-| `ef_` | `export function ${1:name} ($2) {  $0  }` |
-| `eaf_` | `export async function ${1:name} ($2) {  $0  }` |
-| `edf_` | `export default function ($1) {  $0  }` |
+| `ef_` | `export function ${1:name} ($2) { $0 }` |
+| `eaf_` | `export async function ${1:name} ($2) { $0 }` |
+| `edf_` | `export default function ($1) { $0 }` |
 | `ec_` | `export class ${1:name} {  $0  }` |
 | `ece_` | `export class ${1:name} extends ${2:parent} {  $0  }` |
 | `edc_` | `export default class {  $0  }` |
 | `edce_` | `export default class extends ${1:parent} {  $0  }` |
-| `c_` | `constructor ($1) {  $0  }` |
+| `c_` | `constructor ($1) { $0 }` |
 | `s$` | `super($0);` |
-| `g_` | `get ${1:name} () {  $0  }` |
-| `s_` | `set ${1:name} (value) {  $0  }` |
-| `g_s_` | `get ${1:name} () {  $0  }  set ${1:name} (value) {    }` |
-| `_` | `${1:name} ($2) {  $0  }` |
-| `s_` | `static ${1:name} ($2) {  $0  }` |
-| `a_` | `async ${1:name} ($2) {  $0  }` |
-| `sa_` | `static async ${1:name} ($2) {  $0  }` |
+| `g_` | `get ${1:name} () { $0 }` |
+| `s_` | `set ${1:name} (value) { $0 }` |
+| `g_s_` | `get ${1:name} () { $0 }  set ${1:name} (value) {  }` |
+| `_` | `${1:name} ($2) { $0 }` |
+| `s_` | `static ${1:name} ($2) { $0 }` |
+| `a_` | `async ${1:name} ($2) { $0 }` |
+| `sa_` | `static async ${1:name} ($2) { $0 }` |
 | `r_` | `return { $0 };` |
-| `vO_` | `valueOf () {  $0  }` |
-| `tS_` | `toString () {  return '[object ${0:name}]';  }` |
-| `tJ_` | `toJSON () {  $0  }` |
+| `vO_` | `valueOf () { $0 }` |
+| `tS_` | `toString () { return '[object ${0:name}]'; }` |
+| `tJ_` | `toJSON () { $0 }` |
 | `tnE$` | `throw new Error(${0:message})` |
 | `tnEE$` | `throw new EvalError(${0:message})` |
 | `tnRE$` | `throw new RangeError(${0:message})` |
@@ -170,8 +170,8 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `Oe$` | `Object.entries($0)` |
 | `Ok$` | `Object.keys($0)` |
 | `Ov$` | `Object.values($0)` |
-| `nP$_` | `new Promise((resolve, reject) => {  $0  })` |
-| `nPf_` | `new Promise(function (resolve, reject) {  $0  })` |
+| `nP$_` | `new Promise((resolve, reject) => { $0 })` |
+| `nPf_` | `new Promise(function (resolve, reject) { $0 })` |
 | `Pa$` | `Promise.all($0)` |
 | `Pr$` | `Promise.resolve($0)` |
 | `Pr$` | `Promise.reject($0)` |
@@ -206,24 +206,24 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `e_` | `enum ${1:name} { $0 };` |
 | `ce1` | `const enum ${1:name} { $0 };` |
 | `ce_` | `const enum ${1:name} { $0 };` |
-| `fb_` | `function ${1:name} ($2) :boolean {  $0  }` |
-| `fn_` | `function ${1:name} ($2) :number {  $0  }` |
-| `fa_` | `function ${1:name} ($2) :string {  $0  }` |
-| `fv_` | `function ${1:name} ($2) :void {  $0  }` |
-| `efb_` | `export function ${1:name} ($2) :boolean {  $0  }` |
-| `efn_` | `export function ${1:name} ($2) :number {  $0  }` |
-| `efa_` | `export function ${1:name} ($2) :string {  $0  }` |
-| `efv_` | `export function ${1:name} ($2) :void {  $0  }` |
-| `afb_` | `async function ${1:name} ($2) :Promise<boolean> {  $0  }` |
-| `afn_` | `async function ${1:name} ($2) :Promise<number> {  $0  }` |
-| `afa_` | `async function ${1:name} ($2) :Promise<string> {  $0  }` |
-| `afv_` | `async function ${1:name} ($2) :Promise<void> {  $0  }` |
-| `eafb_` | `export async function ${1:name} ($2) :Promise<boolean> {  $0  }` |
-| `eafn_` | `export async function ${1:name} ($2) :Promise<number> {  $0  }` |
-| `eafa_` | `export async function ${1:name} ($2) :Promise<string> {  $0  }` |
-| `eafv_` | `export async function ${1:name} ($2) :Promise<void> {  $0  }` |
-| `pc_` | `public constructor ($1) {  $0  }` |
-| `_c_` | `private constructor ($1) {  $0  }` |
+| `fb_` | `function ${1:name} ($2) :boolean { $0 }` |
+| `fn_` | `function ${1:name} ($2) :number { $0 }` |
+| `fa_` | `function ${1:name} ($2) :string { $0 }` |
+| `fv_` | `function ${1:name} ($2) :void { $0 }` |
+| `efb_` | `export function ${1:name} ($2) :boolean { $0 }` |
+| `efn_` | `export function ${1:name} ($2) :number { $0 }` |
+| `efa_` | `export function ${1:name} ($2) :string { $0 }` |
+| `efv_` | `export function ${1:name} ($2) :void { $0 }` |
+| `afb_` | `async function ${1:name} ($2) :Promise<boolean> { $0 }` |
+| `afn_` | `async function ${1:name} ($2) :Promise<number> { $0 }` |
+| `afa_` | `async function ${1:name} ($2) :Promise<string> { $0 }` |
+| `afv_` | `async function ${1:name} ($2) :Promise<void> { $0 }` |
+| `eafb_` | `export async function ${1:name} ($2) :Promise<boolean> { $0 }` |
+| `eafn_` | `export async function ${1:name} ($2) :Promise<number> { $0 }` |
+| `eafa_` | `export async function ${1:name} ($2) :Promise<string> { $0 }` |
+| `eafv_` | `export async function ${1:name} ($2) :Promise<void> { $0 }` |
+| `pc_` | `public constructor ($1) { $0 }` |
+| `_c_` | `private constructor ($1) { $0 }` |
 | `p1` | `public ${1:name} = ${0:null};` |
 | `pb1` | `public ${1:name}:boolean = ${0:false};` |
 | `pn1` | `public ${1:name}:number = ${0:0};` |
@@ -248,76 +248,76 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `_sb1` | `private static ${1:name}:boolean = ${0:false};` |
 | `_sn1` | `private static ${1:name}:number = ${0:0};` |
 | `_ss1` | `private static ${1:name}:string = '$0';` |
-| `p_` | `public ${1:name} ($2) {  $0  }` |
-| `pb_` | `public ${1:name} ($2) :boolean {  $0  }` |
-| `pn_` | `public ${1:name} ($2) :number {  $0  }` |
-| `ps_` | `public ${1:name} ($2) :string {  $0  }` |
-| `pv_` | `public ${1:name} ($2) :void {  $0  }` |
-| `pa_` | `public async ${1:name} ($2) {  $0  }` |
-| `pab_` | `public async ${1:name} ($2) :Promise<boolean> {  $0  }` |
-| `pan_` | `public async ${1:name} ($2) :Promise<number> {  $0  }` |
-| `pas_` | `public async ${1:name} ($2) :Promise<string> {  $0  }` |
-| `pav_` | `public async ${1:name} ($2) :Promise<void> {  $0  }` |
-| `__` | `private ${1:name} ($2) {  $0  }` |
-| `_b_` | `private ${1:name} ($2) :boolean {  $0  }` |
-| `_n_` | `private ${1:name} ($2) :number {  $0  }` |
-| `_s_` | `private ${1:name} ($2) :string {  $0  }` |
-| `_v_` | `private ${1:name} ($2) :void {  $0  }` |
-| `_a_` | `private async ${1:name} ($2) {  $0  }` |
-| `_ab_` | `private async ${1:name} ($2) :Promise<boolean> {  $0  }` |
-| `_an_` | `private async ${1:name} ($2) :Promise<number> {  $0  }` |
-| `_as_` | `private async ${1:name} ($2) :Promise<string> {  $0  }` |
-| `_av_` | `private async ${1:name} ($2) :Promise<void> {  $0  }` |
-| `pg_s_` | `private _${1:name} = ${0:null};  public get ${1:name} () {  return this._${1:name};  }  public set ${1:name} (value) {  this._${1:name} = value;  }` |
-| `pbg_s_` | `private _${1:name}:boolean = ${0:false};  public get ${1:name} () :boolean {  return this._${1:name};  }  public set ${1:name} (value:boolean) {  this._${1:name} = value;  }` |
-| `png_s_` | `private _${1:name}:number = ${0:0};  public get ${1:name} () :number {  return this._${1:name};  }  public set ${1:name} (value:number) {  this._${1:name} = value;  }` |
-| `psg_s_` | `private _${1:name}:string = '$0';  public get ${1:name} () :string {  return this._${1:name};  }  public set ${1:name} (value:string) {  this._${1:name} = value;  }` |
-| `pg_` | `public get ${1:name} () {  $0  }` |
-| `pgb_` | `public get ${1:name} () :boolean {  $0  }` |
-| `pgn_` | `public get ${1:name} () :number {  $0  }` |
-| `pgs_` | `public get ${1:name} () :string {  $0  }` |
-| `ps_` | `public set ${1:name} (value) {  $0  }` |
-| `psb_` | `public set ${1:name} (value:boolean) {  $0  }` |
-| `psn_` | `public set ${1:name} (value:number) {  $0  }` |
-| `pss_` | `public set ${1:name} (value:string) {  $0  }` |
-| `_g_s_` | `private _${1:name} = ${0:null};  private get ${1:name} () {  return this._${1:name};  }  private set ${1:name} (value) {  this._${1:name} = value;  }` |
-| `_bg_s_` | `private _${1:name} = ${0:false};  private get ${1:name} () :boolean {  return this._${1:name};  }  private set ${1:name} (value:boolean) {  this._${1:name} = value;  }` |
-| `_ng_s_` | `private _${1:name} = ${0:0};  private get ${1:name} () :number {  return this._${1:name};  }  private set ${1:name} (value:number) {  this._${1:name} = value;  }` |
-| `_sg_s_` | `private _${1:name} = '$0';  private get ${1:name} () :string {  return this._${1:name};  }  private set ${1:name} (value:string) {  this._${1:name} = value;  }` |
-| `_g_` | `private get ${1:name} () {  $0  }` |
-| `_gb_` | `private get ${1:name} () :boolean {  $0  }` |
-| `_gn_` | `private get ${1:name} () :number {  $0  }` |
-| `_gs_` | `private get ${1:name} () :string {  $0  }` |
-| `_s_` | `private set ${1:name} (value) {  $0  }` |
-| `_sb_` | `private set ${1:name} (value:boolean) {  $0  }` |
-| `_sn_` | `private set ${1:name} (value:number) {  $0  }` |
-| `_ss_` | `private set ${1:name} (value:string) {  $0  }` |
-| `ps_` | `public static ${1:name} ($2) {  $0  }` |
-| `psb_` | `public static ${1:name} ($2) :boolean {  $0  }` |
-| `psn_` | `public static ${1:name} ($2) :number {  $0  }` |
-| `pss_` | `public static ${1:name} ($2) :string {  $0  }` |
-| `psv_` | `public static ${1:name} ($2) :void {  $0  }` |
-| `psa_` | `public static async ${1:name} ($2) {  $0  }` |
-| `psab_` | `public static async ${1:name} ($2) :Promise<boolean> {  $0  }` |
-| `psan_` | `public static async ${1:name} ($2) :Promise<number> {  $0  }` |
-| `psas_` | `public static async ${1:name} ($2) :Promise<string> {  $0  }` |
-| `psav_` | `public static async ${1:name} ($2) :Promise<void> {  $0  }` |
-| `_s_` | `private static ${1:name} ($2) {  $0  }` |
-| `_sb_` | `private static ${1:name} ($2) :boolean {  $0  }` |
-| `_sn_` | `private static ${1:name} ($2) :number {  $0  }` |
-| `_ss_` | `private static ${1:name} ($2) :string {  $0  }` |
-| `_sv_` | `private static ${1:name} ($2) :void {  $0  }` |
-| `_sa_` | `private static async ${1:name} ($2) {  $0  }` |
-| `_sab_` | `private static async ${1:name} ($2) :Promise<boolean> {  $0  }` |
-| `_san_` | `private static async ${1:name} ($2) :Promise<number> {  $0  }` |
-| `_sas_` | `private static async ${1:name} ($2) :Promise<string> {  $0  }` |
-| `_sav_` | `private static async ${1:name} ($2) :Promise<void> {  $0  }` |
-| `pvOb_` | `public valueOf () :boolean {  $0  }` |
-| `pvOn_` | `public valueOf () :number {  $0  }` |
-| `pvOs_` | `public valueOf () :string {  $0  }` |
-| `ptJ_` | `public toJSON () :string {  $0  }` |
-| `ptJb_` | `public toJSON () :boolean {  $0  }` |
-| `ptJn_` | `public toJSON () :number {  $0  }` |
-| `ptJs_` | `public toJSON () :string {  $0  }` |
-| `ptS_` | `public toString () {  return '[object ${0:name}]';  }` |
-| `ptSs_` | `public toString () :string {  return '[object ${0:name}]';  }` |
+| `p_` | `public ${1:name} ($2) { $0 }` |
+| `pb_` | `public ${1:name} ($2) :boolean { $0 }` |
+| `pn_` | `public ${1:name} ($2) :number { $0 }` |
+| `ps_` | `public ${1:name} ($2) :string { $0 }` |
+| `pv_` | `public ${1:name} ($2) :void { $0 }` |
+| `pa_` | `public async ${1:name} ($2) { $0 }` |
+| `pab_` | `public async ${1:name} ($2) :Promise<boolean> { $0 }` |
+| `pan_` | `public async ${1:name} ($2) :Promise<number> { $0 }` |
+| `pas_` | `public async ${1:name} ($2) :Promise<string> { $0 }` |
+| `pav_` | `public async ${1:name} ($2) :Promise<void> { $0 }` |
+| `__` | `private ${1:name} ($2) { $0 }` |
+| `_b_` | `private ${1:name} ($2) :boolean { $0 }` |
+| `_n_` | `private ${1:name} ($2) :number { $0 }` |
+| `_s_` | `private ${1:name} ($2) :string { $0 }` |
+| `_v_` | `private ${1:name} ($2) :void { $0 }` |
+| `_a_` | `private async ${1:name} ($2) { $0 }` |
+| `_ab_` | `private async ${1:name} ($2) :Promise<boolean> { $0 }` |
+| `_an_` | `private async ${1:name} ($2) :Promise<number> { $0 }` |
+| `_as_` | `private async ${1:name} ($2) :Promise<string> { $0 }` |
+| `_av_` | `private async ${1:name} ($2) :Promise<void> { $0 }` |
+| `pg_s_` | `private _${1:name} = ${0:null};  public get ${1:name} () { return this._${1:name}; }  public set ${1:name} (value) { this._${1:name} = value; }` |
+| `pbg_s_` | `private _${1:name}:boolean = ${0:false};  public get ${1:name} () :boolean { return this._${1:name}; }  public set ${1:name} (value:boolean) { this._${1:name} = value; }` |
+| `png_s_` | `private _${1:name}:number = ${0:0};  public get ${1:name} () :number { return this._${1:name}; }  public set ${1:name} (value:number) { this._${1:name} = value; }` |
+| `psg_s_` | `private _${1:name}:string = '$0';  public get ${1:name} () :string { return this._${1:name}; }  public set ${1:name} (value:string) { this._${1:name} = value; }` |
+| `pg_` | `public get ${1:name} () { $0 }` |
+| `pgb_` | `public get ${1:name} () :boolean { $0 }` |
+| `pgn_` | `public get ${1:name} () :number { $0 }` |
+| `pgs_` | `public get ${1:name} () :string { $0 }` |
+| `ps_` | `public set ${1:name} (value) { $0 }` |
+| `psb_` | `public set ${1:name} (value:boolean) { $0 }` |
+| `psn_` | `public set ${1:name} (value:number) { $0 }` |
+| `pss_` | `public set ${1:name} (value:string) { $0 }` |
+| `_g_s_` | `private _${1:name} = ${0:null};  private get ${1:name} () { return this._${1:name}; }  private set ${1:name} (value) { this._${1:name} = value; }` |
+| `_bg_s_` | `private _${1:name} = ${0:false};  private get ${1:name} () :boolean { return this._${1:name}; }  private set ${1:name} (value:boolean) { this._${1:name} = value; }` |
+| `_ng_s_` | `private _${1:name} = ${0:0};  private get ${1:name} () :number { return this._${1:name}; }  private set ${1:name} (value:number) { this._${1:name} = value; }` |
+| `_sg_s_` | `private _${1:name} = '$0';  private get ${1:name} () :string { return this._${1:name}; }  private set ${1:name} (value:string) { this._${1:name} = value; }` |
+| `_g_` | `private get ${1:name} () { $0 }` |
+| `_gb_` | `private get ${1:name} () :boolean { $0 }` |
+| `_gn_` | `private get ${1:name} () :number { $0 }` |
+| `_gs_` | `private get ${1:name} () :string { $0 }` |
+| `_s_` | `private set ${1:name} (value) { $0 }` |
+| `_sb_` | `private set ${1:name} (value:boolean) { $0 }` |
+| `_sn_` | `private set ${1:name} (value:number) { $0 }` |
+| `_ss_` | `private set ${1:name} (value:string) { $0 }` |
+| `ps_` | `public static ${1:name} ($2) { $0 }` |
+| `psb_` | `public static ${1:name} ($2) :boolean { $0 }` |
+| `psn_` | `public static ${1:name} ($2) :number { $0 }` |
+| `pss_` | `public static ${1:name} ($2) :string { $0 }` |
+| `psv_` | `public static ${1:name} ($2) :void { $0 }` |
+| `psa_` | `public static async ${1:name} ($2) { $0 }` |
+| `psab_` | `public static async ${1:name} ($2) :Promise<boolean> { $0 }` |
+| `psan_` | `public static async ${1:name} ($2) :Promise<number> { $0 }` |
+| `psas_` | `public static async ${1:name} ($2) :Promise<string> { $0 }` |
+| `psav_` | `public static async ${1:name} ($2) :Promise<void> { $0 }` |
+| `_s_` | `private static ${1:name} ($2) { $0 }` |
+| `_sb_` | `private static ${1:name} ($2) :boolean { $0 }` |
+| `_sn_` | `private static ${1:name} ($2) :number { $0 }` |
+| `_ss_` | `private static ${1:name} ($2) :string { $0 }` |
+| `_sv_` | `private static ${1:name} ($2) :void { $0 }` |
+| `_sa_` | `private static async ${1:name} ($2) { $0 }` |
+| `_sab_` | `private static async ${1:name} ($2) :Promise<boolean> { $0 }` |
+| `_san_` | `private static async ${1:name} ($2) :Promise<number> { $0 }` |
+| `_sas_` | `private static async ${1:name} ($2) :Promise<string> { $0 }` |
+| `_sav_` | `private static async ${1:name} ($2) :Promise<void> { $0 }` |
+| `pvOb_` | `public valueOf () :boolean { $0 }` |
+| `pvOn_` | `public valueOf () :number { $0 }` |
+| `pvOs_` | `public valueOf () :string { $0 }` |
+| `ptJ_` | `public toJSON () :string { $0 }` |
+| `ptJb_` | `public toJSON () :boolean { $0 }` |
+| `ptJn_` | `public toJSON () :number { $0 }` |
+| `ptJs_` | `public toJSON () :string { $0 }` |
+| `ptS_` | `public toString () { return '[object ${0:name}]'; }` |
+| `ptSs_` | `public toString () :string { return '[object ${0:name}]'; }` |

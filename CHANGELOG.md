@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to the "JavaScript and TypeScript Snippets" extension will be documented in this file.
 
+## [0.21.0] - 2021-02-13
+
+### Added
+- Changed 3 line pattern in functions to 1 line.
+
 ## [0.20.0] - 2021-05-02
 
 ### Added

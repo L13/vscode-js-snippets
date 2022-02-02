@@ -2,10 +2,9 @@
 
 This extension contains keyword snippets and micro patterns for JavaScript, TypeScript and JSON.
 
-## What's new in JavaScript and TypeScript Snippets 0.20.0
+## What's new in JavaScript and TypeScript Snippets 0.21.0
 
-- Added brace scope for cases `case '': { ... break; }`.
-- Added type import `import type { ... } from '...'`.
+- Changed 3 line pattern in functions to 1 line.
 
 ## Index
 

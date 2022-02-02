@@ -2,7 +2,7 @@
 	"name": "l13-js-snippets",
 	"displayName": "JavaScript and TypeScript Snippets",
 	"description": "Keyword snippets and micro patterns for JavaScript and TypeScript",
-	"version": "0.20.0",
+	"version": "0.21.0",
 	"preview": true,
 	"publisher": "L13RARY",
 	"license": "SEE LICENCE IN LICENCE.md",
