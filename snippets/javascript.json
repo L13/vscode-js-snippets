@@ -76,6 +76,7 @@
 	"try {} catch () {} finally {}":			{ "prefix": "t_c_f_",	"body": ["try {", "\t$0", "} catch (error) {", "\t", "} finally {", "\t", "}"], "description": "" },
 	
 	"typeof value === 'boolean'":				{ "prefix": "tb",	"body": ["typeof $0 === 'boolean'"], "description": "" },
+	"typeof value === 'bigint'":				{ "prefix": "tb",	"body": ["typeof $0 === 'bigint'"], "description": "" },
 	"typeof value === 'function'":				{ "prefix": "tf",	"body": ["typeof $0 === 'function'"], "description": "" },
 	"typeof value === 'number'":				{ "prefix": "tn",	"body": ["typeof $0 === 'number'"], "description": "" },
 	"typeof value === 'object'":				{ "prefix": "to",	"body": ["typeof $0 === 'object'"], "description": "" },
@@ -84,6 +85,7 @@
 	"typeof value === 'undefined'":				{ "prefix": "tu",	"body": ["typeof $0 === 'undefined'"], "description": "" },
 	
 	"typeof value !== 'boolean'":				{ "prefix": "tb",	"body": ["typeof $0 !== 'boolean'"], "description": "" },
+	"typeof value !== 'bigint'":				{ "prefix": "tb",	"body": ["typeof $0 !== 'bigint'"], "description": "" },
 	"typeof value !== 'function'":				{ "prefix": "tf",	"body": ["typeof $0 !== 'function'"], "description": "" },
 	"typeof value !== 'number'":				{ "prefix": "tn",	"body": ["typeof $0 !== 'number'"], "description": "" },
 	"typeof value !== 'object'":				{ "prefix": "to",	"body": ["typeof $0 !== 'object'"], "description": "" },
