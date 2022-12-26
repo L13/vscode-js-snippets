@@ -1,4 +1,7 @@
 {
+	"as const":									{ "prefix": "ac",	"body": ["as const"], "description": "" },
+	"asserts NAME is TYPE":						{ "prefix": "ai",	"body": ["asserts ${1:name} is ${0:type}"], "description": "" },
+	
 	"type NAME = null;":						{ "prefix": "t1",	"body": ["type ${1:name} = ${0:null};"], "description": "" },
 	"type NAME = {};":							{ "prefix": "t_",	"body": ["type ${1:name} = {", "\t$0", "};"], "description": "" },
 		
@@ -39,33 +42,8 @@
 	"enum NAME { ... }":						{ "prefix": "e_",	"body": ["enum ${1:name} {", "\t$0", "};"], "description": "" },
 	"const enum NAME {}":						{ "prefix": "ce1",	"body": ["const enum ${1:name} { $0 };"], "description": "" },
 	"const enum NAME { ... }":					{ "prefix": "ce_",	"body": ["const enum ${1:name} {", "\t$0", "};"], "description": "" },
-	
-	"function NAME (): boolean {}":				{ "prefix": "fb_",	"body": ["function ${1:name} ($2): boolean {", "\t$0", "}"], "description": "" },
-	"function NAME (): bigint {}":				{ "prefix": "fb_",	"body": ["function ${1:name} ($2): bigint {", "\t$0", "}"], "description": "" },
-	"function NAME (): number {}":				{ "prefix": "fn_",	"body": ["function ${1:name} ($2): number {", "\t$0", "}"], "description": "" },
-	"function NAME (): string {}":				{ "prefix": "fa_",	"body": ["function ${1:name} ($2): string {", "\t$0", "}"], "description": "" },
-	"function NAME (): void {}":				{ "prefix": "fv_",	"body": ["function ${1:name} ($2): void {", "\t$0", "}"], "description": "" },
-	
-	"export function NAME (): boolean {}":		{ "prefix": "efb_",	"body": ["export function ${1:name} ($2): boolean {", "\t$0", "}"], "description": "" },
-	"export function NAME (): bigint {}":		{ "prefix": "efb_",	"body": ["export function ${1:name} ($2): bigint {", "\t$0", "}"], "description": "" },
-	"export function NAME (): number {}":		{ "prefix": "efn_",	"body": ["export function ${1:name} ($2): number {", "\t$0", "}"], "description": "" },
-	"export function NAME (): string {}":		{ "prefix": "efa_",	"body": ["export function ${1:name} ($2): string {", "\t$0", "}"], "description": "" },
-	"export function NAME (): void {}":			{ "prefix": "efv_",	"body": ["export function ${1:name} ($2): void {", "\t$0", "}"], "description": "" },
-	
-	"async function NAME (): boolean {}":		{ "prefix": "afb_",	"body": ["async function ${1:name} ($2):Promise<boolean> {", "\t$0", "}"], "description": "" },
-	"async function NAME (): bigint {}":		{ "prefix": "afb_",	"body": ["async function ${1:name} ($2):Promise<bigint> {", "\t$0", "}"], "description": "" },
-	"async function NAME (): number {}":		{ "prefix": "afn_",	"body": ["async function ${1:name} ($2):Promise<number> {", "\t$0", "}"], "description": "" },
-	"async function NAME (): string {}":		{ "prefix": "afa_",	"body": ["async function ${1:name} ($2):Promise<string> {", "\t$0", "}"], "description": "" },
-	"async function NAME (): void {}":			{ "prefix": "afv_",	"body": ["async function ${1:name} ($2):Promise<void> {", "\t$0", "}"], "description": "" },
-	
-	"export async function NAME (): boolean {}":{ "prefix": "eafb_",	"body": ["export async function ${1:name} ($2):Promise<boolean> {", "\t$0", "}"], "description": "" },
-	"export async function NAME (): bigint {}":	{ "prefix": "eafb_",	"body": ["export async function ${1:name} ($2):Promise<bigint> {", "\t$0", "}"], "description": "" },
-	"export async function NAME (): number {}":	{ "prefix": "eafn_",	"body": ["export async function ${1:name} ($2):Promise<number> {", "\t$0", "}"], "description": "" },
-	"export async function NAME (): string {}":	{ "prefix": "eafa_",	"body": ["export async function ${1:name} ($2):Promise<string> {", "\t$0", "}"], "description": "" },
-	"export async function NAME (): void {}":	{ "prefix": "eafv_",	"body": ["export async function ${1:name} ($2):Promise<void> {", "\t$0", "}"], "description": "" },
-	
-	"public constructor () {}":					{ "prefix": "pc_",	"body": ["public constructor ($1) {", "\t$0", "}"], "description": "" },
-	"private constructor () {}":				{ "prefix": "_c_",	"body": ["private constructor ($1) {", "\t$0", "}"], "description": "" },
+	"export const enum NAME {}":				{ "prefix": "ece1",	"body": ["export const enum ${1:name} { $0 };"], "description": "" },
+	"export const enum NAME { ... }":			{ "prefix": "ece_",	"body": ["export const enum ${1:name} {", "\t$0", "};"], "description": "" },
 	
 	"public NAME = null;":						{ "prefix": "p1",	"body": ["public ${1:name} = ${0:null};"], "description": "" },
 	"public NAME: boolean = false;":			{ "prefix": "pb1",	"body": ["public ${1:name}: boolean = ${0:false};"], "description": "" },
@@ -101,111 +79,5 @@
 	"private static NAME: boolean = false;":	{ "prefix": "_sb1",	"body": ["private static ${1:name}: boolean = ${0:false};"], "description": "" },
 	"private static NAME: bigint = 0n;":		{ "prefix": "_sb1",	"body": ["private static ${1:name}: bigint = ${0:0n};"], "description": "" },
 	"private static NAME: number = 0;":			{ "prefix": "_sn1",	"body": ["private static ${1:name}: number = ${0:0};"], "description": "" },
-	"private static NAME: string = '';":		{ "prefix": "_ss1",	"body": ["private static ${1:name}: string = '$0';"], "description": "" },
-	
-	"public NAME () {}":						{ "prefix": "p_",	"body": ["public ${1:name} ($2) {", "\t$0", "}"], "description": "" },
-	"public NAME (): boolean {}":				{ "prefix": "pb_",	"body": ["public ${1:name} ($2): boolean {", "\t$0", "}"], "description": "" },
-	"public NAME (): bigint {}":				{ "prefix": "pb_",	"body": ["public ${1:name} ($2): bigint {", "\t$0", "}"], "description": "" },
-	"public NAME (): number {}":				{ "prefix": "pn_",	"body": ["public ${1:name} ($2): number {", "\t$0", "}"], "description": "" },
-	"public NAME (): string {}":				{ "prefix": "ps_",	"body": ["public ${1:name} ($2): string {", "\t$0", "}"], "description": "" },
-	"public NAME (): void {}":					{ "prefix": "pv_",	"body": ["public ${1:name} ($2): void {", "\t$0", "}"], "description": "" },
-	
-	"public async NAME () {}":					{ "prefix": "pa_",	"body": ["public async ${1:name} ($2) {", "\t$0", "}"], "description": "" },
-	"public async NAME (): boolean {}":			{ "prefix": "pab_",	"body": ["public async ${1:name} ($2):Promise<boolean> {", "\t$0", "}"], "description": "" },
-	"public async NAME (): bigint {}":			{ "prefix": "pab_",	"body": ["public async ${1:name} ($2):Promise<bigint> {", "\t$0", "}"], "description": "" },
-	"public async NAME (): number {}":			{ "prefix": "pan_",	"body": ["public async ${1:name} ($2):Promise<number> {", "\t$0", "}"], "description": "" },
-	"public async NAME (): string {}":			{ "prefix": "pas_",	"body": ["public async ${1:name} ($2):Promise<string> {", "\t$0", "}"], "description": "" },
-	"public async NAME (): void {}":			{ "prefix": "pav_",	"body": ["public async ${1:name} ($2):Promise<void> {", "\t$0", "}"], "description": "" },
-	
-	"private NAME () {}":						{ "prefix": "__",	"body": ["private ${1:name} ($2) {", "\t$0", "}"], "description": "" },
-	"private NAME (): boolean {}":				{ "prefix": "_b_",	"body": ["private ${1:name} ($2): boolean {", "\t$0", "}"], "description": "" },
-	"private NAME (): bigint {}":				{ "prefix": "_b_",	"body": ["private ${1:name} ($2): bigint {", "\t$0", "}"], "description": "" },
-	"private NAME (): number {}":				{ "prefix": "_n_",	"body": ["private ${1:name} ($2): number {", "\t$0", "}"], "description": "" },
-	"private NAME (): string {}":				{ "prefix": "_s_",	"body": ["private ${1:name} ($2): string {", "\t$0", "}"], "description": "" },
-	"private NAME (): void {}":					{ "prefix": "_v_",	"body": ["private ${1:name} ($2): void {", "\t$0", "}"], "description": "" },
-	
-	"private async NAME () {}":					{ "prefix": "_a_",	"body": ["private async ${1:name} ($2) {", "\t$0", "}"], "description": "" },
-	"private async NAME (): boolean {}":		{ "prefix": "_ab_",	"body": ["private async ${1:name} ($2):Promise<boolean> {", "\t$0", "}"], "description": "" },
-	"private async NAME (): bigint {}":			{ "prefix": "_ab_",	"body": ["private async ${1:name} ($2):Promise<bigint> {", "\t$0", "}"], "description": "" },
-	"private async NAME (): number {}":			{ "prefix": "_an_",	"body": ["private async ${1:name} ($2):Promise<number> {", "\t$0", "}"], "description": "" },
-	"private async NAME (): string {}":			{ "prefix": "_as_",	"body": ["private async ${1:name} ($2):Promise<string> {", "\t$0", "}"], "description": "" },
-	"private async NAME (): void {}":			{ "prefix": "_av_",	"body": ["private async ${1:name} ($2):Promise<void> {", "\t$0", "}"], "description": "" },
-	
-	"public get set NAME () {}":				{ "prefix": "pg_s_",	"body": ["private _${1:name} = ${0:null};", "", "public get ${1:name} () {", "\treturn this._${1:name};", "}", "", "public set ${1:name} (value) {", "\tthis._${1:name} = value;", "}"], "description": "" },
-	"public get set NAME (): boolean {}":		{ "prefix": "pbg_s_",	"body": ["private _${1:name}: boolean = ${0:false};", "", "public get ${1:name} (): boolean {", "\treturn this._${1:name};", "}", "", "public set ${1:name} (value: boolean) {", "\tthis._${1:name} = value;", "}"], "description": "" },
-	"public get set NAME (): bigint {}":		{ "prefix": "pbg_s_",	"body": ["private _${1:name}: bigint = ${0:0n};", "", "public get ${1:name} (): bigint {", "\treturn this._${1:name};", "}", "", "public set ${1:name} (value: bigint) {", "\tthis._${1:name} = value;", "}"], "description": "" },
-	"public get set NAME (): number {}":		{ "prefix": "png_s_",	"body": ["private _${1:name}: number = ${0:0};", "", "public get ${1:name} (): number {", "\treturn this._${1:name};", "}", "", "public set ${1:name} (value: number) {", "\tthis._${1:name} = value;", "}"], "description": "" },
-	"public get set NAME (): string {}":		{ "prefix": "psg_s_",	"body": ["private _${1:name}: string = '$0';", "", "public get ${1:name} (): string {", "\treturn this._${1:name};", "}", "", "public set ${1:name} (value: string) {", "\tthis._${1:name} = value;", "}"], "description": "" },
-		
-	"public get NAME () {}":					{ "prefix": "pg_",	"body": ["public get ${1:name} () {", "\t$0", "}"], "description": "" },
-	"public get NAME (): boolean {}":			{ "prefix": "pgb_",	"body": ["public get ${1:name} (): boolean {", "\t$0", "}"], "description": "" },
-	"public get NAME (): bigint {}":			{ "prefix": "pgb_",	"body": ["public get ${1:name} (): bigint {", "\t$0", "}"], "description": "" },
-	"public get NAME (): number {}":			{ "prefix": "pgn_",	"body": ["public get ${1:name} (): number {", "\t$0", "}"], "description": "" },
-	"public get NAME (): string {}":			{ "prefix": "pgs_",	"body": ["public get ${1:name} (): string {", "\t$0", "}"], "description": "" },
-	
-	"public set NAME (value) {}":				{ "prefix": "ps_",	"body": ["public set ${1:name} (value) {", "\t$0", "}"], "description": "" },
-	"public set NAME (value: boolean) {}":		{ "prefix": "psb_",	"body": ["public set ${1:name} (value: boolean) {", "\t$0", "}"], "description": "" },
-	"public set NAME (value: bigint) {}":		{ "prefix": "psb_",	"body": ["public set ${1:name} (value: bigint) {", "\t$0", "}"], "description": "" },
-	"public set NAME (value: number) {}":		{ "prefix": "psn_",	"body": ["public set ${1:name} (value: number) {", "\t$0", "}"], "description": "" },
-	"public set NAME (value: string) {}":		{ "prefix": "pss_",	"body": ["public set ${1:name} (value: string) {", "\t$0", "}"], "description": "" },
-	
-	"private get set NAME () {}":				{ "prefix": "_g_s_",	"body": ["private _${1:name} = ${0:null};", "", "private get ${1:name} () {", "\treturn this._${1:name};", "}", "", "private set ${1:name} (value) {", "\tthis._${1:name} = value;", "}"], "description": "" },
-	"private get set NAME (): boolean {}":		{ "prefix": "_bg_s_",	"body": ["private _${1:name} = ${0:false};", "", "private get ${1:name} (): boolean {", "\treturn this._${1:name};", "}", "", "private set ${1:name} (value: boolean) {", "\tthis._${1:name} = value;", "}"], "description": "" },
-	"private get set NAME (): bigint {}":		{ "prefix": "_bg_s_",	"body": ["private _${1:name} = ${0:false};", "", "private get ${1:name} (): bigint {", "\treturn this._${1:name};", "}", "", "private set ${1:name} (value: bigint) {", "\tthis._${1:name} = value;", "}"], "description": "" },
-	"private get set NAME (): number {}":		{ "prefix": "_ng_s_",	"body": ["private _${1:name} = ${0:0};", "", "private get ${1:name} (): number {", "\treturn this._${1:name};", "}", "", "private set ${1:name} (value: number) {", "\tthis._${1:name} = value;", "}"], "description": "" },
-	"private get set NAME (): string {}":		{ "prefix": "_sg_s_",	"body": ["private _${1:name} = '$0';", "", "private get ${1:name} (): string {", "\treturn this._${1:name};", "}", "", "private set ${1:name} (value: string) {", "\tthis._${1:name} = value;", "}"], "description": "" },
-	
-	"private get NAME () {}":					{ "prefix": "_g_",	"body": ["private get ${1:name} () {", "\t$0", "}"], "description": "" },
-	"private get NAME (): boolean {}":			{ "prefix": "_gb_",	"body": ["private get ${1:name} (): boolean {", "\t$0", "}"], "description": "" },
-	"private get NAME (): bigint {}":			{ "prefix": "_gb_",	"body": ["private get ${1:name} (): bigint {", "\t$0", "}"], "description": "" },
-	"private get NAME (): number {}":			{ "prefix": "_gn_",	"body": ["private get ${1:name} (): number {", "\t$0", "}"], "description": "" },
-	"private get NAME (): string {}":			{ "prefix": "_gs_",	"body": ["private get ${1:name} (): string {", "\t$0", "}"], "description": "" },
-	
-	"private set NAME (value) {}":				{ "prefix": "_s_",	"body": ["private set ${1:name} (value) {", "\t$0", "}"], "description": "" },
-	"private set NAME (value: boolean) {}":		{ "prefix": "_sb_",	"body": ["private set ${1:name} (value: boolean) {", "\t$0", "}"], "description": "" },
-	"private set NAME (value: bigint) {}":		{ "prefix": "_sb_",	"body": ["private set ${1:name} (value: bigint) {", "\t$0", "}"], "description": "" },
-	"private set NAME (value: number) {}":		{ "prefix": "_sn_",	"body": ["private set ${1:name} (value: number) {", "\t$0", "}"], "description": "" },
-	"private set NAME (value: string) {}":		{ "prefix": "_ss_",	"body": ["private set ${1:name} (value: string) {", "\t$0", "}"], "description": "" },
-	
-	"public static NAME () {}":					{ "prefix": "ps_",	"body": ["public static ${1:name} ($2) {", "\t$0", "}"], "description": "" },
-	"public static NAME (): boolean {}":		{ "prefix": "psb_",	"body": ["public static ${1:name} ($2): boolean {", "\t$0", "}"], "description": "" },
-	"public static NAME (): bigint {}":			{ "prefix": "psb_",	"body": ["public static ${1:name} ($2): bigint {", "\t$0", "}"], "description": "" },
-	"public static NAME (): number {}":			{ "prefix": "psn_",	"body": ["public static ${1:name} ($2): number {", "\t$0", "}"], "description": "" },
-	"public static NAME (): string {}":			{ "prefix": "pss_",	"body": ["public static ${1:name} ($2): string {", "\t$0", "}"], "description": "" },
-	"public static NAME (): void {}":			{ "prefix": "psv_",	"body": ["public static ${1:name} ($2): void {", "\t$0", "}"], "description": "" },
-	
-	"public static async NAME () {}":			{ "prefix": "psa_",	"body": ["public static async ${1:name} ($2) {", "\t$0", "}"], "description": "" },
-	"public static async NAME (): boolean {}":	{ "prefix": "psab_",	"body": ["public static async ${1:name} ($2):Promise<boolean> {", "\t$0", "}"], "description": "" },
-	"public static async NAME (): bigint {}":	{ "prefix": "psab_",	"body": ["public static async ${1:name} ($2):Promise<bigint> {", "\t$0", "}"], "description": "" },
-	"public static async NAME (): number {}":	{ "prefix": "psan_",	"body": ["public static async ${1:name} ($2):Promise<number> {", "\t$0", "}"], "description": "" },
-	"public static async NAME (): string {}":	{ "prefix": "psas_",	"body": ["public static async ${1:name} ($2):Promise<string> {", "\t$0", "}"], "description": "" },
-	"public static async NAME (): void {}":		{ "prefix": "psav_",	"body": ["public static async ${1:name} ($2):Promise<void> {", "\t$0", "}"], "description": "" },
-	
-	"private static NAME () {}":				{ "prefix": "_s_",	"body": ["private static ${1:name} ($2) {", "\t$0", "}"], "description": "" },
-	"private static NAME (): boolean {}":		{ "prefix": "_sb_",	"body": ["private static ${1:name} ($2): boolean {", "\t$0", "}"], "description": "" },
-	"private static NAME (): bigint {}":		{ "prefix": "_sb_",	"body": ["private static ${1:name} ($2): bigint {", "\t$0", "}"], "description": "" },
-	"private static NAME (): number {}":		{ "prefix": "_sn_",	"body": ["private static ${1:name} ($2): number {", "\t$0", "}"], "description": "" },
-	"private static NAME (): string {}":		{ "prefix": "_ss_",	"body": ["private static ${1:name} ($2): string {", "\t$0", "}"], "description": "" },
-	"private static NAME (): void {}":			{ "prefix": "_sv_",	"body": ["private static ${1:name} ($2): void {", "\t$0", "}"], "description": "" },
-	
-	"private static async NAME () {}":			{ "prefix": "_sa_",	"body": ["private static async ${1:name} ($2) {", "\t$0", "}"], "description": "" },
-	"private static async NAME (): boolean {}":	{ "prefix": "_sab_",	"body": ["private static async ${1:name} ($2):Promise<boolean> {", "\t$0", "}"], "description": "" },
-	"private static async NAME (): bigint {}":	{ "prefix": "_sab_",	"body": ["private static async ${1:name} ($2):Promise<bigint> {", "\t$0", "}"], "description": "" },
-	"private static async NAME (): number {}":	{ "prefix": "_san_",	"body": ["private static async ${1:name} ($2):Promise<number> {", "\t$0", "}"], "description": "" },
-	"private static async NAME (): string {}":	{ "prefix": "_sas_",	"body": ["private static async ${1:name} ($2):Promise<string> {", "\t$0", "}"], "description": "" },
-	"private static async NAME (): void {}":	{ "prefix": "_sav_",	"body": ["private static async ${1:name} ($2):Promise<void> {", "\t$0", "}"], "description": "" },
-	
-	"public valueOf (): boolean {}":			{ "prefix": "pvOb_",	"body": ["public valueOf (): boolean {", "\t$0", "}"], "description": "" },
-	"public valueOf (): bigint {}":				{ "prefix": "pvOb_",	"body": ["public valueOf (): bigint {", "\t$0", "}"], "description": "" },
-	"public valueOf (): number {}":				{ "prefix": "pvOn_",	"body": ["public valueOf (): number {", "\t$0", "}"], "description": "" },
-	"public valueOf (): string {}":				{ "prefix": "pvOs_",	"body": ["public valueOf (): string {", "\t$0", "}"], "description": "" },
-	
-	"public toJSON () {}":						{ "prefix": "ptJ_",	"body": ["public toJSON (): string {", "\t$0", "}"], "description": "" },
-	"public toJSON (): boolean {}":				{ "prefix": "ptJb_",	"body": ["public toJSON (): boolean {", "\t$0", "}"], "description": "" },
-	"public toJSON (): bigint {}":				{ "prefix": "ptJb_",	"body": ["public toJSON (): bigint {", "\t$0", "}"], "description": "" },
-	"public toJSON (): number {}":				{ "prefix": "ptJn_",	"body": ["public toJSON (): number {", "\t$0", "}"], "description": "" },
-	"public toJSON (): string {}":				{ "prefix": "ptJs_",	"body": ["public toJSON (): string {", "\t$0", "}"], "description": "" },
-	
-	"public toString () {}":					{ "prefix": "ptS_",	"body": ["public toString () {", "\treturn '[object ${0:name}]';", "}"], "description": "" },
-	"public toString (): string {}":			{ "prefix": "ptSs_",	"body": ["public toString (): string {", "\treturn '[object ${0:name}]';", "}"], "description": "" }
+	"private static NAME: string = '';":		{ "prefix": "_ss1",	"body": ["private static ${1:name}: string = '$0';"], "description": "" }
 }

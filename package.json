@@ -5,7 +5,7 @@
 	"version": "0.21.0",
 	"preview": true,
 	"publisher": "L13RARY",
-	"license": "SEE LICENCE IN LICENCE.md",
+	"license": "SEE LICENSE IN LICENSE.md",
 	"homepage": "https://github.com/l13/vscode-js-snippets/blob/master/README.md",
 	"repository": {
 		"type": "git",
@@ -68,6 +68,6 @@
 		]
 	},
 	"scripts": {
-		"build": "node ./src/index.js"
+		"docs": "node ./scripts/docs.js"
 	}
 }
