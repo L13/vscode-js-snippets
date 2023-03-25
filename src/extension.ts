@@ -9,7 +9,7 @@ import type { Snippet } from './types';
 
 //	Variables __________________________________________________________________
 
-let useFunctionBlockPadding = true;
+
 
 //	Initialize _________________________________________________________________
 
@@ -19,10 +19,10 @@ let useFunctionBlockPadding = true;
 
 export function activate (context: vscode.ExtensionContext) {
 	
-	useFunctionBlockPadding = get('useFunctionBlockPadding');
+	let useFunctionBlockPadding = get('useFunctionBlockPadding');
 	
-	let cacheJavaScriptSnippets = buildSnippets(javascriptFuncs);
-	let cacheTypeScriptSnippets = buildSnippets(typescriptFuncs);
+	let javascriptCompletionItems = buildCompletionItems(javascriptFuncs, useFunctionBlockPadding);
+	let typescriptCompletionItems = buildCompletionItems(typescriptFuncs, useFunctionBlockPadding);
 	
 	const javascriptProvider = vscode.languages.registerCompletionItemProvider([
 		'javascript',
@@ -33,7 +33,7 @@ export function activate (context: vscode.ExtensionContext) {
 		
 		provideCompletionItems () {
 			
-			return cacheJavaScriptSnippets;
+			return javascriptCompletionItems;
 			
 		},
 		
@@ -46,7 +46,7 @@ export function activate (context: vscode.ExtensionContext) {
 		
 		provideCompletionItems () {
 			
-			return cacheTypeScriptSnippets;
+			return typescriptCompletionItems;
 			
 		},
 		
@@ -58,8 +58,8 @@ export function activate (context: vscode.ExtensionContext) {
 		
 		if (event.affectsConfiguration('l13JSSnippets.useFunctionBlockPadding')) {
 			useFunctionBlockPadding = get('useFunctionBlockPadding');
-			cacheJavaScriptSnippets = buildSnippets(javascriptFuncs);
-			cacheTypeScriptSnippets = buildSnippets(typescriptFuncs);
+			javascriptCompletionItems = buildCompletionItems(javascriptFuncs, useFunctionBlockPadding);
+			typescriptCompletionItems = buildCompletionItems(typescriptFuncs, useFunctionBlockPadding);
 		}
 		
 	}));
@@ -80,19 +80,17 @@ function filterEmptyTab (body: string[]) {
 	
 }
 
-function buildSnippet (item: Snippet) {
+function buildCompletionItems (snippets: Record<string, Snippet>, useFunctionBlockPadding: boolean) {
 	
-	const body = useFunctionBlockPadding ? item.body : filterEmptyTab(item.body);
-	const snippet = new vscode.CompletionItem(item.prefix, vscode.CompletionItemKind.Snippet);
+	return Object.values(snippets).map((item) => {
 	
-	snippet.insertText = new vscode.SnippetString(body.join('\n'));
-	
-	return snippet;
-	
-}
-
-function buildSnippets (snippets: Record<string, Snippet>) {
-	
-	return Object.values(snippets).map(buildSnippet);
+		const body = useFunctionBlockPadding ? item.body : filterEmptyTab(item.body);
+		const completionItem = new vscode.CompletionItem(item.prefix, vscode.CompletionItemKind.Snippet);
+		
+		completionItem.insertText = new vscode.SnippetString(body.join('\n'));
+		
+		return completionItem;
+		
+	});
 	
 }
