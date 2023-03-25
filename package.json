@@ -31,6 +31,20 @@
 		"snippets",
 		"typescript"
 	],
+	"activationEvents": [
+		"onLanguage:javascript",
+		"onLanguage:javascriptreact",
+		"onLanguage:typescript",
+		"onLanguage:typescriptreact"
+	],
+	"extensionKind": [
+		"ui",
+		"workspace"
+	],
+	"capabilities": {
+		"virtualWorkspaces": true
+	},
+	"main": "./out/extension.js",
 	"contributes": {
 		"snippets": [
 			{
@@ -65,9 +79,39 @@
 				"language": "typescriptreact",
 				"path": "./snippets/typescript.json"
 			}
-		]
+		],
+		"configuration": {
+			"type": "object",
+			"title": "JS Snippets",
+			"properties": {
+				"l13JSSnippets.useFunctionBlockPadding": {
+					"type": "boolean",
+					"default": true,
+					"description": "Controls if a function block has additional empty lines."
+				}
+			}
+		}
 	},
 	"scripts": {
-		"docs": "node ./scripts/docs.js"
+		"docs": "node ./scripts/docs.js",
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint . --ext .ts,.tsx",
+		"watch": "tsc -watch -p ./",
+		"update": "rm -rf node_modules && rm package-lock.json && npm install",
+		"check-lint-rules": "node ./plugins/check-lint-rules"
+	},
+	"devDependencies": {
+		"@types/node": "^16.11.7",
+		"@types/vscode": "^1.32.0",
+		"@typescript-eslint/eslint-plugin": "^4.22.1",
+		"@typescript-eslint/eslint-plugin-tslint": "^4.22.1",
+		"@typescript-eslint/parser": "^4.22.1",
+		"del": "^6.0.0",
+		"eslint": "^7.26.0",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-jsdoc": "^33.3.0",
+		"eslint-plugin-l13": "file:plugins/eslint-plugin-l13",
+		"typescript": "^4.8.4"
 	}
 }

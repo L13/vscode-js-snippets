@@ -4,7 +4,7 @@ This extension contains keyword snippets and micro patterns for JavaScript, Type
 
 ## What's new in JavaScript and TypeScript Snippets 0.21.0
 
-- Changed 3 line pattern in functions to 1 line.
+- Added `l13JSSnippets.useFunctionBlockPadding` to enable or disable empty lines in function block scopes.
 
 ## Index
 

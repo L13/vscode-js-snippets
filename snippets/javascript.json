@@ -93,8 +93,6 @@
 	"typeof value !== 'symbol'":				{ "prefix": "ts",	"body": ["typeof $0 !== 'symbol'"], "description": "" },
 	"typeof value !== 'undefined'":				{ "prefix": "tu",	"body": ["typeof $0 !== 'undefined'"], "description": "" },
 	
-	"() =>":									{ "prefix": "$1",	"body": ["($1) => $0"], "description": "" },
-	
 	"module NAME {}":							{ "prefix": "m_",	"body": ["module ${1:name} {", "\t", "$0", "\t", "}"], "description": "" },
 	
 	"import {} from ''":						{ "prefix": "i_f1",	"body": ["import { ${0:name} } from '${1:path}';"], "description": "" },

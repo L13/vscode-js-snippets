@@ -1,6 +1,12 @@
-{
+/* eslint-disable no-template-curly-in-string */
+/* eslint-disable key-spacing */
+/* eslint-disable max-len */
+/* eslint-disable @typescript-eslint/quotes */
+export default {
 	"function NAME () {}":						{ "prefix": "f_",	"body": ["function ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"async function NAME () {}":				{ "prefix": "af_",	"body": ["async function ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
+	
+	"() =>":									{ "prefix": "$1",	"body": ["($1) => $0"], "description": "" },
 	"() => {}":									{ "prefix": "$_",	"body": ["($1) => {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"async () => {}":							{ "prefix": "a$_",	"body": ["async ($1) => {", "\t", "\t$0", "\t", "}"], "description": "" },
 	
@@ -22,5 +28,5 @@
 	"toJSON () {}":								{ "prefix": "tJ_",	"body": ["toJSON () {", "\t", "\t$0", "\t", "}"], "description": "" },
 	
 	"new Promise(() => {})":					{ "prefix": "nP$_",	"body": ["new Promise((resolve, reject) => {", "\t", "\t$0", "\t", "})"], "description": "" },
-	"new Promise(function () {})":				{ "prefix": "nPf_",	"body": ["new Promise(function (resolve, reject) {", "\t", "\t$0", "\t", "})"], "description": "" }
-}
+	"new Promise(function () {})":				{ "prefix": "nPf_",	"body": ["new Promise(function (resolve, reject) {", "\t", "\t$0", "\t", "})"], "description": "" },
+};

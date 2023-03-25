@@ -1,4 +1,8 @@
-{
+/* eslint-disable no-template-curly-in-string */
+/* eslint-disable key-spacing */
+/* eslint-disable max-len */
+/* eslint-disable @typescript-eslint/quotes */
+export default {
 	"function NAME (): boolean {}":				{ "prefix": "fb_",	"body": ["function ${1:name} ($2): boolean {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"function NAME (): bigint {}":				{ "prefix": "fb_",	"body": ["function ${1:name} ($2): bigint {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"function NAME (): number {}":				{ "prefix": "fn_",	"body": ["function ${1:name} ($2): number {", "\t", "\t$0", "\t", "}"], "description": "" },
@@ -130,5 +134,5 @@
 	"public toJSON (): string {}":				{ "prefix": "ptJs_",	"body": ["public toJSON (): string {", "\t", "\t$0", "\t", "}"], "description": "" },
 	
 	"public toString () {}":					{ "prefix": "ptS_",	"body": ["public toString () {", "\t", "\treturn '[object ${0:name}]';", "\t", "}"], "description": "" },
-	"public toString (): string {}":			{ "prefix": "ptSs_",	"body": ["public toString (): string {", "\t", "\treturn '[object ${0:name}]';", "\t", "}"], "description": "" }
-}
+	"public toString (): string {}":			{ "prefix": "ptSs_",	"body": ["public toString (): string {", "\t", "\treturn '[object ${0:name}]';", "\t", "}"], "description": "" },
+};
