@@ -39,6 +39,7 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `Sf$` | `Symbol.for($0)` |
 | `SkF$` | `Symbol.keyFor($0)` |
 | `_` | `${1:name} ($2) {  $0  }` |
+| `a$1` | `async ($1) => $0` |
 | `a$_` | `async ($1) => {  $0  }` |
 | `a_` | `async ${1:name} ($2) {  $0  }` |
 | `a` | `await ` |
@@ -69,6 +70,7 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `cw$` | `console.warn($0);` |
 | `d_w` | `do {  } while (${0:condition});` |
 | `d` | `delete ` |
+| `da` | `default as ${0:name}` |
 | `e1` | `else $0;` |
 | `e_` | `else { $0 }` |
 | `e_` | `export { $0 };` |
@@ -79,6 +81,7 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `ece_` | `export class ${1:name} extends ${2:parent} {  $0  }` |
 | `ed1` | `export default $0;` |
 | `ed_` | `export default { $0 };` |
+| `edaf_` | `export default async function ($1) {  $0  }` |
 | `edc_` | `export default class {  $0  }` |
 | `edce_` | `export default class extends ${1:parent} {  $0  }` |
 | `edf_` | `export default function ($1) {  $0  }` |
@@ -117,6 +120,7 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `i_f1` | `import { ${0:name} } from '${1:path}';` |
 | `i` | `${1:identifier} instanceof ${0:constructor}` |
 | `iaf1` | `import * as ${0:name} from '${1:path}';` |
+| `if1` | `import ${0:name} from '${1:path}';` |
 | `ir1` | `if (${0:condition}) return;` |
 | `l1` | `let ${1:name} = ${0:null};` |
 | `l_1` | `let { $0 } = ${1:null};` |
@@ -263,6 +267,8 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `ece_` | `export const enum ${1:name} { $0 };` |
 | `ecn1` | `export const ${1:name}: number = ${0:0};` |
 | `ecs1` | `export const ${1:name}: string = '$0';` |
+| `ee1` | `export enum ${1:name} { $0 };` |
+| `ee_` | `export enum ${1:name} { $0 };` |
 | `efa_` | `export function ${1:name} ($2): string {  $0  }` |
 | `efb_` | `export function ${1:name} ($2): bigint {  $0  }` |
 | `efb_` | `export function ${1:name} ($2): boolean {  $0  }` |

@@ -95,8 +95,10 @@
 	
 	"module NAME {}":							{ "prefix": "m_",	"body": ["module ${1:name} {", "\t", "$0", "\t", "}"], "description": "" },
 	
+	"import NAME from ''":						{ "prefix": "if1",	"body": ["import ${0:name} from '${1:path}';"], "description": "" },
 	"import {} from ''":						{ "prefix": "i_f1",	"body": ["import { ${0:name} } from '${1:path}';"], "description": "" },
 	"import as from ''":						{ "prefix": "iaf1",	"body": ["import * as ${0:name} from '${1:path}';"], "description": "" },
+	"default as NAME":							{ "prefix": "da",	"body": ["default as ${0:name}"], "description": "" },
 	
 	"export * from ''":							{ "prefix": "ef1",	"body": ["export * from '${0:path}';"], "description": "" },
 	"export {} from ''":						{ "prefix": "e_f1",	"body": ["export { ${0:name} } from '${1:path}';"], "description": "" },

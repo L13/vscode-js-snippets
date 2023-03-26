@@ -7,12 +7,14 @@ export default {
 	"async function NAME () {}":				{ "prefix": "af_",	"body": ["async function ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
 	
 	"() =>":									{ "prefix": "$1",	"body": ["($1) => $0"], "description": "" },
+	"async () =>":								{ "prefix": "a$1",	"body": ["async ($1) => $0"], "description": "" },
 	"() => {}":									{ "prefix": "$_",	"body": ["($1) => {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"async () => {}":							{ "prefix": "a$_",	"body": ["async ($1) => {", "\t", "\t$0", "\t", "}"], "description": "" },
 	
 	"export function NAME () {}":				{ "prefix": "ef_",	"body": ["export function ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"export async function () {}":				{ "prefix": "eaf_",	"body": ["export async function ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"export default function () {}":			{ "prefix": "edf_",	"body": ["export default function ($1) {", "\t", "\t$0", "\t", "}"], "description": "" },
+	"export default async function () {}":		{ "prefix": "edaf_",	"body": ["export default async function ($1) {", "\t", "\t$0", "\t", "}"], "description": "" },
 	
 	"constructor () {}":						{ "prefix": "c_",	"body": ["constructor ($1) {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"get NAME () {}":							{ "prefix": "g_",	"body": ["get ${1:name} () {", "\t", "\t$0", "\t", "}"], "description": "" },

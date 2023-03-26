@@ -15,6 +15,13 @@
 				"kind": "build",
 				"isDefault": true
 			}
+		},
+		{
+			"type": "npm",
+			"script": "docs",
+			"problemMatcher": [],
+			"label": "npm: docs",
+			"detail": "node ./scripts/docs.js"
 		}
 	]
 }
