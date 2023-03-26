@@ -25,7 +25,7 @@ const contents = [`## JavaScript and TypeScript Snippets
 
 Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. The rules for all these snippets are explained in the [README.md](./README.md)`];
 
-const findComments = /"(?:[^"\r\n]*(?:\\”)*)*"|(\/\*(?:.|[\r\n])*?\*\/|\/\/[^\r\n]*|export[\s\r\n]+default[\s\r\n]*|;)|,[\s\r\n]*?([\]}])/g;
+const findComments = /"(?:[^"\r\n\\]*(?:\\.)*)*"|(\/\*(?:.|[\r\n])*?\*\/|\/\/[^\r\n]*|export[\s\r\n]+default[\s\r\n]*|;)|,[\s\r\n]*?([\]}])/g;
 
 //	Initialize _________________________________________________________________
 
