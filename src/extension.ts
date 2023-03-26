@@ -25,8 +25,6 @@ export function activate (context: vscode.ExtensionContext) {
 	const javascriptProvider = vscode.languages.registerCompletionItemProvider([
 		'javascript',
 		'javascriptreact',
-		'typescript',
-		'typescriptreact',
 	], {
 		provideCompletionItems: () => javascriptCompletionItems,
 	});
@@ -84,6 +82,9 @@ function buildAllCompletionItems () {
 	const useFunctionBlockPadding = get('useFunctionBlockPadding');
 	
 	javascriptCompletionItems = buildCompletionItems(javascriptFuncs, useFunctionBlockPadding);
-	typescriptCompletionItems = buildCompletionItems(typescriptFuncs, useFunctionBlockPadding);
+	typescriptCompletionItems = [
+		...javascriptCompletionItems,
+		...buildCompletionItems(typescriptFuncs, useFunctionBlockPadding),
+	];
 		
 }
