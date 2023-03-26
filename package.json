@@ -82,7 +82,7 @@
 		],
 		"configuration": {
 			"type": "object",
-			"title": "JS Snippets",
+			"title": "JavaScript & TypeScript Snippets",
 			"properties": {
 				"l13JSSnippets.useFunctionBlockPadding": {
 					"type": "boolean",
