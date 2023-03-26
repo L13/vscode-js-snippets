@@ -9,7 +9,8 @@ import type { Snippet } from './types';
 
 //	Variables __________________________________________________________________
 
-
+let javascriptCompletionItems: vscode.CompletionItem[] = null;
+let typescriptCompletionItems: vscode.CompletionItem[] = null;
 
 //	Initialize _________________________________________________________________
 
@@ -19,10 +20,7 @@ import type { Snippet } from './types';
 
 export function activate (context: vscode.ExtensionContext) {
 	
-	let useFunctionBlockPadding = get('useFunctionBlockPadding');
-	
-	let javascriptCompletionItems = buildCompletionItems(javascriptFuncs, useFunctionBlockPadding);
-	let typescriptCompletionItems = buildCompletionItems(typescriptFuncs, useFunctionBlockPadding);
+	buildAllCompletionItems();
 	
 	const javascriptProvider = vscode.languages.registerCompletionItemProvider([
 		'javascript',
@@ -30,39 +28,25 @@ export function activate (context: vscode.ExtensionContext) {
 		'typescript',
 		'typescriptreact',
 	], {
-		
-		provideCompletionItems () {
-			
-			return javascriptCompletionItems;
-			
-		},
-		
+		provideCompletionItems: () => javascriptCompletionItems,
 	});
 	
 	const typescriptProvider = vscode.languages.registerCompletionItemProvider([
 		'typescript',
 		'typescriptreact',
 	], {
+		provideCompletionItems: () => typescriptCompletionItems,
+	});
+	
+	const changeConfiguration = vscode.workspace.onDidChangeConfiguration((event) => {
 		
-		provideCompletionItems () {
-			
-			return typescriptCompletionItems;
-			
-		},
+		if (event.affectsConfiguration('l13JSSnippets.useFunctionBlockPadding')) {
+			buildAllCompletionItems();
+		}
 		
 	});
 	
-	context.subscriptions.push(javascriptProvider, typescriptProvider);
-	
-	context.subscriptions.push(vscode.workspace.onDidChangeConfiguration((event) => {
-		
-		if (event.affectsConfiguration('l13JSSnippets.useFunctionBlockPadding')) {
-			useFunctionBlockPadding = get('useFunctionBlockPadding');
-			javascriptCompletionItems = buildCompletionItems(javascriptFuncs, useFunctionBlockPadding);
-			typescriptCompletionItems = buildCompletionItems(typescriptFuncs, useFunctionBlockPadding);
-		}
-		
-	}));
+	context.subscriptions.push(javascriptProvider, typescriptProvider, changeConfiguration);
 	
 }
 
@@ -93,4 +77,13 @@ function buildCompletionItems (snippets: Record<string, Snippet>, useFunctionBlo
 		
 	});
 	
+}
+
+function buildAllCompletionItems () {
+		
+	const useFunctionBlockPadding = get('useFunctionBlockPadding');
+	
+	javascriptCompletionItems = buildCompletionItems(javascriptFuncs, useFunctionBlockPadding);
+	typescriptCompletionItems = buildCompletionItems(typescriptFuncs, useFunctionBlockPadding);
+		
 }
