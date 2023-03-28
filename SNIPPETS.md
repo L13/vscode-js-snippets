@@ -242,6 +242,7 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `_sv_` | `private static ${1:name} ($2): void {  $0  }` |
 | `_v_` | `private ${1:name} ($2): void {  $0  }` |
 | `ac` | `as const` |
+| `acs` | `as const satisfies ` |
 | `afa_` | `async function ${1:name} ($2):Promise<string> {  $0  }` |
 | `afb_` | `async function ${1:name} ($2):Promise<bigint> {  $0  }` |
 | `afb_` | `async function ${1:name} ($2):Promise<boolean> {  $0  }` |
@@ -254,6 +255,30 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `ce_` | `const enum ${1:name} { $0 };` |
 | `cn1` | `const ${1:name}: number = ${0:0};` |
 | `cs1` | `const ${1:name}: string = '$0';` |
+| `dc1` | `declare const ${1:name} = ${0:null};` |
+| `dc_` | `declare class ${1:name} {  $0  }` |
+| `dcb1` | `declare const ${1:name}: bigint = ${0:0n};` |
+| `dcb1` | `declare const ${1:name}: boolean = ${0:false};` |
+| `dcn1` | `declare const ${1:name}: number = ${0:0};` |
+| `dcs1` | `declare const ${1:name}: string = '$0';` |
+| `df1` | `declare function ${1:name} ($0);` |
+| `dfb1` | `declare function ${1:name} ($0): bigint;` |
+| `dfb1` | `declare function ${1:name} ($0): boolean;` |
+| `dfn1` | `declare function ${1:name} ($0): number;` |
+| `dfs1` | `declare function ${1:name} ($0): string;` |
+| `dfv1` | `declare function ${1:name} ($0): void;` |
+| `dl1` | `declare let ${1:name} = ${0:null};` |
+| `dlb1` | `declare let ${1:name}: bigint = ${0:0n};` |
+| `dlb1` | `declare let ${1:name}: boolean = ${0:false};` |
+| `dln1` | `declare let ${1:name}: number = ${0:0};` |
+| `dls1` | `declare var ${1:name}: string = '$0';` |
+| `dm_` | `declare module ${1:name} {  $0  }` |
+| `dn_` | `declare namespace ${1:name} {  $0  }` |
+| `dv1` | `declare var ${1:name} = ${0:null};` |
+| `dvb1` | `declare var ${1:name}: bigint = ${0:0n};` |
+| `dvb1` | `declare var ${1:name}: boolean = ${0:false};` |
+| `dvn1` | `declare var ${1:name}: number = ${0:0};` |
+| `dvs1` | `declare var ${1:name}: string = '$0';` |
 | `e1` | `enum ${1:name} { $0 };` |
 | `e_` | `enum ${1:name} { $0 };` |
 | `eafa_` | `export async function ${1:name} ($2):Promise<string> {  $0  }` |
@@ -261,6 +286,7 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `eafb_` | `export async function ${1:name} ($2):Promise<boolean> {  $0  }` |
 | `eafn_` | `export async function ${1:name} ($2):Promise<number> {  $0  }` |
 | `eafv_` | `export async function ${1:name} ($2):Promise<void> {  $0  }` |
+| `ean1` | `export as namespace $0;` |
 | `ecb1` | `export const ${1:name}: bigint = ${0:0n};` |
 | `ecb1` | `export const ${1:name}: boolean = ${0:false};` |
 | `ece1` | `export const enum ${1:name} { $0 };` |
@@ -361,5 +387,11 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `pvOn_` | `public valueOf (): number {  $0  }` |
 | `pvOs_` | `public valueOf (): string {  $0  }` |
 | `pv_` | `public ${1:name} ($2): void {  $0  }` |
+| `r1` | `readonly ${1:name} = ${0:null};` |
+| `rb1` | `readonly ${1:name}: bigint = ${0:0n};` |
+| `rb1` | `readonly ${1:name}: boolean = ${0:false};` |
+| `rn1` | `readonly ${1:name}: number = ${0:0};` |
+| `rs1` | `readonly ${1:name}: string = '$0';` |
 | `t1` | `type ${1:name} = ${0:null};` |
 | `t_` | `type ${1:name} = { $0 };` |
+| `tr1` | `type ${1:name} = readonly [$0];` |
