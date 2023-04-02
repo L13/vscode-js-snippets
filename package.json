@@ -82,11 +82,16 @@
 		],
 		"configuration": {
 			"type": "object",
-			"title": "JavaScript & TypeScript Snippets",
+			"title": "TypeScript Snippets",
 			"properties": {
-				"l13JSSnippets.useFunctionBlockPadding": {
+				"l13Snippets.javascript.useFunctionBlockPadding": {
 					"type": "boolean",
-					"default": true,
+					"default": false,
+					"description": "Controls if a function block has additional empty lines."
+				},
+				"l13Snippets.typescript.useFunctionBlockPadding": {
+					"type": "boolean",
+					"default": false,
 					"description": "Controls if a function block has additional empty lines."
 				}
 			}

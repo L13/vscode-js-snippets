@@ -27,6 +27,13 @@ export default {
 	"export async function NAME (): string {}":	{ "prefix": "eafa_",	"body": ["export async function ${1:name} ($2):Promise<string> {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"export async function NAME (): void {}":	{ "prefix": "eafv_",	"body": ["export async function ${1:name} ($2):Promise<void> {", "\t", "\t$0", "\t", "}"], "description": "" },
 	
+	"declare function NAME ();":				{ "prefix": "df1",	"body": ["declare function ${1:name} ($0);"], "description": "" },
+	"declare function NAME (): boolean;":		{ "prefix": "dfb1",	"body": ["declare function ${1:name} ($0): boolean;"], "description": "" },
+	"declare function NAME (): bigint;":		{ "prefix": "dfb1",	"body": ["declare function ${1:name} ($0): bigint;"], "description": "" },
+	"declare function NAME (): number;":		{ "prefix": "dfn1",	"body": ["declare function ${1:name} ($0): number;"], "description": "" },
+	"declare function NAME (): string;":		{ "prefix": "dfs1",	"body": ["declare function ${1:name} ($0): string;"], "description": "" },
+	"declare function NAME (): void;":			{ "prefix": "dfv1",	"body": ["declare function ${1:name} ($0): void;"], "description": "" },
+	
 	"public constructor () {}":					{ "prefix": "pc_",	"body": ["public constructor ($1) {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"private constructor () {}":				{ "prefix": "_c_",	"body": ["private constructor ($1) {", "\t", "\t$0", "\t", "}"], "description": "" },
 	

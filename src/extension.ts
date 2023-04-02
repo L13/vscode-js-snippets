@@ -20,7 +20,8 @@ let typescriptCompletionItems: vscode.CompletionItem[] = null;
 
 export function activate (context: vscode.ExtensionContext) {
 	
-	buildAllCompletionItems();
+	buildJavaScriptCompletionItems();
+	buildTypeScriptCompletionItems();
 	
 	const javascriptProvider = vscode.languages.registerCompletionItemProvider([
 		'javascript',
@@ -38,8 +39,12 @@ export function activate (context: vscode.ExtensionContext) {
 	
 	const changeConfiguration = vscode.workspace.onDidChangeConfiguration((event) => {
 		
-		if (event.affectsConfiguration('l13JSSnippets.useFunctionBlockPadding')) {
-			buildAllCompletionItems();
+		if (event.affectsConfiguration('l13Snippets.javascript.useFunctionBlockPadding')) {
+			buildJavaScriptCompletionItems();
+		}
+		
+		if (event.affectsConfiguration('l13Snippets.typescript.useFunctionBlockPadding')) {
+			buildTypeScriptCompletionItems();
 		}
 		
 	});
@@ -50,9 +55,15 @@ export function activate (context: vscode.ExtensionContext) {
 
 //	Functions __________________________________________________________________
 
-function get (key: string, value?: any) {
+function getJavaScriptConfig (key: string, value?: any) {
 	
-	return vscode.workspace.getConfiguration('l13JSSnippets').get(key, value);
+	return vscode.workspace.getConfiguration('l13Snippets.javascript').get(key, value);
+	
+}
+
+function getTypeScriptConfig (key: string, value?: any) {
+	
+	return vscode.workspace.getConfiguration('l13Snippets.typescript').get(key, value);
 	
 }
 
@@ -77,13 +88,24 @@ function buildCompletionItems (snippets: Record<string, Snippet>, useFunctionBlo
 	
 }
 
-function buildAllCompletionItems () {
+function buildJavaScriptCompletionItems () {
 		
-	const useFunctionBlockPadding = get('useFunctionBlockPadding');
+	const useFunctionBlockPadding = getJavaScriptConfig('useFunctionBlockPadding');
 	
 	javascriptCompletionItems = buildCompletionItems(javascriptFuncs, useFunctionBlockPadding);
 	typescriptCompletionItems = [
 		...javascriptCompletionItems,
+		...buildCompletionItems(typescriptFuncs, useFunctionBlockPadding),
+	];
+		
+}
+
+function buildTypeScriptCompletionItems () {
+		
+	const useFunctionBlockPadding = getTypeScriptConfig('useFunctionBlockPadding');
+	
+	typescriptCompletionItems = [
+		...buildCompletionItems(javascriptFuncs, useFunctionBlockPadding),
 		...buildCompletionItems(typescriptFuncs, useFunctionBlockPadding),
 	];
 		

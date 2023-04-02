@@ -4,7 +4,8 @@ All notable changes to the "JavaScript and TypeScript Snippets" extension will b
 ## [0.21.0] - 2023-04-02
 
 ### Added
-- Added `l13JSSnippets.useFunctionBlockPadding` to enable or disable empty lines in function block scopes.
+- Added `l13Snippets.javascript.useFunctionBlockPadding` to enable or disable line padding in function blocks.
+- Added `l13Snippets.typescript.useFunctionBlockPadding` to enable or disable line padding in function blocks.
 
 ## [0.20.0] - 2021-05-02
 

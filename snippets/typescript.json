@@ -21,13 +21,6 @@
 	"declare module":							{ "prefix": "dm_",	"body": ["declare module ${1:name} {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"declare class":							{ "prefix": "dc_",	"body": ["declare class ${1:name} {", "\t", "\t$0", "\t", "}"], "description": "" },
 	
-	"declare function NAME ();":				{ "prefix": "df1",	"body": ["declare function ${1:name} ($0);"], "description": "" },
-	"declare function NAME (): boolean;":		{ "prefix": "dfb1",	"body": ["declare function ${1:name} ($0): boolean;"], "description": "" },
-	"declare function NAME (): bigint;":		{ "prefix": "dfb1",	"body": ["declare function ${1:name} ($0): bigint;"], "description": "" },
-	"declare function NAME (): number;":		{ "prefix": "dfn1",	"body": ["declare function ${1:name} ($0): number;"], "description": "" },
-	"declare function NAME (): string;":		{ "prefix": "dfs1",	"body": ["declare function ${1:name} ($0): string;"], "description": "" },
-	"declare function NAME (): void;":			{ "prefix": "dfv1",	"body": ["declare function ${1:name} ($0): void;"], "description": "" },
-	
 	"declare var NAME = null;":					{ "prefix": "dv1",	"body": ["declare var ${1:name} = ${0:null};"], "description": "" },
 	"declare var NAME: boolean = false;":		{ "prefix": "dvb1",	"body": ["declare var ${1:name}: boolean = ${0:false};"], "description": "" },
 	"declare var NAME: bigint = 0n;":			{ "prefix": "dvb1",	"body": ["declare var ${1:name}: bigint = ${0:0n};"], "description": "" },
