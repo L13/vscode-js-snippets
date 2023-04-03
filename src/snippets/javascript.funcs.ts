@@ -19,7 +19,7 @@ export default {
 	"constructor () {}":						{ "prefix": "c_",	"body": ["constructor ($1) {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"get NAME () {}":							{ "prefix": "g_",	"body": ["get ${1:name} () {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"set NAME () {}":							{ "prefix": "s_",	"body": ["set ${1:name} (value) {", "\t", "\t$0", "\t", "}"], "description": "" },
-	"get set NAME () {}":						{ "prefix": "g_s_",	"body": ["get ${1:name} () {", "\t", "\t$0", "\t", "}", "", "set ${1:name} (value) {", "\t", "}"], "description": "" },
+	"get set NAME () {}":						{ "prefix": "g_s_",	"body": ["get ${1:name} () {", "\t", "\t$0", "\t", "}", "", "set ${1:name} (value) {", "\t", "\t", "\t", "}"], "description": "" },
 	"NAME () {}":								{ "prefix": "_",	"body": ["${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"static NAME () {}":						{ "prefix": "s_",	"body": ["static ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"async NAME () {}":							{ "prefix": "a_",	"body": ["async ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },

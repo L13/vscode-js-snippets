@@ -69,7 +69,7 @@ function getTypeScriptConfig (key: string, value?: any) {
 
 function filterEmptyTab (body: string[]) {
 	
-	return body.filter((value) => value !== '\t');
+	return body.filter((value, index, values) => value !== '\t' || value === '\t' && values[index + 1] === '\t' && values[index + 2] === '\t');
 	
 }
 

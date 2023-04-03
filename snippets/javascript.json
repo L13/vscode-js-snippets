@@ -9,6 +9,7 @@
 	"return;":									{ "prefix": "r",	"body": ["return$0;"], "description": "" },
 	"super":									{ "prefix": "s",	"body": ["super."], "description": "" },
 	"true":										{ "prefix": "t",	"body": ["true"], "description": "" },
+	"this.()":									{ "prefix": "t$",	"body": ["this.$0()"], "description": "" },
 	"undefined":								{ "prefix": "u",	"body": ["undefined"], "description": "" },
 	"void":										{ "prefix": "v",	"body": ["void "], "description": "" },
 	"yield":									{ "prefix": "y",	"body": ["yield"], "description": "" },
