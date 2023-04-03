@@ -6,6 +6,28 @@
 	"type NAME = null;":						{ "prefix": "t1",	"body": ["type ${1:name} = ${0:null};"], "description": "" },
 	"type NAME = readonly [];":					{ "prefix": "tr1",	"body": ["type ${1:name} = readonly [$0];"], "description": "" },
 	"type NAME = {};":							{ "prefix": "t_",	"body": ["type ${1:name} = {", "\t$0", "};"], "description": "" },
+	
+	"{ [K in T] }":								{ "prefix": "_i",	"body": ["{", "\t[${1:K} in ${2:T}]: $0;", "}"], "description": "" },
+	"{ [K in T as P] }":						{ "prefix": "_ia",	"body": ["{", "\t[${1:K} in ${2:T} as ${3:P}]: $0;", "}"], "description": "" },
+	"{ [K in keyof T] }":						{ "prefix": "_ik",	"body": ["{", "\t[${1:K} in keyof ${2:T}]: $0;", "}"], "description": "" },
+	"{ [K in keyof T as P] }":					{ "prefix": "_ika",	"body": ["{", "\t[${1:K} in keyof ${2:T} as ${3:P}]: $0;", "}"], "description": "" },
+	
+	"T extends any":							{ "prefix": "ea",	"body": ["${1:T} extends ${0:any}"], "description": "" },
+	"T extends boolean":						{ "prefix": "eb",	"body": ["${1:T} extends boolean$0"], "description": "" },
+	"T extends bigint":							{ "prefix": "eb",	"body": ["${1:T} extends bigint$0"], "description": "" },
+	"T extends number":							{ "prefix": "en",	"body": ["${1:T} extends number$0"], "description": "" },
+	"T extends string":							{ "prefix": "es",	"body": ["${1:T} extends string$0"], "description": "" },
+	"T extends unknown":						{ "prefix": "eu",	"body": ["${1:T} extends unknown$0"], "description": "" },
+	
+	"T extends keyof Object":					{ "prefix": "ek",	"body": ["${1:T} extends keyof ${0:O}"], "description": "" },
+	"T extends keyof any":						{ "prefix": "eka",	"body": ["${1:T} extends keyof ${0:any}"], "description": "" },
+	
+	"T extends readonly any[]":					{ "prefix": "era",	"body": ["${1:T} extends readonly ${0:any}[]"], "description": "" },
+	"T extends readonly boolean[]":				{ "prefix": "erb",	"body": ["${1:T} extends readonly boolean[]$0"], "description": "" },
+	"T extends readonly bigint[]":				{ "prefix": "erb",	"body": ["${1:T} extends readonly bigint[]$0"], "description": "" },
+	"T extends readonly number[]":				{ "prefix": "ern",	"body": ["${1:T} extends readonly number[]$0"], "description": "" },
+	"T extends readonly string[]":				{ "prefix": "ers",	"body": ["${1:T} extends readonly string[]$0"], "description": "" },
+	"T extends readonly unknown[]":				{ "prefix": "eru",	"body": ["${1:T} extends readonly unknown[]$0"], "description": "" },
 		
 	"import type {} from ''":					{ "prefix": "it_f1",	"body": ["import type { ${0:name} } from '${1:path}';"], "description": "" },
 		

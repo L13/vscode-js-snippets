@@ -207,6 +207,10 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `_gb_` | `private get ${1:name} (): boolean {  $0  }` |
 | `_gn_` | `private get ${1:name} (): number {  $0  }` |
 | `_gs_` | `private get ${1:name} (): string {  $0  }` |
+| `_i` | `{ [${1:K} in ${2:T}]: $0; }` |
+| `_ia` | `{ [${1:K} in ${2:T} as ${3:P}]: $0; }` |
+| `_ik` | `{ [${1:K} in keyof ${2:T}]: $0; }` |
+| `_ika` | `{ [${1:K} in keyof ${2:T} as ${3:P}]: $0; }` |
 | `_n1` | `private ${1:name}: number = ${0:0};` |
 | `_n_` | `private ${1:name} ($2): number {  $0  }` |
 | `_ng_s_` | `private _${1:name} = ${0:0};  private get ${1:name} (): number {  return this._${1:name};  }  private set ${1:name} (value: number) {  this._${1:name} = value;  }` |
@@ -281,12 +285,15 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `dvs1` | `declare var ${1:name}: string = '$0';` |
 | `e1` | `enum ${1:name} { $0 };` |
 | `e_` | `enum ${1:name} { $0 };` |
+| `ea` | `${1:T} extends ${0:any}` |
 | `eafa_` | `export async function ${1:name} ($2):Promise<string> {  $0  }` |
 | `eafb_` | `export async function ${1:name} ($2):Promise<bigint> {  $0  }` |
 | `eafb_` | `export async function ${1:name} ($2):Promise<boolean> {  $0  }` |
 | `eafn_` | `export async function ${1:name} ($2):Promise<number> {  $0  }` |
 | `eafv_` | `export async function ${1:name} ($2):Promise<void> {  $0  }` |
 | `ean1` | `export as namespace $0;` |
+| `eb` | `${1:T} extends bigint$0` |
+| `eb` | `${1:T} extends boolean$0` |
 | `ecb1` | `export const ${1:name}: bigint = ${0:0n};` |
 | `ecb1` | `export const ${1:name}: boolean = ${0:false};` |
 | `ece1` | `export const enum ${1:name} { $0 };` |
@@ -302,12 +309,23 @@ Complete list of all JavaScript and TypeScript snippets for Visual Studio Code. 
 | `efv_` | `export function ${1:name} ($2): void {  $0  }` |
 | `ei_` | `export interface ${1:name} {  $0  }` |
 | `eie_` | `export interface ${1:name} extends ${2:name} {  $0  }` |
+| `ek` | `${1:T} extends keyof ${0:O}` |
+| `eka` | `${1:T} extends keyof ${0:any}` |
 | `elb1` | `export let ${1:name}: bigint = ${0:0n};` |
 | `elb1` | `export let ${1:name}: boolean = ${0:false};` |
 | `eln1` | `export let ${1:name}: number = ${0:0};` |
 | `els1` | `export let ${1:name}: string = '$0';` |
+| `en` | `${1:T} extends number$0` |
+| `era` | `${1:T} extends readonly ${0:any}[]` |
+| `erb` | `${1:T} extends readonly bigint[]$0` |
+| `erb` | `${1:T} extends readonly boolean[]$0` |
+| `ern` | `${1:T} extends readonly number[]$0` |
+| `ers` | `${1:T} extends readonly string[]$0` |
+| `eru` | `${1:T} extends readonly unknown[]$0` |
+| `es` | `${1:T} extends string$0` |
 | `et1` | `export type ${1:name} = ${0:null};` |
 | `et_` | `export type ${1:name} = { $0 };` |
+| `eu` | `${1:T} extends unknown$0` |
 | `fa_` | `function ${1:name} ($2): string {  $0  }` |
 | `fb_` | `function ${1:name} ($2): bigint {  $0  }` |
 | `fb_` | `function ${1:name} ($2): boolean {  $0  }` |
