@@ -1,4 +1,6 @@
 {
+	"keyof":									{ "prefix": "k",	"body": ["keyof "], "description": "" },
+	
 	"as const":									{ "prefix": "ac",	"body": ["as const"], "description": "" },
 	"as const satisfies":						{ "prefix": "acs",	"body": ["as const satisfies "], "description": "" },
 	"asserts NAME is TYPE":						{ "prefix": "ai",	"body": ["asserts ${1:name} is ${0:type}"], "description": "" },
@@ -18,6 +20,14 @@
 	"T extends number":							{ "prefix": "en",	"body": ["${1:T} extends number$0"], "description": "" },
 	"T extends string":							{ "prefix": "es",	"body": ["${1:T} extends string$0"], "description": "" },
 	"T extends unknown":						{ "prefix": "eu",	"body": ["${1:T} extends unknown$0"], "description": "" },
+	
+	"any extends T":							{ "prefix": "ae",	"body": ["${1:any} extends ${0:T}"], "description": "" },
+	"boolean extends T":						{ "prefix": "be",	"body": ["boolean extends ${0:T}"], "description": "" },
+	"bigint extends T":							{ "prefix": "be",	"body": ["bigint extends ${0:T}"], "description": "" },
+	"number extends T":							{ "prefix": "ne",	"body": ["number extends ${0:T}"], "description": "" },
+	"null extends T":							{ "prefix": "ne",	"body": ["null extends ${0:T}"], "description": "" },
+	"string extends T":							{ "prefix": "se",	"body": ["string extends ${0:T}"], "description": "" },
+	"unknown extends T":						{ "prefix": "ue",	"body": ["unknown extends ${0:T}"], "description": "" },
 	
 	"T extends keyof Object":					{ "prefix": "ek",	"body": ["${1:T} extends keyof ${0:O}"], "description": "" },
 	"T extends keyof any":						{ "prefix": "eka",	"body": ["${1:T} extends keyof ${0:any}"], "description": "" },
