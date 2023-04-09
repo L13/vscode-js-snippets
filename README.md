@@ -5,6 +5,9 @@ This extension contains keyword snippets and micro patterns for JavaScript, Type
 ## What's new in JavaScript and TypeScript Snippets 0.21.0
 
 - Added `l13Snippets.javascript.useFunctionBlockPadding` to enable or disable line padding in function blocks.
+- Added `l13Snippets.typescript.useFunctionBlockPadding` to enable or disable line padding in function blocks.
+- Added more snippets for TypeScript types like `declare`, `readonly`, `{ [K in T]: ... }` and `extends`.
+- Changed type formatting in TypeScript snippets.
 
 ## Index
 
