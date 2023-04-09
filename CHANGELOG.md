@@ -1,6 +1,16 @@
 # Change Log
 All notable changes to the "JavaScript and TypeScript Snippets" extension will be documented in this file.
 
+## [0.21.0] - 2023-04-09
+
+### Added
+- Added `l13Snippets.javascript.useFunctionBlockPadding` to enable or disable line padding in function blocks.
+- Added `l13Snippets.typescript.useFunctionBlockPadding` to enable or disable line padding in function blocks.
+- Added more snippets for TypeScript types like `declare`, `readonly`, `{ [K in T]: ... }` and `extends`.
+
+### Changed
+- Changed type formatting in TypeScript snippets.
+
 ## [0.20.0] - 2021-05-02
 
 ### Added

@@ -2,10 +2,12 @@
 
 This extension contains keyword snippets and micro patterns for JavaScript, TypeScript and JSON.
 
-## What's new in JavaScript and TypeScript Snippets 0.20.0
+## What's new in JavaScript and TypeScript Snippets 0.21.0
 
-- Added brace scope for cases `case '': { ... break; }`.
-- Added type import `import type { ... } from '...'`.
+- Added `l13Snippets.javascript.useFunctionBlockPadding` to enable or disable line padding in function blocks.
+- Added `l13Snippets.typescript.useFunctionBlockPadding` to enable or disable line padding in function blocks.
+- Added more snippets for TypeScript types like `declare`, `readonly`, `{ [K in T]: ... }` and `extends`.
+- Changed type formatting in TypeScript snippets.
 
 ## Index
 
@@ -87,13 +89,14 @@ __The following prefixes are just examples to explain the rules.__ To see the co
 | `pgn_`  | <b>p</b>ublic <b>g</b>et <i>NAME</i> () :<b>n</b>umber <b>{ ... }</b> |
 | `pso_`  | <b>p</b>ublic <b>s</b>tatic <i>NAME</i> () :<b>o</b>bject <b>{ ... }</b> |
 
-### 3. An underscore "\_" at the start defines a private member.
+### 3. An underscore "\_" at the start defines a private member or a mapped type.
 
 | Prefix  | Snippet |
 | -------:| ------- |
 | `__`   | <b>p</b>rivate <i>NAME</i> () <b>{ ... }</b> |
 | `_a1`   | <b>p</b>rivate <i>NAME</i>:<b>a</b>ny = null; |
 | `_b_`   | <b>p</b>rivate <i>NAME</i> () :<b>b</b>oolean <b>{ ... }</b>; |
+| `_ik`   | <b>{</b> [<i>K</i> <b>i</b>n <b>k</b>eyof <i>T</i>]: ... <b>}</b>; |
 
 ## Recommended Settings
 

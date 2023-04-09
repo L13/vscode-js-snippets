@@ -9,6 +9,7 @@
 	"return;":									{ "prefix": "r",	"body": ["return$0;"], "description": "" },
 	"super":									{ "prefix": "s",	"body": ["super."], "description": "" },
 	"true":										{ "prefix": "t",	"body": ["true"], "description": "" },
+	"this.()":									{ "prefix": "t$",	"body": ["this.$0()"], "description": "" },
 	"undefined":								{ "prefix": "u",	"body": ["undefined"], "description": "" },
 	"void":										{ "prefix": "v",	"body": ["void "], "description": "" },
 	"yield":									{ "prefix": "y",	"body": ["yield"], "description": "" },
@@ -76,6 +77,7 @@
 	"try {} catch () {} finally {}":			{ "prefix": "t_c_f_",	"body": ["try {", "\t$0", "} catch (error) {", "\t", "} finally {", "\t", "}"], "description": "" },
 	
 	"typeof value === 'boolean'":				{ "prefix": "tb",	"body": ["typeof $0 === 'boolean'"], "description": "" },
+	"typeof value === 'bigint'":				{ "prefix": "tb",	"body": ["typeof $0 === 'bigint'"], "description": "" },
 	"typeof value === 'function'":				{ "prefix": "tf",	"body": ["typeof $0 === 'function'"], "description": "" },
 	"typeof value === 'number'":				{ "prefix": "tn",	"body": ["typeof $0 === 'number'"], "description": "" },
 	"typeof value === 'object'":				{ "prefix": "to",	"body": ["typeof $0 === 'object'"], "description": "" },
@@ -84,6 +86,7 @@
 	"typeof value === 'undefined'":				{ "prefix": "tu",	"body": ["typeof $0 === 'undefined'"], "description": "" },
 	
 	"typeof value !== 'boolean'":				{ "prefix": "tb",	"body": ["typeof $0 !== 'boolean'"], "description": "" },
+	"typeof value !== 'bigint'":				{ "prefix": "tb",	"body": ["typeof $0 !== 'bigint'"], "description": "" },
 	"typeof value !== 'function'":				{ "prefix": "tf",	"body": ["typeof $0 !== 'function'"], "description": "" },
 	"typeof value !== 'number'":				{ "prefix": "tn",	"body": ["typeof $0 !== 'number'"], "description": "" },
 	"typeof value !== 'object'":				{ "prefix": "to",	"body": ["typeof $0 !== 'object'"], "description": "" },
@@ -91,16 +94,12 @@
 	"typeof value !== 'symbol'":				{ "prefix": "ts",	"body": ["typeof $0 !== 'symbol'"], "description": "" },
 	"typeof value !== 'undefined'":				{ "prefix": "tu",	"body": ["typeof $0 !== 'undefined'"], "description": "" },
 	
-	"function NAME () {}":						{ "prefix": "f_",	"body": ["function ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
-	"async function NAME () {}":				{ "prefix": "af_",	"body": ["async function ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
-	"() =>":									{ "prefix": "$1",	"body": ["($1) => $0"], "description": "" },
-	"() => {}":									{ "prefix": "$_",	"body": ["($1) => {", "\t", "\t$0", "\t", "}"], "description": "" },
-	"async () => {}":							{ "prefix": "a$_",	"body": ["async ($1) => {", "\t", "\t$0", "\t", "}"], "description": "" },
-	
 	"module NAME {}":							{ "prefix": "m_",	"body": ["module ${1:name} {", "\t", "$0", "\t", "}"], "description": "" },
 	
+	"import NAME from ''":						{ "prefix": "if1",	"body": ["import ${0:name} from '${1:path}';"], "description": "" },
 	"import {} from ''":						{ "prefix": "i_f1",	"body": ["import { ${0:name} } from '${1:path}';"], "description": "" },
 	"import as from ''":						{ "prefix": "iaf1",	"body": ["import * as ${0:name} from '${1:path}';"], "description": "" },
+	"default as NAME":							{ "prefix": "da",	"body": ["default as ${0:name}"], "description": "" },
 	
 	"export * from ''":							{ "prefix": "ef1",	"body": ["export * from '${0:path}';"], "description": "" },
 	"export {} from ''":						{ "prefix": "e_f1",	"body": ["export { ${0:name} } from '${1:path}';"], "description": "" },
@@ -113,30 +112,14 @@
 	"export let NAME":							{ "prefix": "el1",	"body": ["export let ${1:name} = ${0:null};"], "description": "" },
 	"export var NAME":							{ "prefix": "ev1",	"body": ["export var ${1:name} = ${0:null};"], "description": "" },
 	
-	"export function NAME () {}":				{ "prefix": "ef_",	"body": ["export function ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
-	"export async function () {}":				{ "prefix": "eaf_",	"body": ["export async function ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
-	"export default function () {}":			{ "prefix": "edf_",	"body": ["export default function ($1) {", "\t", "\t$0", "\t", "}"], "description": "" },
-	
 	"export class NAME {}":						{ "prefix": "ec_",	"body": ["export class ${1:name} {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"export class NAME extends PARENT {}":		{ "prefix": "ece_",	"body": ["export class ${1:name} extends ${2:parent} {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"export default class {}":					{ "prefix": "edc_",	"body": ["export default class {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"export default class extends PARENT {}":	{ "prefix": "edce_",	"body": ["export default class extends ${1:parent} {", "\t", "\t$0", "\t", "}"], "description": "" },
 	
-	"constructor () {}":						{ "prefix": "c_",	"body": ["constructor ($1) {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"super();":									{ "prefix": "s$",	"body": ["super($0);"], "description": "" },
-	"get NAME () {}":							{ "prefix": "g_",	"body": ["get ${1:name} () {", "\t", "\t$0", "\t", "}"], "description": "" },
-	"set NAME () {}":							{ "prefix": "s_",	"body": ["set ${1:name} (value) {", "\t", "\t$0", "\t", "}"], "description": "" },
-	"get set NAME () {}":						{ "prefix": "g_s_",	"body": ["get ${1:name} () {", "\t", "\t$0", "\t", "}", "", "set ${1:name} (value) {", "\t", "\t", "\t", "}"], "description": "" },
-	"NAME () {}":								{ "prefix": "_",	"body": ["${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
-	"static NAME () {}":						{ "prefix": "s_",	"body": ["static ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
-	"async NAME () {}":							{ "prefix": "a_",	"body": ["async ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
-	"static async NAME () {}":					{ "prefix": "sa_",	"body": ["static async ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
 		
 	"return {};":								{ "prefix": "r_",	"body": ["return {", "\t$0", "};"], "description": "" },
-	
-	"valueOf () {}":							{ "prefix": "vO_",	"body": ["valueOf () {", "\t", "\t$0", "\t", "}"], "description": "" },
-	"toString () {}":							{ "prefix": "tS_",	"body": ["toString () {", "\t", "\treturn '[object ${0:name}]';", "\t", "}"], "description": "" },
-	"toJSON () {}":								{ "prefix": "tJ_",	"body": ["toJSON () {", "\t", "\t$0", "\t", "}"], "description": "" },
 	
 	"throw new Error()":						{ "prefix": "tnE$",	"body": ["throw new Error(${0:message})"], "description": "" },
 	"throw new EvalError()":					{ "prefix": "tnEE$",	"body": ["throw new EvalError(${0:message})"], "description": "" },
@@ -185,8 +168,6 @@
 	"Object.keys()":							{ "prefix": "Ok$",	"body": ["Object.keys($0)"], "description": "" },
 	"Object.values()":							{ "prefix": "Ov$",	"body": ["Object.values($0)"], "description": "" },
 		
-	"new Promise(() => {})":					{ "prefix": "nP$_",	"body": ["new Promise((resolve, reject) => {", "\t", "\t$0", "\t", "})"], "description": "" },
-	"new Promise(function () {})":				{ "prefix": "nPf_",	"body": ["new Promise(function (resolve, reject) {", "\t", "\t$0", "\t", "})"], "description": "" },
 	"Promise.all()":							{ "prefix": "Pa$",	"body": ["Promise.all($0)"], "description": "" },
 	"Promise.resolve()":						{ "prefix": "Pr$",	"body": ["Promise.resolve($0)"], "description": "" },
 	"Promise.reject()":							{ "prefix": "Pr$",	"body": ["Promise.reject($0)"], "description": "" },
