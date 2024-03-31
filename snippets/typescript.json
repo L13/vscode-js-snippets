@@ -3,46 +3,25 @@
 	
 	"as const":									{ "prefix": "ac",	"body": ["as const"], "description": "" },
 	"as const satisfies":						{ "prefix": "acs",	"body": ["as const satisfies "], "description": "" },
-	"asserts NAME is TYPE":						{ "prefix": "ai",	"body": ["asserts ${1:name} is ${0:type}"], "description": "" },
+	"asserts NAME is T":						{ "prefix": "ai",	"body": ["asserts ${1:T} is ${0:T}"], "description": "" },
 	
-	"type NAME = null;":						{ "prefix": "t1",	"body": ["type ${1:name} = ${0:null};"], "description": "" },
-	"type NAME = readonly [];":					{ "prefix": "tr1",	"body": ["type ${1:name} = readonly [$0];"], "description": "" },
-	"type NAME = {};":							{ "prefix": "t_",	"body": ["type ${1:name} = {", "\t$0", "};"], "description": "" },
+	"type T = null;":							{ "prefix": "t1",	"body": ["type ${1:T} = ${0:null};"], "description": "" },
+	"type T = readonly [];":					{ "prefix": "tr1",	"body": ["type ${1:T} = readonly [$0];"], "description": "" },
+	"type T = {};":								{ "prefix": "t_",	"body": ["type ${1:T} = {", "\t$0", "};"], "description": "" },
 	
 	"{ [K in T] }":								{ "prefix": "_i",	"body": ["{", "\t[${1:K} in ${2:T}]: $0;", "}"], "description": "" },
 	"{ [K in T as P] }":						{ "prefix": "_ia",	"body": ["{", "\t[${1:K} in ${2:T} as ${3:P}]: $0;", "}"], "description": "" },
 	"{ [K in keyof T] }":						{ "prefix": "_ik",	"body": ["{", "\t[${1:K} in keyof ${2:T}]: $0;", "}"], "description": "" },
 	"{ [K in keyof T as P] }":					{ "prefix": "_ika",	"body": ["{", "\t[${1:K} in keyof ${2:T} as ${3:P}]: $0;", "}"], "description": "" },
 	
-	"T extends any":							{ "prefix": "ea",	"body": ["${1:T} extends ${0:any}"], "description": "" },
-	"T extends boolean":						{ "prefix": "eb",	"body": ["${1:T} extends boolean$0"], "description": "" },
-	"T extends bigint":							{ "prefix": "eb",	"body": ["${1:T} extends bigint$0"], "description": "" },
-	"T extends number":							{ "prefix": "en",	"body": ["${1:T} extends number$0"], "description": "" },
-	"T extends string":							{ "prefix": "es",	"body": ["${1:T} extends string$0"], "description": "" },
-	"T extends unknown":						{ "prefix": "eu",	"body": ["${1:T} extends unknown$0"], "description": "" },
-	
-	"any extends T":							{ "prefix": "ae",	"body": ["${1:any} extends ${0:T}"], "description": "" },
-	"boolean extends T":						{ "prefix": "be",	"body": ["boolean extends ${0:T}"], "description": "" },
-	"bigint extends T":							{ "prefix": "be",	"body": ["bigint extends ${0:T}"], "description": "" },
-	"number extends T":							{ "prefix": "ne",	"body": ["number extends ${0:T}"], "description": "" },
-	"null extends T":							{ "prefix": "ne",	"body": ["null extends ${0:T}"], "description": "" },
-	"string extends T":							{ "prefix": "se",	"body": ["string extends ${0:T}"], "description": "" },
-	"unknown extends T":						{ "prefix": "ue",	"body": ["unknown extends ${0:T}"], "description": "" },
-	
-	"T extends keyof Object":					{ "prefix": "ek",	"body": ["${1:T} extends keyof ${0:O}"], "description": "" },
-	"T extends keyof any":						{ "prefix": "eka",	"body": ["${1:T} extends keyof ${0:any}"], "description": "" },
-	
-	"T extends readonly any[]":					{ "prefix": "era",	"body": ["${1:T} extends readonly ${0:any}[]"], "description": "" },
-	"T extends readonly boolean[]":				{ "prefix": "erb",	"body": ["${1:T} extends readonly boolean[]$0"], "description": "" },
-	"T extends readonly bigint[]":				{ "prefix": "erb",	"body": ["${1:T} extends readonly bigint[]$0"], "description": "" },
-	"T extends readonly number[]":				{ "prefix": "ern",	"body": ["${1:T} extends readonly number[]$0"], "description": "" },
-	"T extends readonly string[]":				{ "prefix": "ers",	"body": ["${1:T} extends readonly string[]$0"], "description": "" },
-	"T extends readonly unknown[]":				{ "prefix": "eru",	"body": ["${1:T} extends readonly unknown[]$0"], "description": "" },
+	"T extends U":								{ "prefix": "e",	"body": ["${1:T} extends ${0:any}"], "description": "" },
+	"T extends keyof any":						{ "prefix": "ek",	"body": ["${1:T} extends keyof ${0:any}"], "description": "" },
+	"T extends readonly any[]":					{ "prefix": "er",	"body": ["${1:T} extends readonly ${0:any}[]"], "description": "" },
 		
 	"import type {} from ''":					{ "prefix": "it_f1",	"body": ["import type { ${0:name} } from '${1:path}';"], "description": "" },
 		
-	"export type NAME = null;":					{ "prefix": "et1",	"body": ["export type ${1:name} = ${0:null};"], "description": "" },
-	"export type NAME = {};":					{ "prefix": "et_",	"body": ["export type ${1:name} = {", "\t$0", "};"], "description": "" },
+	"export type T = null;":					{ "prefix": "et1",	"body": ["export type ${1:T} = ${0:null};"], "description": "" },
+	"export type T = {};":						{ "prefix": "et_",	"body": ["export type ${1:T} = {", "\t$0", "};"], "description": "" },
 	
 	"export as namespace NAME;":				{ "prefix": "ean1",	"body": ["export as namespace $0;"], "description": "" },
 	
@@ -54,47 +33,13 @@
 	"declare class":							{ "prefix": "dc_",	"body": ["declare class ${1:name} {", "\t", "\t$0", "\t", "}"], "description": "" },
 	
 	"declare var NAME = null;":					{ "prefix": "dv1",	"body": ["declare var ${1:name} = ${0:null};"], "description": "" },
-	"declare var NAME: boolean = false;":		{ "prefix": "dvb1",	"body": ["declare var ${1:name}: boolean = ${0:false};"], "description": "" },
-	"declare var NAME: bigint = 0n;":			{ "prefix": "dvb1",	"body": ["declare var ${1:name}: bigint = ${0:0n};"], "description": "" },
-	"declare var NAME: number = 0;":			{ "prefix": "dvn1",	"body": ["declare var ${1:name}: number = ${0:0};"], "description": "" },
-	"declare var NAME: string = '';":			{ "prefix": "dvs1",	"body": ["declare var ${1:name}: string = '$0';"], "description": "" },
-	
 	"declare let NAME = null":					{ "prefix": "dl1",	"body": ["declare let ${1:name} = ${0:null};"], "description": "" },
-	"declare let NAME: boolean = false;":		{ "prefix": "dlb1",	"body": ["declare let ${1:name}: boolean = ${0:false};"], "description": "" },
-	"declare let NAME: bigint = 0n;":			{ "prefix": "dlb1",	"body": ["declare let ${1:name}: bigint = ${0:0n};"], "description": "" },
-	"declare let NAME: number = 0;":			{ "prefix": "dln1",	"body": ["declare let ${1:name}: number = ${0:0};"], "description": "" },
-	"declare let NAME: string = '';":			{ "prefix": "dls1",	"body": ["declare var ${1:name}: string = '$0';"], "description": "" },
-	
 	"declare const":							{ "prefix": "dc1",	"body": ["declare const ${1:name} = ${0:null};"], "description": "" },
-	"declare const NAME: boolean = false;":		{ "prefix": "dcb1",	"body": ["declare const ${1:name}: boolean = ${0:false};"], "description": "" },
-	"declare const NAME: bigint = 0n;":			{ "prefix": "dcb1",	"body": ["declare const ${1:name}: bigint = ${0:0n};"], "description": "" },
-	"declare const NAME: number = 0;":			{ "prefix": "dcn1",	"body": ["declare const ${1:name}: number = ${0:0};"], "description": "" },
-	"declare const NAME: string = '';":			{ "prefix": "dcs1",	"body": ["declare const ${1:name}: string = '$0';"], "description": "" },
 		
 	"export interface NAME":					{ "prefix": "ei_",	"body": ["export interface ${1:name} {", "\t", "\t$0", "\t", "}"], "description": "" },
 	"export interface NAME extends NAME":		{ "prefix": "eie_",	"body": ["export interface ${1:name} extends ${2:name} {", "\t", "\t$0", "\t", "}"], "description": "" },
 	
 	"namespace NAME {}":						{ "prefix": "n_",	"body": ["namespace ${1:name} {", "\t", "$0", "\t", "}"], "description": "" },
-	
-	"let NAME: boolean = false;":				{ "prefix": "lb1",	"body": ["let ${1:name}: boolean = ${0:false};"], "description": "" },
-	"let NAME: bigint = 0n;":					{ "prefix": "lb1",	"body": ["let ${1:name}: boolean = ${0:0n};"], "description": "" },
-	"let NAME: number = 0;":					{ "prefix": "ln1",	"body": ["let ${1:name}: number = ${0:0};"], "description": "" },
-	"let NAME: string = '';":					{ "prefix": "ls1",	"body": ["let ${1:name}: string = '$0';"], "description": "" },
-	
-	"export let NAME: boolean = false;":		{ "prefix": "elb1",	"body": ["export let ${1:name}: boolean = ${0:false};"], "description": "" },
-	"export let NAME: bigint = 0n;":			{ "prefix": "elb1",	"body": ["export let ${1:name}: bigint = ${0:0n};"], "description": "" },
-	"export let NAME: number = 0;":				{ "prefix": "eln1",	"body": ["export let ${1:name}: number = ${0:0};"], "description": "" },
-	"export let NAME: string = '';":			{ "prefix": "els1",	"body": ["export let ${1:name}: string = '$0';"], "description": "" },
-	
-	"const NAME: boolean = false;":				{ "prefix": "cb1",	"body": ["const ${1:name}: boolean = ${0:false};"], "description": "" },
-	"const NAME: bigint = 0n;":					{ "prefix": "cb1",	"body": ["const ${1:name}: bigint = ${0:0n};"], "description": "" },
-	"const NAME: number = 0;":					{ "prefix": "cn1",	"body": ["const ${1:name}: number = ${0:0};"], "description": "" },
-	"const NAME: string = '';":					{ "prefix": "cs1",	"body": ["const ${1:name}: string = '$0';"], "description": "" },
-	
-	"export const NAME: boolean = false;":		{ "prefix": "ecb1",	"body": ["export const ${1:name}: boolean = ${0:false};"], "description": "" },
-	"export const NAME: bigint = 0n;":			{ "prefix": "ecb1",	"body": ["export const ${1:name}: bigint = ${0:0n};"], "description": "" },
-	"export const NAME: number = 0;":			{ "prefix": "ecn1",	"body": ["export const ${1:name}: number = ${0:0};"], "description": "" },
-	"export const NAME: string = '';":			{ "prefix": "ecs1",	"body": ["export const ${1:name}: string = '$0';"], "description": "" },
 	
 	"enum NAME {}":								{ "prefix": "e1",	"body": ["enum ${1:name} { $0 };"], "description": "" },
 	"enum NAME { ... }":						{ "prefix": "e_",	"body": ["enum ${1:name} {", "\t$0", "};"], "description": "" },
@@ -106,44 +51,12 @@
 	"export const enum NAME { ... }":			{ "prefix": "ece_",	"body": ["export const enum ${1:name} {", "\t$0", "};"], "description": "" },
 		
 	"readonly NAME":							{ "prefix": "r1",	"body": ["readonly ${1:name} = ${0:null};"], "description": "" },
-	"readonly NAME: boolean = false;":			{ "prefix": "rb1",	"body": ["readonly ${1:name}: boolean = ${0:false};"], "description": "" },
-	"readonly NAME: bigint = 0n;":				{ "prefix": "rb1",	"body": ["readonly ${1:name}: bigint = ${0:0n};"], "description": "" },
-	"readonly NAME: number = 0;":				{ "prefix": "rn1",	"body": ["readonly ${1:name}: number = ${0:0};"], "description": "" },
-	"readonly NAME: string = '';":				{ "prefix": "rs1",	"body": ["readonly ${1:name}: string = '$0';"], "description": "" },
 	
-	"public NAME = null;":						{ "prefix": "p1",	"body": ["public ${1:name} = ${0:null};"], "description": "" },
-	"public NAME: boolean = false;":			{ "prefix": "pb1",	"body": ["public ${1:name}: boolean = ${0:false};"], "description": "" },
-	"public NAME: bigint = 0n;":				{ "prefix": "pb1",	"body": ["public ${1:name}: bigint = ${0:0n};"], "description": "" },
-	"public NAME: number = 0;":					{ "prefix": "pn1",	"body": ["public ${1:name}: number = ${0:0};"], "description": "" },
-	"public NAME: string = '';":				{ "prefix": "ps1",	"body": ["public ${1:name}: string = '$0';"], "description": "" },
-		
+	"public NAME":								{ "prefix": "p1",	"body": ["public ${1:name} = ${0:null};"], "description": "" },
 	"public readonly NAME":						{ "prefix": "pr1",	"body": ["public readonly ${1:name} = ${0:null};"], "description": "" },
-	"public readonly NAME: boolean = false;":	{ "prefix": "prb1",	"body": ["public readonly ${1:name}: boolean = ${0:false};"], "description": "" },
-	"public readonly NAME: bigint = 0n;":		{ "prefix": "prb1",	"body": ["public readonly ${1:name}: bigint = ${0:0n};"], "description": "" },
-	"public readonly NAME: number = 0;":		{ "prefix": "prn1",	"body": ["public readonly ${1:name}: number = ${0:0};"], "description": "" },
-	"public readonly NAME: string = '';":		{ "prefix": "prs1",	"body": ["public readonly ${1:name}: string = '$0';"], "description": "" },
-		
-	"public static NAME = null;":				{ "prefix": "ps1",	"body": ["public static ${1:name} = ${0:null};"], "description": "" },
-	"public static NAME: boolean = false;":		{ "prefix": "psb1",	"body": ["public static ${1:name}: boolean = ${0:false};"], "description": "" },
-	"public static NAME: bigint = 0n;":			{ "prefix": "psb1",	"body": ["public static ${1:name}: bigint = ${0:0n};"], "description": "" },
-	"public static NAME: number = 0;":			{ "prefix": "psn1",	"body": ["public static ${1:name}: number = ${0:0};"], "description": "" },
-	"public static NAME: string = '';":			{ "prefix": "pss1",	"body": ["public static ${1:name}: string = '$0';"], "description": "" },
+	"public static NAME":						{ "prefix": "ps1",	"body": ["public static ${1:name} = ${0:null};"], "description": "" },
 	
-	"private NAME = null;":						{ "prefix": "_1",	"body": ["private ${1:name} = ${0:null};"], "description": "" },
-	"private NAME: boolean = false;":			{ "prefix": "_b1",	"body": ["private ${1:name}: boolean = ${0:false};"], "description": "" },
-	"private NAME: bigint = 0n;":				{ "prefix": "_b1",	"body": ["private ${1:name}: bigint = ${0:0n};"], "description": "" },
-	"private NAME: number = 0;":				{ "prefix": "_n1",	"body": ["private ${1:name}: number = ${0:0};"], "description": "" },
-	"private NAME: string = '';":				{ "prefix": "_s1",	"body": ["private ${1:name}: string = '$0';"], "description": "" },
-		
+	"private NAME":								{ "prefix": "_1",	"body": ["private ${1:name} = ${0:null};"], "description": "" },
 	"private readonly NAME":					{ "prefix": "_r1",	"body": ["private readonly ${1:name} = ${0:null};"], "description": "" },
-	"private readonly NAME: boolean = false;":	{ "prefix": "_rb1",	"body": ["private readonly ${1:name}: boolean = ${0:false};"], "description": "" },
-	"private readonly NAME: bigint = 0n;":		{ "prefix": "_rb1",	"body": ["private readonly ${1:name}: bigint = ${0:0n};"], "description": "" },
-	"private readonly NAME: number = 0;":		{ "prefix": "_rn1",	"body": ["private readonly ${1:name}: number = ${0:0};"], "description": "" },
-	"private readonly NAME: string = '';":		{ "prefix": "_rs1",	"body": ["private readonly ${1:name}: string = '$0';"], "description": "" },
-		
-	"private static NAME = null;":				{ "prefix": "_s1",	"body": ["private static ${1:name} = ${0:null};"], "description": "" },
-	"private static NAME: boolean = false;":	{ "prefix": "_sb1",	"body": ["private static ${1:name}: boolean = ${0:false};"], "description": "" },
-	"private static NAME: bigint = 0n;":		{ "prefix": "_sb1",	"body": ["private static ${1:name}: bigint = ${0:0n};"], "description": "" },
-	"private static NAME: number = 0;":			{ "prefix": "_sn1",	"body": ["private static ${1:name}: number = ${0:0};"], "description": "" },
-	"private static NAME: string = '';":		{ "prefix": "_ss1",	"body": ["private static ${1:name}: string = '$0';"], "description": "" }
+	"private static NAME = null;":				{ "prefix": "_s1",	"body": ["private static ${1:name} = ${0:null};"], "description": "" }
 }
