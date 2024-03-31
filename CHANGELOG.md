@@ -1,6 +1,20 @@
 # Change Log
 All notable changes to the "JavaScript and TypeScript Snippets" extension will be documented in this file.
 
+## [0.22.0] - 2024-03-31
+
+### Added
+- Added `using` and `await using`.
+- Added `Symbol.dispose` and `Symbol.asyncDispose`.
+- Added `${clipboard}` and `${selection}` for keyboard shortcut usage.
+
+### Changed
+- Eliminated duplicated prefixes with value selection.
+
+### Removed
+- Removed primitive types for functions, getters, setters, methods and types.
+- Removed `typeof value !== ...`.
+
 ## [0.21.0] - 2023-04-09
 
 ### Added

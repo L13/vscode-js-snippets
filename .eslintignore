@@ -3,4 +3,7 @@
 images/
 out/
 plugins/
-scripts/
+snippets/
+tasks/
+test/
+gulpfile.js
