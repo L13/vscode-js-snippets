@@ -2,12 +2,14 @@
 
 This extension contains keyword snippets and micro patterns for JavaScript, TypeScript and JSON.
 
-## What's new in JavaScript and TypeScript Snippets 0.21.0
+## What's new in JavaScript and TypeScript Snippets 0.22.0
 
-- Added `l13Snippets.javascript.useFunctionBlockPadding` to enable or disable line padding in function blocks.
-- Added `l13Snippets.typescript.useFunctionBlockPadding` to enable or disable line padding in function blocks.
-- Added more snippets for TypeScript types like `declare`, `readonly`, `{ [K in T]: ... }` and `extends`.
-- Changed type formatting in TypeScript snippets.
+- Added `using` and `await using`.
+- Added `Symbol.dispose` and `Symbol.asyncDispose`.
+- Added `${clipboard}` and `${selection}` for keyboard shortcut usage.
+- Eliminated duplicated prefixes with value selection.
+- Removed primitive types for functions, getters, setters, methods and types.
+- Removed `typeof value !== ...`.
 
 ## Index
 
@@ -102,13 +104,23 @@ __The following prefixes are just examples to explain the rules.__ To see the co
 
 It is recommended to set the snippet suggestions to top.
 
+It is recommended to disable auto intellisense for snippet.
+
 ```json
-"editor.snippetSuggestions": "top",
+"editor.suggest.snippetsPreventQuickSuggestions": true
 ```
 
-It is also recommended to disable the built-in JavaScript Snippets with the following extension.
+It is also recommended to hide the built-in JavaScript and TypeScript snippets.
 
-[Built-In Extensions](https://marketplace.visualstudio.com/items?itemName=L13RARY.l13-built-in-extensions)
+1. Open a JavaScript file
+1. Open command palette
+1. Run `Snippets: Insert Snippets`
+1. Hide all `JavaScript Language Basics` snippets from Intellisense
+
+1. Open a TypeScript file
+1. Open command palette
+1. Run `Snippets: Insert Snippets`
+1. Hide all `Typercript Language Basics` snippets from Intellisense
 
 ## Recommended Keyboard Shortcuts
 
@@ -128,8 +140,49 @@ Please have the following keyboard shortcuts always in mind, because these are f
 * `Ctrl + Enter` - Insert line below, even if the caret is in the middle of a line.
 * `Ctrl + Shift + Enter` - Insert line above, even if the caret is in the middle of a line.
 
+### Quick Template Literals Expression
+
+The following keyboard shortcut improves the writing of an expression in template literals.
+
+#### macOS
+
+```json
+[
+	{
+		"key": "cmd+-",
+		"command": "editor.action.insertSnippet",
+		"when": "editorTextFocus && !editorReadonly && editorLangId =~ /(java|type)script(react)?/",
+		"args": { "name": "${selection}" }
+	},
+	{
+		"key": "alt+cmd+-",
+		"command": "editor.action.insertSnippet",
+		"when": "editorTextFocus && !editorReadonly && editorLangId =~ /(java|type)script(react)?/",
+		"args": { "name": "${clipboard}" }
+	}
+]
+```
+
+#### Windows and Linux
+
+```json
+[
+	{
+		"key": "ctrl+-",
+		"command": "editor.action.insertSnippet",
+		"when": "editorTextFocus && !editorReadonly && editorLangId =~ /(java|type)script(react)?/",
+		"args": { "name": "${selection}" }
+	},
+	{
+		"key": "alt+ctrl+-",
+		"command": "editor.action.insertSnippet",
+		"when": "editorTextFocus && !editorReadonly && editorLangId =~ /(java|type)script(react)?/",
+		"args": { "name": "${clipboard}" }
+	}
+]
+```
+
 ## Recommended Extensions
 
 - [Swap Keywords](https://marketplace.visualstudio.com/items?itemName=L13RARY.l13-swap)
-- [Built-In Extensions](https://marketplace.visualstudio.com/items?itemName=L13RARY.l13-built-in-extensions)
 - [Extension Pack](https://marketplace.visualstudio.com/items?itemName=L13RARY.l13-extension-pack)
