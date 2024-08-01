@@ -82,16 +82,7 @@ __The following prefixes are just examples to explain the rules.__ To see the co
 | `t1`    | <b>t</b>ype <i>NAME</i> = <i>TYPE</i>; |
 | `t_`    | <b>t</b>ype <i>NAME</i> = <b>{ ... };</b> |
 
-### 2. Variable declarations, properties and methods are available with primitive types and accessors, too.
-
-| Prefix  | Snippet |
-| -------:| ------- |
-| `cb1`   | <b>c</b>onst <i>NAME</i>:<b>b</b>oolean = false; |
-| `pb1`   | <b>p</b>ublic <i>NAME</i>:<b>b</b>oolean = false; |
-| `pgn_`  | <b>p</b>ublic <b>g</b>et <i>NAME</i> () :<b>n</b>umber <b>{ ... }</b> |
-| `pso_`  | <b>p</b>ublic <b>s</b>tatic <i>NAME</i> () :<b>o</b>bject <b>{ ... }</b> |
-
-### 3. An underscore "\_" at the start defines a private member or a mapped type.
+### 2. An underscore "\_" at the start defines a private member or a mapped type.
 
 | Prefix  | Snippet |
 | -------:| ------- |
